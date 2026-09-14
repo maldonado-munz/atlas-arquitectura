@@ -15,7 +15,6 @@ import {
   Calendar,
   Maximize2,
   ExternalLink,
-  Focus,
 } from 'lucide-react';
 import { traducirEstilo, traducirPrograma } from '../i18n';
 
@@ -32,12 +31,12 @@ interface MapViewerProps {
   idioma?: Idioma;
 }
 
-type TileProviderId = 'esri_light' | 'osm' | 'esri_dark';
+
+type TileProviderId = 'esri_light' | 'osm_mono' | 'esri_dark';
 
 interface TileProviderConfig {
   id: TileProviderId;
   name: string;
-  description: string;
   url: string;
   options: L.TileLayerOptions;
 }
@@ -46,34 +45,33 @@ const TILE_PROVIDERS: Record<TileProviderId, TileProviderConfig> = {
   esri_light: {
     id: 'esri_light',
     name: 'Esri Light Gray Canvas',
-    description: 'Monocromático, neutro y de alta legibilidad arquitectónica',
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
     options: {
       maxNativeZoom: 16,
       maxZoom: 19,
-      attribution: 'Tiles © Esri',
+      crossOrigin: true,
+      attribution: '',
     },
   },
-  osm: {
-    id: 'osm',
-    name: 'OpenStreetMap',
-    description: 'Cartografía estándar con calles, manzanas y nombres de barrios',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  osm_mono: {
+    id: 'osm_mono',
+    name: 'OpenStreetMap B&W',
+    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     options: {
-      subdomains: ['a', 'b', 'c'],
       maxZoom: 19,
-      attribution: '© OpenStreetMap contributors',
+      crossOrigin: true,
+      attribution: '',
     },
   },
   esri_dark: {
     id: 'esri_dark',
     name: 'Esri Dark Gray Canvas',
-    description: 'Gris oscuro de alto contraste para visualización nocturna',
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
     options: {
       maxNativeZoom: 16,
       maxZoom: 19,
-      attribution: 'Tiles © Esri',
+      crossOrigin: true,
+      attribution: '',
     },
   },
 };
@@ -97,9 +95,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
   const tileLayerRef = useRef<L.TileLayer | null>(null);
   const markersLayerRef = useRef<L.LayerGroup | null>(null);
 
-  const [activeTileProvider, setActiveTileProvider] = useState<TileProviderId>(
-    modoOscuroMapa ? 'esri_dark' : 'esri_light'
-  );
+  const [activeTileProvider, setActiveTileProvider] = useState<TileProviderId>('esri_light');
   const [menuCapasAbierto, setMenuCapasAbierto] = useState<boolean>(false);
   const [zoomLevel, setZoomLevel] = useState<number>(6);
   const [centerCoords, setCenterCoords] = useState<{ lat: number; lng: number }>({
@@ -107,50 +103,12 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     lng: -70.6693,
   });
 
-  const activeTileProviderRef = useRef<TileProviderId>(
-    modoOscuroMapa ? 'esri_dark' : 'esri_light'
-  );
-
-  // Apply tile layer manually with complete stability and clean layer replacement
-  const aplicarProveedor = (providerId: TileProviderId) => {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-
-    if (activeTileProviderRef.current === providerId && tileLayerRef.current && map.hasLayer(tileLayerRef.current)) {
-      return;
-    }
-
-    const config = TILE_PROVIDERS[providerId];
-    if (!config) return;
-
-    // Cleanly remove any existing TileLayers
-    map.eachLayer((layer) => {
-      if (layer instanceof L.TileLayer) {
-        try {
-          map.removeLayer(layer);
-        } catch {
-          // ignore
-        }
-      }
-    });
-    tileLayerRef.current = null;
-
-    const newLayer = L.tileLayer(config.url, config.options);
-    newLayer.addTo(map);
-
-    tileLayerRef.current = newLayer;
-    activeTileProviderRef.current = providerId;
-    setActiveTileProvider(providerId);
-
-    map.invalidateSize({ pan: false });
-  };
-
-  // Switch canvas if dark mode prop changes externally
+  // Switch to dark canvas if dark mode toggled from header
   useEffect(() => {
     if (modoOscuroMapa) {
-      aplicarProveedor('esri_dark');
-    } else if (activeTileProviderRef.current === 'esri_dark') {
-      aplicarProveedor('esri_light');
+      cambiarProveedorCapa('esri_dark');
+    } else {
+      cambiarProveedorCapa('esri_light');
     }
   }, [modoOscuroMapa]);
 
@@ -159,23 +117,19 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     if (!mapContainerRef.current || mapInstanceRef.current) return;
 
     // Centered initially on Chile (Santiago / Central Zone)
-    const initialZoom = 6.2;
     const map = L.map(mapContainerRef.current, {
       center: [-33.4489, -70.6693],
-      zoom: initialZoom,
+      zoom: 6.2,
       minZoom: 2,
       maxZoom: 18,
       zoomControl: false, // Custom modernist controls
-      attributionControl: false, // Disables default Leaflet watermarks/attributions
+      attributionControl: false, // Disables all default Leaflet watermarks/attributions
     });
 
-    // Primary tile layer: Esri Light Gray Canvas (or dark)
-    const initialProviderId: TileProviderId = modoOscuroMapa ? 'esri_dark' : 'esri_light';
-    const provider = TILE_PROVIDERS[initialProviderId];
+    // Primary tile layer: Esri Light Gray Canvas (No API key, zero watermarks)
+    const provider = TILE_PROVIDERS[activeTileProvider];
     const initialTileLayer = L.tileLayer(provider.url, provider.options).addTo(map);
     tileLayerRef.current = initialTileLayer;
-    activeTileProviderRef.current = initialProviderId;
-    setActiveTileProvider(initialProviderId);
 
     // Markers layer group
     const markersGroup = L.layerGroup().addTo(map);
@@ -197,16 +151,10 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     });
 
     map.on('zoomend', () => {
-      const currentZoom = Math.round(map.getZoom());
-      setZoomLevel(currentZoom);
+      setZoomLevel(Math.round(map.getZoom()));
     });
 
-    // Close layer menu on map click
-    map.on('click', () => {
-      setMenuCapasAbierto(false);
-    });
-
-    // ResizeObserver for reliable dimension adjustments
+    // ResizeObserver
     const resizeObserver = new ResizeObserver(() => {
       map.invalidateSize();
     });
@@ -216,14 +164,26 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       clearTimeout(t1);
       clearTimeout(t2);
       resizeObserver.disconnect();
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove();
-        mapInstanceRef.current = null;
-      }
-      tileLayerRef.current = null;
-      markersLayerRef.current = null;
+      map.remove();
+      mapInstanceRef.current = null;
     };
   }, []);
+
+  // Handle Tile Provider Change
+  const cambiarProveedorCapa = (providerId: TileProviderId) => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (tileLayerRef.current) {
+      map.removeLayer(tileLayerRef.current);
+    }
+
+    const config = TILE_PROVIDERS[providerId];
+    const newLayer = L.tileLayer(config.url, config.options).addTo(map);
+    tileLayerRef.current = newLayer;
+    setActiveTileProvider(providerId);
+    setMenuCapasAbierto(false);
+  };
 
   // Update Markers when projects change
   useEffect(() => {
@@ -293,10 +253,8 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           e.originalEvent.stopPropagation();
         }
         onSeleccionarProyecto(proyecto);
-        // Pure smooth pan without forcing or altering the user's manual zoom level
-        map.panTo([proyecto.coordenadas.lat, proyecto.coordenadas.lng], {
-          animate: true,
-          duration: 0.5,
+        map.flyTo([proyecto.coordenadas.lat, proyecto.coordenadas.lng], Math.max(map.getZoom(), 12), {
+          duration: 1.2,
         });
       });
 
@@ -304,7 +262,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     });
   }, [proyectos, proyectoSeleccionado, onSeleccionarProyecto]);
 
-  // Center on selected project if changed externally without overriding manual zoom
+  // Center on selected project if changed externally
   useEffect(() => {
     const map = mapInstanceRef.current;
     if (!map || !proyectoSeleccionado) return;
@@ -318,40 +276,20 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       currentCenter.lng - targetLng
     );
 
-    if (distance > 0.001) {
-      map.panTo([targetLat, targetLng], {
-        animate: true,
-        duration: 0.5,
+    if (distance > 0.02) {
+      map.flyTo([targetLat, targetLng], Math.max(map.getZoom(), 12), {
+        duration: 1.2,
       });
     }
   }, [proyectoSeleccionado]);
 
-  // Zoom controls (Manual)
+  // Zoom controls
   const handleZoomIn = () => {
     mapInstanceRef.current?.zoomIn();
   };
 
   const handleZoomOut = () => {
     mapInstanceRef.current?.zoomOut();
-  };
-
-  // Manual fit bounds to active filtered works
-  const handleAjustarObras = () => {
-    const map = mapInstanceRef.current;
-    if (!map || proyectos.length === 0) return;
-
-    const bounds = L.latLngBounds(
-      proyectos.map((p) => [p.coordenadas.lat, p.coordenadas.lng])
-    );
-
-    if (bounds.isValid()) {
-      map.fitBounds(bounds, {
-        padding: [60, 60],
-        maxZoom: 14,
-        animate: true,
-        duration: 0.8,
-      });
-    }
   };
 
   const handleVerChile = () => {
@@ -368,11 +306,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       <div
         ref={mapContainerRef}
         className={`w-full h-full ${
-          activeTileProvider === 'esri_dark'
-            ? 'architect-map-dark'
-            : activeTileProvider === 'osm'
-            ? 'architect-map-osm'
-            : 'architect-map-monochrome'
+          modoOscuroMapa ? 'architect-map-dark' : 'architect-map-monochrome'
         }`}
         style={{ minHeight: '100%', width: '100%' }}
       />
@@ -399,16 +333,6 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           <Minus className="w-4 h-4" />
         </button>
 
-        <button
-          id="btn-map-fit-bounds"
-          onClick={handleAjustarObras}
-          className="w-9 h-9 bg-white hover:bg-black text-black hover:text-white border border-[#111111] flex items-center justify-center transition-colors cursor-pointer"
-          title={idioma === 'en' ? 'Fit view to filtered projects' : 'Ajustar vista a obras filtradas'}
-          aria-label="Ajustar vista a obras filtradas"
-        >
-          <Focus className="w-4 h-4" />
-        </button>
-
         <div className="h-[1px] bg-[#D4D4D4] my-0.5" />
 
         <button
@@ -431,61 +355,40 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           <Globe className="w-4 h-4" />
         </button>
 
-        {/* Tile Provider Layer Switcher (Manual) */}
+        {/* Tile Provider Layer Switcher */}
         <div className="relative">
           <button
             id="btn-map-capas"
             onClick={() => setMenuCapasAbierto(!menuCapasAbierto)}
-            className={`w-9 h-9 border border-[#111111] flex items-center justify-center transition-colors cursor-pointer relative ${
+            className={`w-9 h-9 border border-[#111111] flex items-center justify-center transition-colors cursor-pointer ${
               menuCapasAbierto ? 'bg-black text-white' : 'bg-white hover:bg-black text-black hover:text-white'
             }`}
-            title="Selector de capas cartográficas"
-            aria-label="Selector de capas cartográficas"
+            title="Cambiar capa base cartográfica"
+            aria-label="Cambiar capa base cartográfica"
           >
             <Layers className="w-4 h-4" />
           </button>
 
           {menuCapasAbierto && (
-            <div
-              id="menu-capas-cartograficas"
-              onClick={(e) => e.stopPropagation()}
-              className="absolute right-full top-0 mr-2 w-64 bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] p-3 z-50 text-xs flex flex-col gap-2 animate-in fade-in slide-in-from-right-2 duration-150"
-            >
-              <div className="font-mono-code font-bold uppercase text-[10px] text-neutral-500 pb-1.5 border-b border-neutral-200 flex items-center justify-between">
-                <span>{idioma === 'en' ? 'Cartographic Layer' : 'Capa Cartográfica'}</span>
+            <div className="absolute right-full top-0 mr-2 w-56 bg-white border border-[#111111] shadow-xl p-2 z-50 text-xs">
+              <div className="font-mono-code font-bold uppercase text-[10px] text-neutral-400 mb-1.5 pb-1 border-b border-[#E5E5E5]">
+                Capa Cartográfica (Sin Marcas)
               </div>
-              <div className="space-y-1.5">
-                {(Object.keys(TILE_PROVIDERS) as TileProviderId[]).map((id) => {
-                  const isCurrent = activeTileProvider === id;
-                  const prov = TILE_PROVIDERS[id];
-                  return (
-                    <button
-                      key={id}
-                      id={`btn-capa-${id}`}
-                      onClick={() => {
-                        aplicarProveedor(id);
-                        setMenuCapasAbierto(false);
-                      }}
-                      className={`w-full text-left px-2.5 py-2 text-xs transition-colors flex flex-col gap-0.5 cursor-pointer border ${
-                        isCurrent
-                          ? 'bg-black text-white border-black font-medium'
-                          : 'bg-white hover:bg-neutral-50 text-black border-neutral-200 hover:border-black'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between w-full">
-                        <span className="font-semibold">{prov.name}</span>
-                        {isCurrent && <span className="text-xs font-bold">✓</span>}
-                      </div>
-                      <span
-                        className={`text-[10px] leading-tight ${
-                          isCurrent ? 'text-neutral-300' : 'text-neutral-500'
-                        }`}
-                      >
-                        {prov.description}
-                      </span>
-                    </button>
-                  );
-                })}
+              <div className="space-y-1">
+                {(Object.keys(TILE_PROVIDERS) as TileProviderId[]).map((id) => (
+                  <button
+                    key={id}
+                    onClick={() => cambiarProveedorCapa(id)}
+                    className={`w-full text-left px-2 py-1.5 text-xs transition-colors flex items-center justify-between cursor-pointer ${
+                      activeTileProvider === id
+                        ? 'bg-black text-white font-semibold'
+                        : 'hover:bg-[#F5F5F5] text-black'
+                    }`}
+                  >
+                    <span>{TILE_PROVIDERS[id].name}</span>
+                    {activeTileProvider === id && <span>✓</span>}
+                  </button>
+                ))}
               </div>
             </div>
           )}
@@ -606,36 +509,17 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           </p>
 
           {/* Action Footer */}
-          <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-100 mt-1 flex-wrap">
-            <div className="flex items-center gap-1.5">
-              {onAbrirModalCompleto && (
-                <button
-                  id="btn-abrir-modal-completo"
-                  onClick={() => onAbrirModalCompleto(proyectoSeleccionado)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-mono-code font-bold uppercase transition-colors cursor-pointer shadow-xs"
-                >
-                  <Maximize2 className="w-3.5 h-3.5" />
-                  <span>{idioma === 'en' ? 'Full dossier' : 'Ver ficha completa'}</span>
-                </button>
-              )}
-
+          <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-100 mt-1">
+            {onAbrirModalCompleto && (
               <button
-                id="btn-acercar-sitio-obra"
-                type="button"
-                onClick={() => {
-                  mapInstanceRef.current?.flyTo(
-                    [proyectoSeleccionado.coordenadas.lat, proyectoSeleccionado.coordenadas.lng],
-                    14,
-                    { duration: 0.7 }
-                  );
-                }}
-                className="inline-flex items-center gap-1 text-[11px] font-mono-code px-2 py-1.5 border border-neutral-300 hover:border-black text-neutral-800 hover:bg-neutral-50 transition-colors cursor-pointer"
-                title={idioma === 'en' ? 'Zoom in to site (Z:14)' : 'Acercar a sitio (Z:14)'}
+                id="btn-abrir-modal-completo"
+                onClick={() => onAbrirModalCompleto(proyectoSeleccionado)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-mono-code font-bold uppercase transition-colors cursor-pointer shadow-xs"
               >
-                <Focus className="w-3 h-3" />
-                <span>{idioma === 'en' ? 'Zoom in' : 'Acercar'}</span>
+                <Maximize2 className="w-3.5 h-3.5" />
+                <span>{idioma === 'en' ? 'Full dossier' : 'Ver ficha completa'}</span>
               </button>
-            </div>
+            )}
 
             {proyectoSeleccionado.fuente_url && (
               <a
@@ -653,7 +537,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       )}
 
       {/* Architectural Telemetry Bar (Bottom-Left) */}
-      <div className="absolute bottom-4 left-4 z-[400] bg-white/95 backdrop-blur-xs border border-[#111111] px-3 py-1.5 text-[11px] font-mono-code text-black flex items-center gap-2.5 shadow-[0_2px_6px_rgba(0,0,0,0.05)] flex-wrap max-w-[calc(100%-2rem)]">
+      <div className="absolute bottom-4 left-4 z-[400] bg-white/95 backdrop-blur-xs border border-[#111111] px-3 py-1.5 text-[11px] font-mono-code text-black flex items-center gap-3 shadow-[0_2px_6px_rgba(0,0,0,0.05)]">
         <div className="flex items-center gap-1.5">
           <Navigation className="w-3 h-3 rotate-45" />
           <span>
@@ -662,15 +546,11 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           </span>
         </div>
         <span className="text-neutral-300">|</span>
-        <div className="flex items-center gap-1">
+        <div>
           <span>Z:{zoomLevel}</span>
         </div>
         <span className="text-neutral-300">|</span>
-        <div className="flex items-center gap-1.5">
-          <span className="text-[10px] text-neutral-500 uppercase font-medium">
-            ESRI CANVAS | EPSG:3857
-          </span>
-        </div>
+        <span className="text-[10px] text-neutral-500 uppercase">{TILE_PROVIDERS[activeTileProvider].name}</span>
       </div>
     </div>
   );
