@@ -20,6 +20,7 @@ export interface ProyectoArquitectura {
   ano_inauguracion: string;
   estilos: string[];
   programa: string[];
+  programas?: string[];
   // Campos complementarios de curaduría
   ciudad: string;
   pais: string;

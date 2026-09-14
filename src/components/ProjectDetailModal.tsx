@@ -321,8 +321,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 <span>{t.programLabel}</span>
               </h3>
               <div className="flex flex-wrap gap-1.5">
-                {proyecto.programa && proyecto.programa.length > 0 ? (
-                  proyecto.programa.map((prog) => (
+                {(proyecto.programas || proyecto.programa) && (proyecto.programas || proyecto.programa)!.length > 0 ? (
+                  (proyecto.programas || proyecto.programa)!.map((prog) => (
                     <span
                       key={prog}
                       className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"

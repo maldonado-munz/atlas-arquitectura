@@ -78,26 +78,34 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
           )}
         </div>
 
-        {/* Architect Dropdown (Principal / Most relevant architects) */}
+        {/* Program Dropdown Filter (Atomic & General Programs) */}
         <div className="w-36 sm:w-44">
           <select
-            id="filtro-select-arquitecto"
-            value={filtros.arquitectoSeleccionado}
+            id="filtro-select-programa"
+            value={filtros.programasSeleccionados[0] || ''}
             onChange={(e) =>
-              onActualizarFiltros({ arquitectoSeleccionado: e.target.value })
+              onActualizarFiltros({
+                programasSeleccionados: e.target.value ? [e.target.value] : [],
+              })
             }
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white px-2.5 py-1.5 text-xs text-black outline-none cursor-pointer transition-all"
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border ${
+              filtros.programasSeleccionados.length > 0
+                ? 'bg-black text-white border-black font-medium shadow-xs'
+                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+            }`}
           >
-            <option value="">{t.allArchitects}</option>
-            {TODOS_LOS_ARQUITECTOS.map((arq) => (
-              <option key={arq} value={arq}>
-                {arq}
+            <option value="" className="text-black bg-white">
+              {t.allPrograms}
+            </option>
+            {TODOS_LOS_PROGRAMAS.map((prog) => (
+              <option key={prog} value={prog} className="text-black bg-white">
+                {traducirPrograma(prog, idioma)}
               </option>
             ))}
           </select>
         </div>
 
-        {/* Styles Dropdown Filter (Native Select - opens above map) */}
+        {/* Styles Dropdown Filter (Normalized General Architectural Styles) */}
         <div className="w-36 sm:w-44">
           <select
             id="filtro-select-estilo"
@@ -107,33 +115,43 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
                 estilosSeleccionados: e.target.value ? [e.target.value] : [],
               })
             }
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white px-2.5 py-1.5 text-xs text-black outline-none cursor-pointer transition-all"
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border ${
+              filtros.estilosSeleccionados.length > 0
+                ? 'bg-black text-white border-black font-medium shadow-xs'
+                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+            }`}
           >
-            <option value="">{t.allStyles}</option>
+            <option value="" className="text-black bg-white">
+              {t.allStyles}
+            </option>
             {TODOS_LOS_ESTILOS.map((estilo) => (
-              <option key={estilo} value={estilo}>
+              <option key={estilo} value={estilo} className="text-black bg-white">
                 {traducirEstilo(estilo, idioma)}
               </option>
             ))}
           </select>
         </div>
 
-        {/* Program Dropdown Filter (Native Select - opens above map) */}
-        <div className="w-32 sm:w-40">
+        {/* Architect Dropdown (Principal / Most relevant architects) */}
+        <div className="w-36 sm:w-44">
           <select
-            id="filtro-select-programa"
-            value={filtros.programasSeleccionados[0] || ''}
+            id="filtro-select-arquitecto"
+            value={filtros.arquitectoSeleccionado}
             onChange={(e) =>
-              onActualizarFiltros({
-                programasSeleccionados: e.target.value ? [e.target.value] : [],
-              })
+              onActualizarFiltros({ arquitectoSeleccionado: e.target.value })
             }
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white px-2.5 py-1.5 text-xs text-black outline-none cursor-pointer transition-all"
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border ${
+              filtros.arquitectoSeleccionado
+                ? 'bg-black text-white border-black font-medium shadow-xs'
+                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+            }`}
           >
-            <option value="">{t.allPrograms}</option>
-            {TODOS_LOS_PROGRAMAS.map((prog) => (
-              <option key={prog} value={prog}>
-                {traducirPrograma(prog, idioma)}
+            <option value="" className="text-black bg-white">
+              {t.allArchitects}
+            </option>
+            {TODOS_LOS_ARQUITECTOS.map((arq) => (
+              <option key={arq} value={arq} className="text-black bg-white">
+                {arq}
               </option>
             ))}
           </select>
@@ -147,11 +165,17 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             onChange={(e) =>
               onActualizarFiltros({ paisSeleccionado: e.target.value })
             }
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white px-2.5 py-1.5 text-xs text-black outline-none cursor-pointer transition-all"
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border ${
+              filtros.paisSeleccionado
+                ? 'bg-black text-white border-black font-medium shadow-xs'
+                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+            }`}
           >
-            <option value="">{t.allCountries}</option>
+            <option value="" className="text-black bg-white">
+              {t.allCountries}
+            </option>
             {TODOS_LOS_PAISES.map((pais) => (
-              <option key={pais} value={pais}>
+              <option key={pais} value={pais} className="text-black bg-white">
                 {pais}
               </option>
             ))}
@@ -166,10 +190,14 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             onChange={(e) =>
               onActualizarFiltros({ decadaSeleccionada: e.target.value })
             }
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white px-2.5 py-1.5 text-xs text-black outline-none cursor-pointer transition-all"
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border ${
+              filtros.decadaSeleccionada !== 'all'
+                ? 'bg-black text-white border-black font-medium shadow-xs'
+                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+            }`}
           >
             {DECADAS_DISPONIBLES.map((dec) => (
-              <option key={dec.value} value={dec.value}>
+              <option key={dec.value} value={dec.value} className="text-black bg-white">
                 {dec.label[idioma]}
               </option>
             ))}

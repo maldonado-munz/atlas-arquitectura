@@ -4,63 +4,61 @@ import { ProyectoArquitectura } from '../types';
 export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = rawData as ProyectoArquitectura[];
 
 export const ORDEN_CANONICO_ESTILOS = [
-  // 1. Clásica y Antigua
-  'Arquitectura Egipcia',
-  'Arquitectura Griega',
-  'Arquitectura Romana',
-  'Arquitectura Paleocristiana',
-  'Arquitectura Bizantina',
-  // 2. Edad Media
-  'Arquitectura Románica',
-  'Arquitectura Gótica',
-  'Arquitectura Islámica',
-  // 3. Edad Moderna
-  'Arquitectura Renacentista',
-  'Arquitectura Manierista',
-  'Arquitectura Barroca',
-  'Arquitectura Rococó',
-  'Arquitectura Neoclásica',
-  // 4. Siglo XIX
-  'Historicismo',
-  'Arquitectura del Hierro y Cristal',
-  'Art Nouveau',
-  // 5. Siglo XX (Vanguardias y Modernidad)
-  'Art Déco',
-  'Expresionismo',
-  'Constructivismo',
-  'Racionalismo',
-  'Funcionalismo',
-  'Estilo Internacional',
-  'Organicismo',
+  'Modernismo',
   'Brutalismo',
-  // 6. Contemporáneo (Siglo XX tardío y XXI)
-  'Posmodernismo',
-  'Deconstructivismo',
-  'High-Tech',
   'Minimalismo',
-  'Parametrismo',
+  'Contemporáneo',
+  'Arquitectura Orgánica',
+  'Vernácula / Local',
+  'High-Tech',
+  'Deconstructivismo',
+  'Sostenible / Bioclimático',
+  'Estructura Expuesta',
+  'Posmodernismo',
+  'Neoclásico',
+  'Barroco',
+  'Historicismo',
+  'Art Déco',
+  'Art Nouveau',
+  'Arqueológico / Ancestral',
+  'Industrial / Hierro y Cristal',
+  'Paramétrico',
 ];
 
-// Estilos presentes en el dataset ordenados cronológicamente conforme se enseñan en la academia
-const estilosEnDataset = new Set(PROYECTOS_ARQUITECTURA.flatMap((p) => p.estilos));
+// Estilos presentes en el dataset ordenados según la taxonomía normalizada
+const estilosEnDataset = new Set(PROYECTOS_ARQUITECTURA.flatMap((p) => p.estilos || []));
 export const TODOS_LOS_ESTILOS = ORDEN_CANONICO_ESTILOS.filter((estilo) =>
   estilosEnDataset.has(estilo)
 );
 
 export const ORDEN_PROGRAMAS = [
-  'Vivienda',
-  'Hospedaje',
-  'Centros Médicos',
-  'Educacional',
-  'Comercial',
+  'Residencial',
   'Cultural',
-  'Institucional / Gubernamental',
-  'Religioso',
-  'Deportivo',
+  'Educación',
+  'Institucional',
+  'Comercial',
   'Infraestructura',
+  'Marítimo',
+  'Paisajismo',
+  'Religioso',
+  'Industrial',
+  'Deportivo',
+  'Salud',
+  'Hotelería',
+  'Social',
+  'Transporte',
+  'Científico',
+  'Patrimonio',
+  'Oficinas',
+  'Innovación',
+  'Pabellón',
+  'Efímero',
+  'Restauración',
 ];
 
-const programasEnDataset = new Set(PROYECTOS_ARQUITECTURA.flatMap((p) => p.programa || []));
+const programasEnDataset = new Set(
+  PROYECTOS_ARQUITECTURA.flatMap((p) => p.programas || p.programa || [])
+);
 export const TODOS_LOS_PROGRAMAS = ORDEN_PROGRAMAS.filter((prog) =>
   programasEnDataset.has(prog)
 );

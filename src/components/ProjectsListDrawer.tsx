@@ -101,7 +101,7 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
 
                   <div className="flex items-center gap-1 mt-2 flex-wrap">
                     {/* Program pills */}
-                    {proyecto.programa && proyecto.programa.slice(0, 1).map((prog) => (
+                    {(proyecto.programas || proyecto.programa || []).slice(0, 2).map((prog) => (
                       <span
                         key={prog}
                         className="text-[9px] font-mono-code px-1.5 py-0.2 bg-black text-white"

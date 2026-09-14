@@ -1,54 +1,73 @@
 import { Idioma } from './types';
 
 export const ESTILOS_TRADUCCION: Record<string, { es: string; en: string }> = {
-  // Clásica y Antigua
+  // Principales estilos generales normalizados
+  'Modernismo': { es: 'Modernismo', en: 'Modernism' },
+  'Brutalismo': { es: 'Brutalismo', en: 'Brutalism' },
+  'Minimalismo': { es: 'Minimalismo', en: 'Minimalism' },
+  'Contemporáneo': { es: 'Contemporáneo', en: 'Contemporary' },
+  'Arquitectura Orgánica': { es: 'Arquitectura Orgánica', en: 'Organic Architecture' },
+  'Vernácula / Local': { es: 'Vernácula / Local', en: 'Vernacular / Local' },
+  'High-Tech': { es: 'High-Tech', en: 'High-Tech' },
+  'Deconstructivismo': { es: 'Deconstructivismo', en: 'Deconstructivism' },
+  'Sostenible / Bioclimático': { es: 'Sostenible / Bioclimático', en: 'Sustainable / Bioclimatic' },
+  'Estructura Expuesta': { es: 'Estructura Expuesta', en: 'Exposed Structure' },
+  'Posmodernismo': { es: 'Posmodernismo', en: 'Postmodernism' },
+  'Neoclásico': { es: 'Neoclásico', en: 'Neoclassical' },
+  'Barroco': { es: 'Barroco', en: 'Baroque' },
+  'Historicismo': { es: 'Historicismo', en: 'Historicism' },
+  'Art Déco': { es: 'Art Déco', en: 'Art Deco' },
+  'Art Nouveau': { es: 'Art Nouveau', en: 'Art Nouveau' },
+  'Arqueológico / Ancestral': { es: 'Arqueológico / Ancestral', en: 'Archaeological / Ancestral' },
+  'Industrial / Hierro y Cristal': { es: 'Industrial / Hierro y Cristal', en: 'Industrial / Iron & Glass' },
+  'Paramétrico': { es: 'Paramétrico', en: 'Parametric' },
+
+  // Compatibilidad con términos clásicos
   'Arquitectura Egipcia': { es: 'Arquitectura Egipcia', en: 'Egyptian Architecture' },
   'Arquitectura Griega': { es: 'Arquitectura Griega', en: 'Greek Architecture' },
   'Arquitectura Romana': { es: 'Arquitectura Romana', en: 'Roman Architecture' },
-  'Arquitectura Paleocristiana': { es: 'Arquitectura Paleocristiana', en: 'Early Christian Architecture' },
-  'Arquitectura Bizantina': { es: 'Arquitectura Bizantina', en: 'Byzantine Architecture' },
-  // Edad Media
-  'Arquitectura Románica': { es: 'Arquitectura Románica', en: 'Romanesque Architecture' },
   'Arquitectura Gótica': { es: 'Arquitectura Gótica', en: 'Gothic Architecture' },
-  'Arquitectura Islámica': { es: 'Arquitectura Islámica', en: 'Islamic Architecture' },
-  // Edad Moderna
   'Arquitectura Renacentista': { es: 'Arquitectura Renacentista', en: 'Renaissance Architecture' },
-  'Arquitectura Manierista': { es: 'Arquitectura Manierista', en: 'Mannerist Architecture' },
   'Arquitectura Barroca': { es: 'Arquitectura Barroca', en: 'Baroque Architecture' },
-  'Arquitectura Rococó': { es: 'Arquitectura Rococó', en: 'Rococo Architecture' },
   'Arquitectura Neoclásica': { es: 'Arquitectura Neoclásica', en: 'Neoclassical Architecture' },
-  // Siglo XIX
-  'Historicismo': { es: 'Historicismo', en: 'Historicism' },
-  'Arquitectura del Hierro y Cristal': { es: 'Arquitectura del Hierro y Cristal', en: 'Iron & Glass Architecture' },
-  'Art Nouveau': { es: 'Art Nouveau', en: 'Art Nouveau' },
-  // Siglo XX
-  'Art Déco': { es: 'Art Déco', en: 'Art Deco' },
-  'Expresionismo': { es: 'Expresionismo', en: 'Expressionism' },
-  'Constructivismo': { es: 'Constructivismo', en: 'Constructivism' },
   'Racionalismo': { es: 'Racionalismo', en: 'Rationalism' },
   'Funcionalismo': { es: 'Funcionalismo', en: 'Functionalism' },
   'Estilo Internacional': { es: 'Estilo Internacional', en: 'International Style' },
   'Organicismo': { es: 'Organicismo', en: 'Organicism' },
-  'Brutalismo': { es: 'Brutalismo', en: 'Brutalism' },
-  // Contemporáneo
-  'Posmodernismo': { es: 'Posmodernismo', en: 'Postmodernism' },
-  'Deconstructivismo': { es: 'Deconstructivismo', en: 'Deconstructivism' },
-  'High-Tech': { es: 'High-Tech', en: 'High-Tech Architecture' },
-  'Minimalismo': { es: 'Minimalismo', en: 'Minimalism' },
   'Parametrismo': { es: 'Parametrismo', en: 'Parametricism' },
 };
 
 export const PROGRAMAS_TRADUCCION: Record<string, { es: string; en: string }> = {
-  'Vivienda': { es: 'Vivienda', en: 'Residential / Housing' },
-  'Hospedaje': { es: 'Hospedaje', en: 'Hospitality / Hotels' },
-  'Centros Médicos': { es: 'Centros Médicos', en: 'Healthcare / Medical' },
-  'Educacional': { es: 'Educacional', en: 'Educational' },
-  'Comercial': { es: 'Comercial', en: 'Commercial / Offices' },
+  // Programas atómicos y generales normalizados
+  'Residencial': { es: 'Residencial', en: 'Residential' },
   'Cultural': { es: 'Cultural', en: 'Cultural' },
-  'Institucional / Gubernamental': { es: 'Institucional / Gubernamental', en: 'Institutional / Government' },
+  'Educación': { es: 'Educación', en: 'Education' },
+  'Institucional': { es: 'Institucional', en: 'Institutional' },
+  'Comercial': { es: 'Comercial', en: 'Commercial' },
+  'Infraestructura': { es: 'Infraestructura', en: 'Infrastructure' },
   'Religioso': { es: 'Religioso', en: 'Religious' },
   'Deportivo': { es: 'Deportivo', en: 'Sports' },
-  'Infraestructura': { es: 'Infraestructura', en: 'Infrastructure / Public Realm' },
+  'Salud': { es: 'Salud', en: 'Healthcare' },
+  'Hotelería': { es: 'Hotelería', en: 'Hospitality' },
+  'Industrial': { es: 'Industrial', en: 'Industrial' },
+  'Marítimo': { es: 'Marítimo', en: 'Maritime' },
+  'Paisajismo': { es: 'Paisajismo', en: 'Landscape' },
+  'Transporte': { es: 'Transporte', en: 'Transportation' },
+  'Social': { es: 'Social', en: 'Social Housing' },
+  'Científico': { es: 'Científico', en: 'Scientific' },
+  'Patrimonio': { es: 'Patrimonio', en: 'Heritage' },
+  'Oficinas': { es: 'Oficinas', en: 'Offices' },
+  'Innovación': { es: 'Innovación', en: 'Innovation' },
+  'Pabellón': { es: 'Pabellón', en: 'Pavilion' },
+  'Efímero': { es: 'Efímero', en: 'Ephemeral' },
+  'Restauración': { es: 'Restauración', en: 'Dining / Food' },
+
+  // Compatibilidad legacy
+  'Vivienda': { es: 'Vivienda', en: 'Residential' },
+  'Hospedaje': { es: 'Hospedaje', en: 'Hospitality' },
+  'Centros Médicos': { es: 'Centros Médicos', en: 'Healthcare' },
+  'Educacional': { es: 'Educacional', en: 'Education' },
+  'Institucional / Gubernamental': { es: 'Institucional / Gubernamental', en: 'Institutional / Government' },
 };
 
 export function traducirEstilo(estilo: string, idioma: Idioma): string {

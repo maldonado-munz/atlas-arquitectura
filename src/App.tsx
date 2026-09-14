@@ -64,7 +64,7 @@ export default function App() {
         const coincideEstilo = p.estilos.some((e) =>
           e.toLowerCase().includes(query)
         );
-        const coincidePrograma = (p.programa || []).some((prog) =>
+        const coincidePrograma = (p.programas || p.programa || []).some((prog) =>
           prog.toLowerCase().includes(query)
         );
 
@@ -92,7 +92,7 @@ export default function App() {
       // Filtro por programa (selección múltiple: debe coincidir con alguno de los seleccionados)
       if (filtros.programasSeleccionados.length > 0) {
         const coincideConAlgunPrograma = filtros.programasSeleccionados.some(
-          (prog) => (p.programa || []).includes(prog)
+          (prog) => (p.programas || p.programa || []).includes(prog)
         );
         if (!coincideConAlgunPrograma) return false;
       }
