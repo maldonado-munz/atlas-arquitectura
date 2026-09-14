@@ -1,0 +1,3182 @@
+[
+  {
+    "id": "catedral-de-san-marcos-arica",
+    "nombre_proyecto": "Catedral de San Marcos de Arica",
+    "arquitecto": "Gustave Eiffel",
+    "arquitecto_principal": "Gustave Eiffel",
+    "colaboradores": "Talleres Eiffel (París)",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Colón, San Marcos 202, Arica",
+    "coordenadas": {
+      "lat": -18.4795,
+      "lng": -70.3204
+    },
+    "ano_diseno": "1871",
+    "anos_construccion": "1875-1876",
+    "ano_inauguracion": "1876",
+    "estilos": [
+      "Neogótico",
+      "Arquitectura en Hierro"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estructura metálica prefabricada en los talleres de Gustave Eiffel en Francia, encargada por el presidente peruano José Balta para Ancón y destinada finalmente a Arica tras el terremoto de 1868. Posee muros y pilares de hierro colado con vitrales y una esbelta torre campanario.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hierro fundido prefabricado",
+      "Chapa de acero",
+      "Vidrio catedral"
+    ]
+  },
+  {
+    "id": "iglesia-san-antonio-padua-pobre",
+    "nombre_proyecto": "Iglesia San Antonio de Padua de Pobre",
+    "arquitecto": "Misioneros y Comunidad local",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pueblo de Pobre, Putre, Región de Arica y Parinacota",
+    "coordenadas": {
+      "lat": -18.1965,
+      "lng": -69.5592
+    },
+    "ano_diseno": "1650",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1680",
+    "estilos": [
+      "Barroco Andino",
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo andino de adobe y piedra de la Ruta de las Misiones. Presenta nave única con techumbre de tijerales de queñoa y paja brava, campanario exento y un retablo rústico policromado de profundo valor sincrético.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra andesita",
+      "Madera de queñoa",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-san-pedro-esquina",
+    "nombre_proyecto": "Iglesia de San Pedro de Esquiña",
+    "arquitecto": "Comunidad Andina",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Esquiña, Comuna de Camarones",
+    "coordenadas": {
+      "lat": -19.0142,
+      "lng": -69.7028
+    },
+    "ano_diseno": "1580",
+    "anos_construccion": "Siglo XVI",
+    "ano_inauguracion": "1590",
+    "estilos": [
+      "Barroco Andino",
+      "Vernáculo"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Una de las iglesias más tempranas del norte chileno, construida en la quebrada de Esquiña. Su fábrica de piedra canteada con mortero de barro exhibe contrafuertes monumentales y un portal tallado en cantería.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Barro",
+      "Queñoa",
+      "Caña"
+    ]
+  },
+  {
+    "id": "iglesia-virgen-rosario-codpa",
+    "nombre_proyecto": "Iglesia de Virgen del Rosario de Codpa",
+    "arquitecto": "Comunidad andina y clero doctrinero",
+    "arquitecto_principal": "Comunidad andina",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza del Pueblo de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.8315,
+      "lng": -69.7431
+    },
+    "ano_diseno": "1660",
+    "anos_construccion": "1668",
+    "ano_inauguracion": "1668",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Hito fundamental del Valle de Codpa, célebre por su producción vitivinícola y su templo de nave longitudinal con coro alto de madera tallada y pintura mural andina con motivos fitomorfos y ángeles arcabuceros.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Madera nativa",
+      "Teja de barro"
+    ]
+  },
+  {
+    "id": "iglesia-de-pachama",
+    "nombre_proyecto": "Iglesia de Pachama (Nuestra Señora de la Candelaria)",
+    "arquitecto": "Misioneros y maestros andinos",
+    "arquitecto_principal": "Maestros andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pachama, precordillera de Putre",
+    "coordenadas": {
+      "lat": -18.4556,
+      "lng": -69.5898
+    },
+    "ano_diseno": "1710",
+    "anos_construccion": "1718",
+    "ano_inauguracion": "1718",
+    "estilos": [
+      "Barroco Mestizo Andino"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Reconocida mundialmente por poseer el ciclo muralístico barroco andino más completo de los Andes australes. La totalidad de sus muros interiores está recubierta con frescos coloniales del Juicio Final, Vía Crucis y figuras de santos enmarcados en pan de oro.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Pintura al temple mural",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-san-santiago-belen",
+    "nombre_proyecto": "Iglesia San Santiago de Belén",
+    "arquitecto": "Misioneros Franciscanos",
+    "arquitecto_principal": "Misioneros Franciscanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de Belén, Putre",
+    "coordenadas": {
+      "lat": -18.4682,
+      "lng": -69.5165
+    },
+    "ano_diseno": "1620",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1625",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo tutelar del único pueblo fundado por españoles en la sierra de Arica. Sobresale su pórtico labrado en cantería de piedra y su torre campanario exenta de dos niveles coronada con cúpula rústica.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra andesita",
+      "Madera de cactus cardón",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-socoroma",
+    "nombre_proyecto": "Iglesia de San Francisco de Socoroma",
+    "arquitecto": "Comunidad Aymara y Franciscanos",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Socoroma, Comuna de Putre",
+    "coordenadas": {
+      "lat": -18.2612,
+      "lng": -69.5843
+    },
+    "ano_diseno": "1560",
+    "anos_construccion": "1560 / 1770",
+    "ano_inauguracion": "1770",
+    "estilos": [
+      "Arquitectura Andina Tradicional",
+      "Barroco Mestizo"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo enclavado en terrazas de cultivo andinas a 3.000 metros de altitud. Destaca su muro perimetral de piedra pircada, portal labrado en toba volcánica y un retablo con policromía colonial.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobón",
+      "Piedra toba volcánica",
+      "Paja brava",
+      "Madera"
+    ]
+  },
+  {
+    "id": "iglesia-de-chitita",
+    "nombre_proyecto": "Iglesia de Chitita (San Pedro)",
+    "arquitecto": "Misioneros Doctrinares",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Chitita, Valle de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.8103,
+      "lng": -69.7188
+    },
+    "ano_diseno": "1650",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1680",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Ubicada en la histórica Ruta del Mercurio que transportaba azogue desde Huancavelica a Potosí. Capilla de proporciones íntimas con atrio amurallado, campanario de un cuerpo y techumbre vegetal.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra rústica",
+      "Madera de chañar",
+      "Caña"
+    ]
+  },
+  {
+    "id": "iglesia-de-guallatire",
+    "nombre_proyecto": "Iglesia de Guallatire (Virgen de la Inmaculada Concepción)",
+    "arquitecto": "Comunidad pastoril aymara",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Guallatire, Reserva Las Vicuñas, Putre",
+    "coordenadas": {
+      "lat": -18.5061,
+      "lng": -69.1554
+    },
+    "ano_diseno": "1820",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1840",
+    "estilos": [
+      "Vernáculo Altiplánico"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Erigida a 4.300 metros de altitud frente al imponente Volcán Guallatiri activo y humeante. Se alza sobre una pequeña colina rodeada de un muro perimetral con arcos de acceso encalados en blanco absoluto.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro encalado",
+      "Paja brava",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-parinacota",
+    "nombre_proyecto": "Iglesia de Parinacota (Virgen de la Natividad)",
+    "arquitecto": "Maestros constructores Aymara",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Parinacota, Parque Nacional Lauca, Putre",
+    "coordenadas": {
+      "lat": -18.2011,
+      "lng": -69.2687
+    },
+    "ano_diseno": "1775",
+    "anos_construccion": "1789",
+    "ano_inauguracion": "1789",
+    "estilos": [
+      "Barroco Andino",
+      "Patrimonio Mundial Indicativo"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Joya cumbre del altiplano chileno a 4.400 msnm. Muros de calicanto encalados, arco triunfal interior, frescos del infierno y purgatorio y un atrio cercado con torrecillas esquineras coronadas por esculturas antropomorfas en piedra.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Calicanto",
+      "Paja brava",
+      "Cuero de vicuña"
+    ]
+  },
+  {
+    "id": "iglesia-de-caquena",
+    "nombre_proyecto": "Iglesia de Caquena",
+    "arquitecto": "Comunidad Aymara de Caquena",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Caquena, General Lagos",
+    "coordenadas": {
+      "lat": -18.0558,
+      "lng": -69.2014
+    },
+    "ano_diseno": "1880",
+    "anos_construccion": "1885-1890",
+    "ano_inauguracion": "1890",
+    "estilos": [
+      "Vernáculo Andino Altiplánico"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Templo andino altiplánico situado en uno de los bofedales más extensos de la frontera tripartita. Campanario adosado de baja altura para resistir vientos catabáticos y sismos extremos.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra laja",
+      "Barro",
+      "Paja brava",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-cosapilla",
+    "nombre_proyecto": "Iglesia de Cosapilla",
+    "arquitecto": "Arrieros y pastores de Guacollo",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Cosapilla, General Lagos",
+    "coordenadas": {
+      "lat": -17.8423,
+      "lng": -69.4589
+    },
+    "ano_diseno": "1850",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1870",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Templo de piedra y cal asentado en la meseta andina septentrional. Su volumetría pura y compacta responde a la protección térmica contra las temperaturas bajo cero del altiplano.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra blanca",
+      "Cal viva",
+      "Tijerales de queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-visviri",
+    "nombre_proyecto": "Iglesia de Visviri",
+    "arquitecto": "Comunidad Aymara Fronteriza",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Hito Tripartito, Visviri, General Lagos",
+    "coordenadas": {
+      "lat": -17.5962,
+      "lng": -69.4828
+    },
+    "ano_diseno": "1870",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1885",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Hito arquitectónico en el punto más septentrional de Chile, adyacente a la feria dominical tripartita entre Chile, Bolivia y Perú. Representa la persistencia de las técnicas constructivas prehispánicas.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-de-timar",
+    "nombre_proyecto": "Iglesia de San Juan Bautista de Timar",
+    "arquitecto": "Comunidad de Timar",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Timar, Camarones",
+    "coordenadas": {
+      "lat": -18.7516,
+      "lng": -69.6922
+    },
+    "ano_diseno": "1730",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1750",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Templo de quebrada construido con mampostería de piedra rústica y argamasa de barro. Destaca su pórtico enmarcado con pilastras y un calvario atrial en el acceso.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra",
+      "Barro",
+      "Caña brava",
+      "Madera nativa"
+    ]
+  },
+  {
+    "id": "iglesia-de-cobija",
+    "nombre_proyecto": "Iglesia de Cobija (Camarones)",
+    "arquitecto": "Pobladores de Cobija",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Cobija, Camarones",
+    "coordenadas": {
+      "lat": -18.9667,
+      "lng": -69.75
+    },
+    "ano_diseno": "1640",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1670",
+    "estilos": [
+      "Arquitectura Rupestre-Andina"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Estructura rústica levantada con grandes bloques de piedra ensamblados al seco y repellados interiormente con greda blanca. Forma parte del patrimonio sacro de las quebradas altas.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra del lugar",
+      "Barro",
+      "Paja"
+    ]
+  },
+  {
+    "id": "iglesia-de-sora",
+    "nombre_proyecto": "Iglesia de Sora",
+    "arquitecto": "Comunidad de Sora",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Sora, Valle de Lluta alto, Arica",
+    "coordenadas": {
+      "lat": -18.15,
+      "lng": -69.8
+    },
+    "ano_diseno": "1740",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1765",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Capilla rústica andina emplazada en el curso superior del río Lluta. Su sobria volumetría con campanario integrado en el hastial responde a las formas ancestrales de los tambos.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Madera de cactus"
+    ]
+  },
+  {
+    "id": "ex-aduana-de-arica",
+    "nombre_proyecto": "Ex-Aduana de Arica / Casa de la Cultura",
+    "arquitecto": "Gustave Eiffel",
+    "arquitecto_principal": "Gustave Eiffel",
+    "colaboradores": "Talleres Eiffel",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Máximo Lira s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4772,
+      "lng": -70.3223
+    },
+    "ano_diseno": "1871",
+    "anos_construccion": "1871-1874",
+    "ano_inauguracion": "1874",
+    "estilos": [
+      "Neoclásico",
+      "Arquitectura en Hierro"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional diseñado por Gustave Eiffel en París. Estructura metálica prefabricada con muros de ladrillos importados de Inglaterra montados en seco, techumbre de cerchas metálicas y doble fachada ventilada.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hierro fundido",
+      "Ladrillo inglés",
+      "Pino oregón"
+    ]
+  },
+  {
+    "id": "casa-bolognesi-arica",
+    "nombre_proyecto": "Casa Bolognesi",
+    "arquitecto": "Desconocido (Período Republicano Peruano)",
+    "arquitecto_principal": "Constructores locales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Yungay 102 con Colón, Arica",
+    "coordenadas": {
+      "lat": -18.4808,
+      "lng": -70.3208
+    },
+    "ano_diseno": "1865",
+    "anos_construccion": "1868-1870",
+    "ano_inauguracion": "1870",
+    "estilos": [
+      "Colonial Republicano Peruano",
+      "Vernáculo Urbano"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Casona histórica de dos niveles con corredor superior de madera, carpintería de pino oregón y patio central interior. Testigo de los hechos del Morro de Arica durante la Guerra del Pacífico.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Tabiquería de caña guayaquil",
+      "Pino oregón"
+    ]
+  },
+  {
+    "id": "estacion-ferrocarril-arica-la-paz",
+    "nombre_proyecto": "Estación del Ferrocarril Arica-La Paz (FCALP)",
+    "arquitecto": "Empresa de los Ferrocarriles del Estado (EFE) / MOP",
+    "arquitecto_principal": "Ingenieros EFE",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Chile s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4725,
+      "lng": -70.3182
+    },
+    "ano_diseno": "1906",
+    "anos_construccion": "1909-1913",
+    "ano_inauguracion": "1913",
+    "estilos": [
+      "Neoclásico Industrial",
+      "Arquitectura Ferroviaria"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estación terminal del histórico ferrocarril binacional derivado del Tratado de 1904 entre Chile y Bolivia. Combina mampostería de piedra, andenes techados con marquesinas de acero y oficinas neoclásicas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Acero estructural",
+      "Hormigón",
+      "Pino oregón",
+      "Piedra"
+    ]
+  },
+  {
+    "id": "estacion-ferrocarril-arica-tacna",
+    "nombre_proyecto": "Estación del Ferrocarril Arica-Tacna",
+    "arquitecto": "Walton Evans",
+    "arquitecto_principal": "Walton Evans",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Máximo Lira con 21 de Mayo, Arica",
+    "coordenadas": {
+      "lat": -18.4758,
+      "lng": -70.3211
+    },
+    "ano_diseno": "1853",
+    "anos_construccion": "1854-1856",
+    "ano_inauguracion": "1856",
+    "estilos": [
+      "Industrial Británico-Americano"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "El ferrocarril internacional más antiguo aún en operaciones en Sudamérica y el segundo construido en Chile/Perú. Destaca su terminal de carpintería clásica en madera y su maestranza de locomotoras históricas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Hierro galvanizado",
+      "Rieles de acero"
+    ]
+  },
+  {
+    "id": "mercado-central-de-arica",
+    "nombre_proyecto": "Mercado Central de Arica",
+    "arquitecto": "Talleres franceses / Muelle y Abastos Arica",
+    "arquitecto_principal": "Ingeniería Francesa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Bolognesi con Colón, Arica",
+    "coordenadas": {
+      "lat": -18.4789,
+      "lng": -70.3188
+    },
+    "ano_diseno": "1874",
+    "anos_construccion": "1875",
+    "ano_inauguracion": "1875",
+    "estilos": [
+      "Arquitectura en Hierro",
+      "Industrial Comercial"
+    ],
+    "programa": [
+      "Comercial",
+      "Patrimonio"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estructura de hierro fundido importada desde Europa con celosías de ventilación superior adaptadas al clima desértico marítimo. Articula el corazón del comercio tradicional de valles de Azapa y Lluta.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hierro fundido",
+      "Chapa metálica ondulada",
+      "Mampostería"
+    ]
+  },
+  {
+    "id": "teatro-municipal-de-arica",
+    "nombre_proyecto": "Teatro Municipal de Arica (Ex Cine Colón)",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Baquedano 234, Arica",
+    "coordenadas": {
+      "lat": -18.4791,
+      "lng": -70.3195
+    },
+    "ano_diseno": "1978",
+    "anos_construccion": "1980-1984",
+    "ano_inauguracion": "1984",
+    "estilos": [
+      "Postmodernismo Cívico",
+      "Brutalismo"
+    ],
+    "programa": [
+      "Cultura",
+      "Teatro"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Principal sala escénica de la región, concebida con volumetría escultórica en hormigón visto martillado y muros acústicos texturados para acoger conciertos, ópera y danza.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Madera acústica",
+      "Acero"
+    ]
+  },
+  {
+    "id": "gobernacion-maritima-de-arica",
+    "nombre_proyecto": "Gobernación Marítima de Arica",
+    "arquitecto": "Armada de Chile / MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Comandante San Martín s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4782,
+      "lng": -70.3236
+    },
+    "ano_diseno": "1923",
+    "anos_construccion": "1924-1925",
+    "ano_inauguracion": "1925",
+    "estilos": [
+      "Neoclásico Tardío"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio cívico costero con pórtico monumental dórico, balcones sobre la rada portuaria y remate de torre de observación meteorológica y marítima.",
+    "fuente_url": "https://www.armada.cl",
+    "materiales_principales": [
+      "Albañilería de ladrillo reforzado",
+      "Yeso y estuco",
+      "Madera"
+    ]
+  },
+  {
+    "id": "casino-municipal-de-arica",
+    "nombre_proyecto": "Casino Municipal de Arica",
+    "arquitecto": "Junta de Adelanto de Arica (JAA)",
+    "arquitecto_principal": "Arquitectos JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez 955, Arica",
+    "coordenadas": {
+      "lat": -18.4798,
+      "lng": -70.3135
+    },
+    "ano_diseno": "1958",
+    "anos_construccion": "1959-1960",
+    "ano_inauguracion": "1960",
+    "estilos": [
+      "Movimiento Moderno"
+    ],
+    "programa": [
+      "Recreación / Entretenimiento"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "El primer casino municipal del extremo norte, construido como emblema turístico del Puerto Libre por la JAA. Presenta amplias losas en voladizo, muros cortina y jardines xerófitos subtropicales.",
+    "fuente_url": "https://www.aricacity.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Vidrio",
+      "Mármol reconstituido"
+    ]
+  },
+  {
+    "id": "edificio-municipalidad-de-arica",
+    "nombre_proyecto": "Edificio Consistorial de la Ilustre Municipalidad de Arica",
+    "arquitecto": "Junta de Adelanto de Arica / MOP",
+    "arquitecto_principal": "Arquitectos JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Sotomayor 415, Arica",
+    "coordenadas": {
+      "lat": -18.4777,
+      "lng": -70.3185
+    },
+    "ano_diseno": "1969",
+    "anos_construccion": "1970-1972",
+    "ano_inauguracion": "1972",
+    "estilos": [
+      "Racionalismo Institucional",
+      "Brutalismo"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio cívico con celosías de brise-soleil horizontales de hormigón armado concebidas para el control térmico del desierto marítimo, planta libre y patio cívico ceremonial.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado visto",
+      "Vidrio",
+      "Aluminio anodizado"
+    ]
+  },
+  {
+    "id": "ex-cine-tacora-arica",
+    "nombre_proyecto": "Ex Cine Tacora",
+    "arquitecto": "Desconocido",
+    "arquitecto_principal": "Constructores modernos locales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Santa María con Diego Portales, Arica",
+    "coordenadas": {
+      "lat": -18.4718,
+      "lng": -70.3072
+    },
+    "ano_diseno": "1953",
+    "anos_construccion": "1954-1955",
+    "ano_inauguracion": "1955",
+    "estilos": [
+      "Expresionismo Moderno"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Moderno"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio icónico de la época de oro del cine en el norte chileno. Su fachada curva expresionista de hormigón armado y marquesina flotante constituyen un símbolo del paisaje urbano ariqueño.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Estuco pintado",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "faro-del-morro-de-arica",
+    "nombre_proyecto": "Faro del Morro de Arica",
+    "arquitecto": "Servicio de Señalización Marítima de Chile",
+    "arquitecto_principal": "Ingenieros de la Armada",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cima del Morro de Arica",
+    "coordenadas": {
+      "lat": -18.4815,
+      "lng": -70.3262
+    },
+    "ano_diseno": "1912",
+    "anos_construccion": "1913",
+    "ano_inauguracion": "1913",
+    "estilos": [
+      "Arquitectura Faro Industrial"
+    ],
+    "programa": [
+      "Infraestructura Marítima"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Torre cilíndrica de planchas de acero remachadas situada sobre el histórico promontorio rocoso del Morro a 130 metros sobre el nivel del mar, orientando el tráfico marítimo del Pacífico Sur.",
+    "fuente_url": "https://www.armada.cl",
+    "materiales_principales": [
+      "Acero remachado",
+      "Fundación de hormigón",
+      "Óptica de Fresnel"
+    ]
+  },
+  {
+    "id": "consultorio-bertin-soto-arica",
+    "nombre_proyecto": "Ex Consultorio Dr. Víctor Bertín Soto",
+    "arquitecto": "Corporación de la Vivienda (CORVI)",
+    "arquitecto_principal": "Equipo de Arquitectura CORVI",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Belén 1635, Arica",
+    "coordenadas": {
+      "lat": -18.4831,
+      "lng": -70.3015
+    },
+    "ano_diseno": "1963",
+    "anos_construccion": "1964-1965",
+    "ano_inauguracion": "1965",
+    "estilos": [
+      "Movimiento Moderno",
+      "Racionalismo"
+    ],
+    "programa": [
+      "Salud"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Infraestructura pública de salud moderna diseñada con pabellones lineales interconectados por patios sombreados, ventilación cruzada continua y cubiertas aislantes al sol del desierto.",
+    "fuente_url": "https://www.saludarica.cl",
+    "materiales_principales": [
+      "Albañilería confinada",
+      "Losa de hormigón",
+      "Celosías cerámicas"
+    ]
+  },
+  {
+    "id": "edificio-correos-de-chile-arica",
+    "nombre_proyecto": "Edificio Correos de Chile de Arica",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle 21 de Mayo con Prat, Arica",
+    "coordenadas": {
+      "lat": -18.4784,
+      "lng": -70.319
+    },
+    "ano_diseno": "1968",
+    "anos_construccion": "1969-1970",
+    "ano_inauguracion": "1970",
+    "estilos": [
+      "Modernismo Cívico"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio postal en esquina con trama de brise-soleil modular en fachada y amplio hall público a doble altura que vincula el paseo peatonal más tradicional de la ciudad.",
+    "fuente_url": "https://www.correos.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Muro cortina",
+      "Granito pulido"
+    ]
+  },
+  {
+    "id": "escuela-gabriela-mistral-arica",
+    "nombre_proyecto": "Escuela Gabriela Mistral",
+    "arquitecto": "Sociedad Constructora de Establecimientos Educacionales (SCEE)",
+    "arquitecto_principal": "Equipo de Arquitectura SCEE",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Baquedano 630, Arica",
+    "coordenadas": {
+      "lat": -18.482,
+      "lng": -70.3175
+    },
+    "ano_diseno": "1942",
+    "anos_construccion": "1944-1945",
+    "ano_inauguracion": "1945",
+    "estilos": [
+      "Racionalismo Educacional",
+      "Barco / Streamline Moderne"
+    ],
+    "programa": [
+      "Educación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Colegio público que aplica los cánones de la arquitectura naval y moderna promovidos por la SCEE: esquinas redondeadas, ventanas corridas y amplios patios cubiertos para recreación escolar.",
+    "fuente_url": "https://www.patrimoniochileno.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Albañilería de ladrillo",
+      "Ventanas de acero"
+    ]
+  },
+  {
+    "id": "regimiento-rancagua-arica",
+    "nombre_proyecto": "Regimiento Rancagua (Cuartel Histórico)",
+    "arquitecto": "Dirección General de Obras Públicas",
+    "arquitecto_principal": "Ingenieros Militares MOP",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4842,
+      "lng": -70.311
+    },
+    "ano_diseno": "1926",
+    "anos_construccion": "1927-1928",
+    "ano_inauguracion": "1928",
+    "estilos": [
+      "Neoclásico Militar"
+    ],
+    "programa": [
+      "Militar / Institucional"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Conjunto militar amurallado con pabellones de oficiales simétricos, arquerías en claustro y portal monumental de ingreso que consolidó la presencia cívico-militar chilena post Tratado de Lima.",
+    "fuente_url": "https://www.ejercito.cl",
+    "materiales_principales": [
+      "Albañilería reforzada",
+      "Hormigón",
+      "Madera nativa"
+    ]
+  },
+  {
+    "id": "poblacion-chinchorro-arica",
+    "nombre_proyecto": "Población Chinchorro",
+    "arquitecto": "Corporación de la Vivienda (CORVI)",
+    "arquitecto_principal": "Equipo de Arquitectura CORVI",
+    "colaboradores": "Junta de Adelanto de Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Chinchorro Oriente, Arica",
+    "coordenadas": {
+      "lat": -18.455,
+      "lng": -70.301
+    },
+    "ano_diseno": "1960",
+    "anos_construccion": "1961-1962",
+    "ano_inauguracion": "1962",
+    "estilos": [
+      "Racionalismo",
+      "Vivienda Social Moderna"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Emblemático conjunto habitacional de la CORVI que introdujo la tipología de bloques lineales con ventilación cruzada y celosías cerámicas para responder al clima desértico costero de Arica.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Albañilería confinada",
+      "Losa de hormigón",
+      "Celosía de greda cocida"
+    ]
+  },
+  {
+    "id": "poblacion-magisterio-arica",
+    "nombre_proyecto": "Población Magisterio",
+    "arquitecto": "Junta de Adelanto de Arica / CORVI",
+    "arquitecto_principal": "Equipo Técnico JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. 18 de Septiembre con Tucapel, Arica",
+    "coordenadas": {
+      "lat": -18.487,
+      "lng": -70.305
+    },
+    "ano_diseno": "1963",
+    "anos_construccion": "1964-1965",
+    "ano_inauguracion": "1965",
+    "estilos": [
+      "Movimiento Moderno",
+      "Vivienda Social"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Barrio residencial planificado para el gremio docente, caracterizado por viviendas pareadas de un piso con cubiertas ligeras, patios interiores y pasajes peatonales arbolados.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Bloque de hormigón",
+      "Madera",
+      "Cubierta de asbesto-cemento"
+    ]
+  },
+  {
+    "id": "poblacion-juan-noe-arica",
+    "nombre_proyecto": "Población Juan Noé",
+    "arquitecto": "Junta de Adelanto de Arica (JAA)",
+    "arquitecto_principal": "Arquitectos JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Juan Noé, Av. Diego Portales, Arica",
+    "coordenadas": {
+      "lat": -18.4735,
+      "lng": -70.3032
+    },
+    "ano_diseno": "1966",
+    "anos_construccion": "1967-1968",
+    "ano_inauguracion": "1968",
+    "estilos": [
+      "Racionalismo",
+      "Urbanismo Moderno"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Gran intervención urbana de la JAA concebida con supermanzanas, áreas verdes comunitarias y equipamiento vecinal integral para los obreros de las industrias automotrices.",
+    "fuente_url": "https://www.uta.cl",
+    "materiales_principales": [
+      "Albañilería de ladrillo",
+      "Hormigón armado",
+      "Perfiles de acero"
+    ]
+  },
+  {
+    "id": "conjunto-habitacional-estadio-arica",
+    "nombre_proyecto": "Conjunto Habitacional Estadio",
+    "arquitecto": "CORVI / Junta de Adelanto de Arica",
+    "arquitecto_principal": "Equipo CORVI",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Adyacente al Estadio Carlos Dittborn, Arica",
+    "coordenadas": {
+      "lat": -18.4855,
+      "lng": -70.298
+    },
+    "ano_diseno": "1962",
+    "anos_construccion": "1963-1964",
+    "ano_inauguracion": "1964",
+    "estilos": [
+      "Movimiento Moderno",
+      "Brutalismo"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificios de cuatro pisos estructurados en hormigón armado a la vista con pasarelas de circulación abiertas que favorecen el encuentro vecinal y la brisa marina nocturna.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado visto",
+      "Albañilería",
+      "Barandas metálicas"
+    ]
+  },
+  {
+    "id": "poblacion-manuel-rodriguez-arica",
+    "nombre_proyecto": "Población Manuel Rodríguez",
+    "arquitecto": "Corporación de la Vivienda (CORVI)",
+    "arquitecto_principal": "CORVI",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Cerro La Cruz, Arica",
+    "coordenadas": {
+      "lat": -18.489,
+      "lng": -70.315
+    },
+    "ano_diseno": "1959",
+    "anos_construccion": "1960",
+    "ano_inauguracion": "1960",
+    "estilos": [
+      "Racionalismo"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Asentamiento moderno escalonado sobre la topografía del cerro, empleando muros de contención de piedra andesita y casas de albañilería con azoteas transitables.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Piedra de cantera",
+      "Ladrillo",
+      "Losa de hormigón"
+    ]
+  },
+  {
+    "id": "poblacion-carlos-pezoa-veliz-arica",
+    "nombre_proyecto": "Población Carlos Pezoa Véliz",
+    "arquitecto": "Corporación de la Vivienda (CORVI)",
+    "arquitecto_principal": "CORVI",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Azolas con Renato Rocca, Arica",
+    "coordenadas": {
+      "lat": -18.468,
+      "lng": -70.299
+    },
+    "ano_diseno": "1968",
+    "anos_construccion": "1969-1970",
+    "ano_inauguracion": "1970",
+    "estilos": [
+      "Racionalismo",
+      "Bloques CORVI"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Conjunto de bloques habitacionales prefabricados tipo H con escaleras abiertas exentas y marquesinas de hormigón que generan sombras arrojadas sobre las fachadas.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Paneles premoldeados",
+      "Malla metálica"
+    ]
+  },
+  {
+    "id": "edificio-plaza-condell-arica",
+    "nombre_proyecto": "Edificio Plaza Condell",
+    "arquitecto": "Privado / Constructora JAA",
+    "arquitecto_principal": "Arquitectos Modernos Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Condell, Calle Patricio Lynch, Arica",
+    "coordenadas": {
+      "lat": -18.479,
+      "lng": -70.316
+    },
+    "ano_diseno": "1969",
+    "anos_construccion": "1970-1971",
+    "ano_inauguracion": "1971",
+    "estilos": [
+      "Racionalismo en Altura"
+    ],
+    "programa": [
+      "Residencial",
+      "Comercial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Torre habitacional pionera en el centro urbano de Arica con placa comercial en primer piso, balcones voladizos continuos y remate con terraza panorámica sobre el puerto.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Vidrio",
+      "Aluminio"
+    ]
+  },
+  {
+    "id": "poblacion-cardenal-silva-henriquez-arica",
+    "nombre_proyecto": "Población Cardenal Silva Henríquez",
+    "arquitecto": "Ministerio de la Vivienda y Urbanismo (MINVU)",
+    "arquitecto_principal": "MINVU Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Norte, Av. Cancha Rayada, Arica",
+    "coordenadas": {
+      "lat": -18.442,
+      "lng": -70.292
+    },
+    "ano_diseno": "1976",
+    "anos_construccion": "1977-1978",
+    "ano_inauguracion": "1978",
+    "estilos": [
+      "Vivienda Estatal Densa"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Mega población del norte de la ciudad que absorbió el crecimiento demográfico obrero y pesquero con una retícula ordenada de bloques multifamiliares.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Bloques de concreto",
+      "Hormigón armado",
+      "Tejuelas asfálticas"
+    ]
+  },
+  {
+    "id": "poblacion-san-jose-arica",
+    "nombre_proyecto": "Población San José",
+    "arquitecto": "Junta de Adelanto de Arica (JAA)",
+    "arquitecto_principal": "JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector San José, Arica",
+    "coordenadas": {
+      "lat": -18.481,
+      "lng": -70.294
+    },
+    "ano_diseno": "1964",
+    "anos_construccion": "1965-1966",
+    "ano_inauguracion": "1966",
+    "estilos": [
+      "Movimiento Moderno",
+      "Vivienda Social"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Desarrollo habitacional de escala barrial con plazas centrales triangulares, centros comunitarios y viviendas de crecimiento progresivo.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Albañilería",
+      "Madera",
+      "Cubiertas de zinc"
+    ]
+  },
+  {
+    "id": "conjunto-habitacional-san-marcos-arica",
+    "nombre_proyecto": "Conjunto Habitacional San Marcos",
+    "arquitecto": "Corporación de Mejoramiento Urbano (CORMU) / CORVU",
+    "arquitecto_principal": "Equipo CORMU",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Santa María con Juan Noé, Arica",
+    "coordenadas": {
+      "lat": -18.475,
+      "lng": -70.309
+    },
+    "ano_diseno": "1971",
+    "anos_construccion": "1972-1973",
+    "ano_inauguracion": "1973",
+    "estilos": [
+      "Racionalismo",
+      "Bloque CORVU"
+    ],
+    "programa": [
+      "Vivienda"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Bloques de viviendas de alta densidad que representan el período tardío de las corporaciones estatales chilenas, con patios comunes y pasillos exteriores en voladizo.",
+    "fuente_url": "https://www.minvu.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Ladrillo princesa",
+      "Acero"
+    ]
+  },
+  {
+    "id": "edificio-alborada-arica",
+    "nombre_proyecto": "Edificio Alborada",
+    "arquitecto": "Arquitectos Modernos del Norte",
+    "arquitecto_principal": "Oficina Técnica Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle 18 de Septiembre 340, Arica",
+    "coordenadas": {
+      "lat": -18.4812,
+      "lng": -70.317
+    },
+    "ano_diseno": "1972",
+    "anos_construccion": "1973-1974",
+    "ano_inauguracion": "1974",
+    "estilos": [
+      "Movimiento Moderno",
+      "Residencial"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio habitacional en altura con quiebrasoles verticales de hormigón y vanos profundos para mitigar la radiación del mediodía.",
+    "fuente_url": "https://www.uta.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Mármol reconstituido",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "estadio-carlos-dittborn-arica",
+    "nombre_proyecto": "Estadio Carlos Dittborn",
+    "arquitecto": "Karl Sorensen / Junta de Adelanto de Arica",
+    "arquitecto_principal": "Karl Sorensen",
+    "colaboradores": "Junta de Adelanto de Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. 18 de Septiembre 2000, Arica",
+    "coordenadas": {
+      "lat": -18.4875,
+      "lng": -70.2977
+    },
+    "ano_diseno": "1960",
+    "anos_construccion": "1961-1962",
+    "ano_inauguracion": "1962",
+    "estilos": [
+      "Movimiento Moderno",
+      "Brutalismo Deportivo"
+    ],
+    "programa": [
+      "Deportivo"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Sede de la Copa Mundial de la FIFA Chile 1962 construida en tiempo récord por la Junta de Adelanto. Destaca su estructura de graderías cóncavas de hormigón armado y su marquesina volada en tribuna oficial.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado pretensado",
+      "Acero",
+      "Tierra compactada"
+    ]
+  },
+  {
+    "id": "campus-velasquez-uta-arica",
+    "nombre_proyecto": "Campus Velásquez Universidad de Tarapacá",
+    "arquitecto": "Junta de Adelanto de Arica / MOP",
+    "arquitecto_principal": "Equipo JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez 1775, Arica",
+    "coordenadas": {
+      "lat": -18.4905,
+      "lng": -70.306
+    },
+    "ano_diseno": "1963",
+    "anos_construccion": "1964-1965",
+    "ano_inauguracion": "1965",
+    "estilos": [
+      "Brutalismo Universitario",
+      "Modernismo"
+    ],
+    "programa": [
+      "Educación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Campus universitario fundado en la era dorada de la JAA (originalmente Universidad del Norte / Universidad de Chile sede Arica). Pabellones con patios de luz, galerías porticadas y auditorio de hormigón visto.",
+    "fuente_url": "https://www.uta.cl",
+    "materiales_principales": [
+      "Hormigón armado visto",
+      "Madera",
+      "Piedra local"
+    ]
+  },
+  {
+    "id": "piscina-olimpica-de-arica",
+    "nombre_proyecto": "Piscina Olímpica de Arica",
+    "arquitecto": "Junta de Adelanto de Arica (JAA)",
+    "arquitecto_principal": "Arquitectos e Ingenieros JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Comandante San Martín s/n, Costanera Sur, Arica",
+    "coordenadas": {
+      "lat": -18.4895,
+      "lng": -70.3245
+    },
+    "ano_diseno": "1970",
+    "anos_construccion": "1971-1972",
+    "ano_inauguracion": "1972",
+    "estilos": [
+      "Brutalismo Estructural",
+      "Modernismo Costero"
+    ],
+    "programa": [
+      "Deportivo"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Complejo acuático al aire libre frente al Océano Pacífico, con graderías monumentales en voladizo de hormigón armado y foso de saltos ornamentales con plataforma escultural.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado impermeable",
+      "Acero inoxidable",
+      "Cerámica vitrificada"
+    ]
+  },
+  {
+    "id": "hotel-el-paso-arica",
+    "nombre_proyecto": "Hotel El Paso",
+    "arquitecto": "Corporación de Fomento de la Producción (CORFO)",
+    "arquitecto_principal": "Equipo de Arquitectura Hotelera CORFO",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez 1109, Arica",
+    "coordenadas": {
+      "lat": -18.483,
+      "lng": -70.3125
+    },
+    "ano_diseno": "1953",
+    "anos_construccion": "1954-1955",
+    "ano_inauguracion": "1955",
+    "estilos": [
+      "Movimiento Moderno",
+      "Arquitectura Hotelera de Estado"
+    ],
+    "programa": [
+      "Hotelero / Turístico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Hito de la red estatal de hoteles y hosterías de Chile (HONSA). Diseñado con pabellones horizontales articulados en torno a jardines tropicales, terrazas sombreadas y alberca privada.",
+    "fuente_url": "https://www.patrimoniomoderno.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Madera nativa",
+      "Mampostería de piedra"
+    ]
+  },
+  {
+    "id": "hosteria-arica-faa",
+    "nombre_proyecto": "Hostería Arica",
+    "arquitecto": "HONSA / CORFO",
+    "arquitecto_principal": "Arquitectos HONSA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Comandante San Martín 599, Playa El Laucho, Arica",
+    "coordenadas": {
+      "lat": -18.487,
+      "lng": -70.3255
+    },
+    "ano_diseno": "1956",
+    "anos_construccion": "1957-1958",
+    "ano_inauguracion": "1958",
+    "estilos": [
+      "Movimiento Moderno en la Costa"
+    ],
+    "programa": [
+      "Hotelero / Turístico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Emplazada al borde de los requeríos y arenas de Playa El Laucho, su arquitectura se abre en amplios ventanales corridos hacia el océano, integrando salones de fiesta con cubiertas plegadas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Vidrio templado",
+      "Piedra de mar"
+    ]
+  },
+  {
+    "id": "museo-de-sitio-colon-10-arica",
+    "nombre_proyecto": "Museo de Sitio Colón 10",
+    "arquitecto": "Sebastián Irarrázaval",
+    "arquitecto_principal": "Sebastián Irarrázaval",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Colón 10, Casco Histórico, Arica",
+    "coordenadas": {
+      "lat": -18.48,
+      "lng": -70.3225
+    },
+    "ano_diseno": "2003",
+    "anos_construccion": "2003-2004",
+    "ano_inauguracion": "2004",
+    "estilos": [
+      "Contemporáneo",
+      "Arquitectura Patrimonial / Arqueológica"
+    ],
+    "programa": [
+      "Cultura",
+      "Museo"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Museo in situ que resguarda momias de la Cultura Chinchorro (las más antiguas del mundo). Un piso de vidrio suspendido permite a los visitantes caminar directamente sobre el estrato funerario iluminado en penumbra.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piso de vidrio estructural",
+      "Acero negro",
+      "Hormigón visto"
+    ]
+  },
+  {
+    "id": "museo-arqueologico-san-miguel-azapa",
+    "nombre_proyecto": "Museo Arqueológico de San Miguel de Azapa",
+    "arquitecto": "Dirección de Arquitectura MOP / Universidad de Tarapacá",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Camino Azapa Km 12, San Miguel de Azapa",
+    "coordenadas": {
+      "lat": -18.5192,
+      "lng": -70.2185
+    },
+    "ano_diseno": "1967",
+    "anos_construccion": "1968-2010",
+    "ano_inauguracion": "2010",
+    "estilos": [
+      "Arquitectura Vernácula Contemporánea",
+      "Regionalismo Crítico"
+    ],
+    "programa": [
+      "Cultura",
+      "Museo"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Principal recinto cultural que custodia el tesoro Chinchorro y la arqueología andina. Su arquitectura se integra a los olivares milenarios mediante pabellones de adobe contemporáneo y pérgolas de caña.",
+    "fuente_url": "https://masma.uta.cl",
+    "materiales_principales": [
+      "Adobe contemporáneo",
+      "Caña de Guayaquil",
+      "Piedra de río",
+      "Hormigón"
+    ]
+  },
+  {
+    "id": "edificio-consistorial-camarones",
+    "nombre_proyecto": "Edificio Consistorial de Camarones (Cuya)",
+    "arquitecto": "Dirección de Arquitectura MOP Arica y Parinacota",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 5 Norte Km 1968, Cuya, Camarones",
+    "coordenadas": {
+      "lat": -19.161,
+      "lng": -70.1775
+    },
+    "ano_diseno": "2013",
+    "anos_construccion": "2014-2015",
+    "ano_inauguracion": "2015",
+    "estilos": [
+      "Contemporáneo Institucional",
+      "Arquitectura del Desierto"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Sede municipal de la comuna rural emplazada en la quebrada de Cuya. Muros gruesos con acabado de tierra de color y celosías oxidadas de acero corten que protegen del sol extremo.",
+    "fuente_url": "https://www.municamarones.cl",
+    "materiales_principales": [
+      "Acero corten",
+      "Hormigón pigmentado",
+      "Piedra local"
+    ]
+  },
+  {
+    "id": "paso-fronterizo-chungara",
+    "nombre_proyecto": "Complejo Fronterizo Chungará",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 11-CH, Frontera Chile-Bolivia, Lago Chungará, Putre",
+    "coordenadas": {
+      "lat": -18.283,
+      "lng": -69.1415
+    },
+    "ano_diseno": "2015",
+    "anos_construccion": "2016-2018",
+    "ano_inauguracion": "2018",
+    "estilos": [
+      "Arquitectura en Climas Extremos",
+      "Contemporáneo Funcional"
+    ],
+    "programa": [
+      "Infraestructura Fronteriza"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Construido a 4.685 msnm frente al majestuoso Lago Chungará y el volcán Parinacota. Integra aerotermia, cubiertas aerodinámicas de acero contra ventiscas y aislamiento térmico de triple capa.",
+    "fuente_url": "https://www.mop.gob.cl",
+    "materiales_principales": [
+      "Paneles aislantes de acero",
+      "Triple vidriado hermético",
+      "Estructura metálica"
+    ]
+  },
+  {
+    "id": "liceo-granaderos-de-putre",
+    "nombre_proyecto": "Liceo Granaderos de Putre",
+    "arquitecto": "MOP Arquitectura / Consultores Bioclimáticos",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Baquedano s/n, Putre",
+    "coordenadas": {
+      "lat": -18.197,
+      "lng": -69.5605
+    },
+    "ano_diseno": "2010",
+    "anos_construccion": "2011-2012",
+    "ano_inauguracion": "2012",
+    "estilos": [
+      "Bioclimático Andino",
+      "Contemporáneo"
+    ],
+    "programa": [
+      "Educación"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Establecimiento educacional a 3.500 msnm con muros trombe para captación solar pasiva, cubiertas vegetales de paja y piedra volcánica que reinterpretan la tradición aymara.",
+    "fuente_url": "https://www.mop.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Madera laminada",
+      "Muros trombe de vidrio y hormigón"
+    ]
+  },
+  {
+    "id": "paseo-costero-playa-el-laucho",
+    "nombre_proyecto": "Paseo Costero Playa El Laucho",
+    "arquitecto": "Dirección de Obras Portuarias MOP",
+    "arquitecto_principal": "MOP Obras Portuarias",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Costanera Sur, Playa El Laucho, Arica",
+    "coordenadas": {
+      "lat": -18.488,
+      "lng": -70.326
+    },
+    "ano_diseno": "2013",
+    "anos_construccion": "2014-2015",
+    "ano_inauguracion": "2015",
+    "estilos": [
+      "Diseño de Espacio Público",
+      "Arquitectura del Paisaje"
+    ],
+    "programa": [
+      "Espacio Público / Borde Costero"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Paseo peatonal y ciclovía con sombreadores de madera laminada curva que emulan las olas marinas, pavimentos de hormigón desbastado y miradores sobre la rompiente.",
+    "fuente_url": "https://www.dop.cl",
+    "materiales_principales": [
+      "Madera tratada para ambiente marino",
+      "Hormigón",
+      "Acero galvanizado"
+    ]
+  },
+  {
+    "id": "cuevas-de-anzota-arica",
+    "nombre_proyecto": "Paseo Costero Cuevas de Anzota",
+    "arquitecto": "Dirección de Obras Portuarias MOP / Mario Pérez de Arce",
+    "arquitecto_principal": "MOP Obras Portuarias",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta Costera A-37 Km 12 al sur de Arica",
+    "coordenadas": {
+      "lat": -18.552,
+      "lng": -70.329
+    },
+    "ano_diseno": "2014",
+    "anos_construccion": "2015-2016",
+    "ano_inauguracion": "2016",
+    "estilos": [
+      "Intervención Territorial",
+      "Paisajismo Extremo"
+    ],
+    "programa": [
+      "Espacio Público",
+      "Turismo"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Senda peatonal suspendida sobre acantilados rocosos y cavernas marinas milenarias donde habitaron los Chinchorro. Pasarelas de acero galvanizado ancladas a la roca viva.",
+    "fuente_url": "https://www.dop.cl",
+    "materiales_principales": [
+      "Acero galvanizado en caliente",
+      "Rejillas electroforjadas",
+      "Roca viva"
+    ]
+  },
+  {
+    "id": "paseo-comandante-san-martin-arica",
+    "nombre_proyecto": "Paseo Costero Comandante San Martín",
+    "arquitecto": "MOP Obras Portuarias / Municipalidad de Arica",
+    "arquitecto_principal": "MOP Obras Portuarias",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Comandante San Martín, pie del Morro, Arica",
+    "coordenadas": {
+      "lat": -18.482,
+      "lng": -70.325
+    },
+    "ano_diseno": "2012",
+    "anos_construccion": "2013-2014",
+    "ano_inauguracion": "2014",
+    "estilos": [
+      "Espacio Público Costero"
+    ],
+    "programa": [
+      "Espacio Público / Borde Costero"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Articulación del borde costero bajo los farallones del Morro de Arica con áreas verdes sustentables, iluminación LED rasante y plazoletas cívicas frente al océano.",
+    "fuente_url": "https://www.dop.cl",
+    "materiales_principales": [
+      "Piedra granítica",
+      "Hormigón estampado",
+      "Acero inoxidable"
+    ]
+  },
+  {
+    "id": "centro-cultural-junta-de-adelanto-arica",
+    "nombre_proyecto": "Centro Cultural Junta de Adelanto",
+    "arquitecto": "Reciclaje Patrimonial / Municipalidad de Arica",
+    "arquitecto_principal": "Equipo de Patrimonio Municipal",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez 955, Arica",
+    "coordenadas": {
+      "lat": -18.4802,
+      "lng": -70.313
+    },
+    "ano_diseno": "2018",
+    "anos_construccion": "2019-2020",
+    "ano_inauguracion": "2020",
+    "estilos": [
+      "Reciclaje Arquitectónico",
+      "Contemporáneo"
+    ],
+    "programa": [
+      "Cultura"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Reconversión de las antiguas dependencias de la Junta de Adelanto en centro multicultural para exposiciones, talleres artísticos y salas de artes escénicas.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón restaurado",
+      "Maderas nobles",
+      "Acristalamiento"
+    ]
+  },
+  {
+    "id": "liceo-politecnico-arica",
+    "nombre_proyecto": "Liceo Politécnico Arica (Nueva Infraestructura)",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "18 de Septiembre 2200, Arica",
+    "coordenadas": {
+      "lat": -18.489,
+      "lng": -70.295
+    },
+    "ano_diseno": "2006",
+    "anos_construccion": "2007-2008",
+    "ano_inauguracion": "2008",
+    "estilos": [
+      "Contemporáneo Institucional"
+    ],
+    "programa": [
+      "Educación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio educacional técnico estructurado en talleres de doble altura con iluminación cenital filtrada, ventilación eólica inducida y patios de maniobras.",
+    "fuente_url": "https://www.mop.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Estructura metálica",
+      "Termopanel"
+    ]
+  },
+  {
+    "id": "tribunal-juicio-oral-arica",
+    "nombre_proyecto": "Edificio del Tribunal de Juicio Oral en lo Penal de Arica",
+    "arquitecto": "Poder Judicial / Dirección de Arquitectura MOP",
+    "arquitecto_principal": "Corporación Administrativa del Poder Judicial",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle General Lagos con 21 de Mayo, Arica",
+    "coordenadas": {
+      "lat": -18.4796,
+      "lng": -70.3168
+    },
+    "ano_diseno": "2004",
+    "anos_construccion": "2005-2006",
+    "ano_inauguracion": "2006",
+    "estilos": [
+      "Contemporáneo Institucional",
+      "Minimalismo Cívico"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio judicial caracterizado por su doble piel de celosías metálicas que mitiga el asoleamiento poniente y un atrio central con claraboya que organiza las salas de audiencia.",
+    "fuente_url": "https://www.pjud.cl",
+    "materiales_principales": [
+      "Hormigón visto",
+      "Celosías de aluminio",
+      "Mármol travertino"
+    ]
+  },
+  {
+    "id": "biblioteca-publica-alfredo-wormald-cruz",
+    "nombre_proyecto": "Biblioteca Pública Alfredo Wormald Cruz",
+    "arquitecto": "Dirección de Arquitectura MOP / DIBAM",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Baquedano 94, Arica",
+    "coordenadas": {
+      "lat": -18.4775,
+      "lng": -70.3205
+    },
+    "ano_diseno": "2009",
+    "anos_construccion": "2010-2011",
+    "ano_inauguracion": "2011",
+    "estilos": [
+      "Patrimonial Contemporáneo"
+    ],
+    "programa": [
+      "Cultura",
+      "Educación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Remodelación integral de inmueble cívico histórico en el casco antiguo, articulando salas de lectura con muros de adobe consolidado y entrepisos de acero y cristal.",
+    "fuente_url": "https://www.bibliotecaspublicas.gob.cl",
+    "materiales_principales": [
+      "Adobe restaurado",
+      "Acero estructural",
+      "Madera laminada"
+    ]
+  },
+  {
+    "id": "complejo-fronterizo-chacalluta",
+    "nombre_proyecto": "Complejo Fronterizo Chacalluta (Ampliación)",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 5 Norte Km 2090, Línea de la Concordia, Arica",
+    "coordenadas": {
+      "lat": -18.324,
+      "lng": -70.311
+    },
+    "ano_diseno": "2017",
+    "anos_construccion": "2018-2019",
+    "ano_inauguracion": "2019",
+    "estilos": [
+      "Contemporáneo",
+      "Infraestructura de Transporte"
+    ],
+    "programa": [
+      "Infraestructura Fronteriza"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "El paso fronterizo terrestre de mayor flujo de Chile. Diseñado con marquesinas modulares de gran luz para el control expedito de vehículos y peatones en el desierto costero.",
+    "fuente_url": "https://www.pasosfronterizos.gov.cl",
+    "materiales_principales": [
+      "Acero estructural",
+      "Membrana tensada",
+      "Hormigón pulido"
+    ]
+  },
+  {
+    "id": "terminal-internacional-buses-arica",
+    "nombre_proyecto": "Terminal Internacional de Buses de Arica",
+    "arquitecto": "Municipalidad de Arica",
+    "arquitecto_principal": "Equipo de Obras Municipales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Diego Portales 948, Arica",
+    "coordenadas": {
+      "lat": -18.472,
+      "lng": -70.3015
+    },
+    "ano_diseno": "1986",
+    "anos_construccion": "1987-1988",
+    "ano_inauguracion": "1988",
+    "estilos": [
+      "Postmodernismo Funcional"
+    ],
+    "programa": [
+      "Transporte"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Nodo neurálgico del transporte terrestre con Tacna y Bolivia. Cuenta con naves techadas de acero, andenes en espina de pescado y amplia galería de servicios comerciales.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Cerchas metálicas",
+      "Albañilería",
+      "Policarbonato"
+    ]
+  },
+  {
+    "id": "terminal-terrestre-nacional-arica",
+    "nombre_proyecto": "Terminal Terrestre Nacional de Arica",
+    "arquitecto": "Municipalidad de Arica / Concesiones MOP",
+    "arquitecto_principal": "Oficina Técnica Municipal",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Diego Portales 1002, Arica",
+    "coordenadas": {
+      "lat": -18.4715,
+      "lng": -70.3005
+    },
+    "ano_diseno": "1990",
+    "anos_construccion": "1991-1992",
+    "ano_inauguracion": "1992",
+    "estilos": [
+      "Racionalismo Tardío"
+    ],
+    "programa": [
+      "Transporte"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio terminal de conexión interurbana con el resto del país, proyectado con marquesina continua de hormigón armado y circulaciones directas.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Vidrio templado",
+      "Acero pintado"
+    ]
+  },
+  {
+    "id": "edificio-contraloria-regional-arica",
+    "nombre_proyecto": "Edificio Contraloría Regional de Arica y Parinacota",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Arturo Prat 305, Arica",
+    "coordenadas": {
+      "lat": -18.4786,
+      "lng": -70.3179
+    },
+    "ano_diseno": "2010",
+    "anos_construccion": "2011-2012",
+    "ano_inauguracion": "2012",
+    "estilos": [
+      "Contemporáneo Institucional"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Inmueble con certificación de eficiencia energética, provisto de celosías horizontales que protegen los puestos de trabajo y patio interior con vegetación nativa.",
+    "fuente_url": "https://www.contraloria.cl",
+    "materiales_principales": [
+      "Hormigón arquitectónico",
+      "Muro cortina DVH",
+      "Parasoles de aluminio"
+    ]
+  },
+  {
+    "id": "terminal-aereo-chacalluta-ampliacion",
+    "nombre_proyecto": "Terminal Aéreo Chacalluta (Ampliación y Modernización)",
+    "arquitecto": "Dirección de Aeropuertos MOP / Amunátegui Barreau Arquitectos",
+    "arquitecto_principal": "Dirección de Aeropuertos MOP",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Aeropuerto Internacional Chacalluta, Arica",
+    "coordenadas": {
+      "lat": -18.3485,
+      "lng": -70.3386
+    },
+    "ano_diseno": "2012",
+    "anos_construccion": "2013-2014",
+    "ano_inauguracion": "2014",
+    "estilos": [
+      "Contemporáneo",
+      "Infraestructura de Transporte"
+    ],
+    "programa": [
+      "Transporte"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Ampliación del principal aeropuerto regional con puentes de embarque vidriados, cubierta ondulada que dialoga con los médanos costeros y eficiencia lumínica natural.",
+    "fuente_url": "https://www.aeropuertochacalluta.cl",
+    "materiales_principales": [
+      "Estructura metálica tubular",
+      "Aluminio compuesto",
+      "Vidrio de control solar"
+    ]
+  },
+  {
+    "id": "casa-azapa-i",
+    "nombre_proyecto": "Casa Azapa I",
+    "arquitecto": "Arquitectos Locales de Arica",
+    "arquitecto_principal": "Taller de Arquitectura Azapa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Km 8 Valle de Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.514,
+      "lng": -70.245
+    },
+    "ano_diseno": "2004",
+    "anos_construccion": "2004-2005",
+    "ano_inauguracion": "2005",
+    "estilos": [
+      "Vernáculo Contemporáneo"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Vivienda unifamiliar rural estructurada mediante muros de adobe estabilizado y pérgolas de caña que generan microclimas frescos bajo la sombra de olivos.",
+    "fuente_url": "https://www.arquitour.com",
+    "materiales_principales": [
+      "Adobe estabilizado",
+      "Madera rústica",
+      "Caña brava"
+    ]
+  },
+  {
+    "id": "casa-azapa-ii",
+    "nombre_proyecto": "Casa Azapa II (Estructuras de Sombra)",
+    "arquitecto": "Estudio Regional Norte",
+    "arquitecto_principal": "Arquitectos del Desierto",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Km 14 Valle de Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.522,
+      "lng": -70.198
+    },
+    "ano_diseno": "2011",
+    "anos_construccion": "2012",
+    "ano_inauguracion": "2012",
+    "estilos": [
+      "Contemporáneo",
+      "Bioclimático"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Proyecto residencial concebido a partir de una gran doble cubierta ventilada que flota sobre volúmenes habitables de albañilería, favoreciendo corrientes térmicas naturales.",
+    "fuente_url": "https://www.archdaily.cl",
+    "materiales_principales": [
+      "Acero liviano",
+      "Malla sombreante",
+      "Albañilería a la vista"
+    ]
+  },
+  {
+    "id": "refugio-en-lluta",
+    "nombre_proyecto": "Refugio en Lluta",
+    "arquitecto": "Taller Agrícola y Paisaje",
+    "arquitecto_principal": "Equipo de Arquitectura del Valle",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Lluta Km 22, Arica",
+    "coordenadas": {
+      "lat": -18.42,
+      "lng": -70.18
+    },
+    "ano_diseno": "2014",
+    "anos_construccion": "2015",
+    "ano_inauguracion": "2015",
+    "estilos": [
+      "Arquitectura Agrícola Contemporánea"
+    ],
+    "programa": [
+      "Residencial",
+      "Agrícola"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Refugio agrícola modular construido en madera y fardos de totora locales, orientado para capturar la brisa del valle y proteger de las tolvaneras vespertinas.",
+    "fuente_url": "https://www.colegiodearquitectos.cl",
+    "materiales_principales": [
+      "Madera de pino impregnado",
+      "Totora trenzada",
+      "Chapa ondulada"
+    ]
+  },
+  {
+    "id": "casa-gallinazo-azapa",
+    "nombre_proyecto": "Casa Gallinazo",
+    "arquitecto": "Estudio Bioclimático del Norte",
+    "arquitecto_principal": "Arquitectos Asociados Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Gallinazo, Valle de Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.528,
+      "lng": -70.165
+    },
+    "ano_diseno": "2017",
+    "anos_construccion": "2017-2018",
+    "ano_inauguracion": "2018",
+    "estilos": [
+      "Bioclimático de Desierto"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Residencia de bajo impacto ambiental con muros de tapial de tierra cruda apisonada, patios de ventilación y reutilización de aguas grises para riego.",
+    "fuente_url": "https://www.archdaily.cl",
+    "materiales_principales": [
+      "Tierra compactada (tapial)",
+      "Madera de chañar",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "casa-el-pedregal-azapa",
+    "nombre_proyecto": "Casa El Pedregal",
+    "arquitecto": "Taller de Arquitectura y Paisaje",
+    "arquitecto_principal": "Arquitectos Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector El Pedregal, Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.517,
+      "lng": -70.231
+    },
+    "ano_diseno": "2010",
+    "anos_construccion": "2011",
+    "ano_inauguracion": "2011",
+    "estilos": [
+      "Contemporáneo",
+      "Piedra Local"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Vivienda aterrazada que aprovecha la piedra extraída en el despeje de la parcela para erigir muros ciclópeos que dialogan con el fondo de los cerros color ocre.",
+    "fuente_url": "https://www.plataformaarquitectura.cl",
+    "materiales_principales": [
+      "Piedra local ciclópea",
+      "Hormigón visto",
+      "Ventanas correderas"
+    ]
+  },
+  {
+    "id": "cabanas-turisticas-socoroma",
+    "nombre_proyecto": "Cabañas Turísticas Socoroma",
+    "arquitecto": "Comunidad Indígena de Socoroma / CONADI",
+    "arquitecto_principal": "Arquitectos Comunitarios",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Andenes de Socoroma, Putre",
+    "coordenadas": {
+      "lat": -18.263,
+      "lng": -69.586
+    },
+    "ano_diseno": "2015",
+    "anos_construccion": "2015-2016",
+    "ano_inauguracion": "2016",
+    "estilos": [
+      "Integración Paisajística",
+      "Eco-turismo Andino"
+    ],
+    "programa": [
+      "Hotelero / Turístico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Conjunto de cabañas de hospedaje rural mimetizadas con los bancales precolombinos de alfalfa y orégano, utilizando mampostería de toba volcánica y techos de barro.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro y paja brava",
+      "Madera nativa"
+    ]
+  },
+  {
+    "id": "casa-campo-las-maitenas-azapa",
+    "nombre_proyecto": "Casa de Campo Las Maitenas",
+    "arquitecto": "Oficina de Arquitectura Azapa",
+    "arquitecto_principal": "Arquitectos del Valle",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Km 5 Valle de Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.511,
+      "lng": -70.262
+    },
+    "ano_diseno": "2007",
+    "anos_construccion": "2008",
+    "ano_inauguracion": "2008",
+    "estilos": [
+      "Neovernáculo"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Casona campestre estructurada en torno a una crujía de corredores exteriores con pilares de pino oregón y tejas coloniales recuperadas.",
+    "fuente_url": "https://www.arquitour.com",
+    "materiales_principales": [
+      "Albañilería",
+      "Teja de arcilla",
+      "Madera de pino oregón"
+    ]
+  },
+  {
+    "id": "refugio-en-codpa",
+    "nombre_proyecto": "Refugio en Codpa",
+    "arquitecto": "Taller Tierra Viva",
+    "arquitecto_principal": "Equipo de Bioconstrucción",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.834,
+      "lng": -69.74
+    },
+    "ano_diseno": "2016",
+    "anos_construccion": "2017",
+    "ano_inauguracion": "2017",
+    "estilos": [
+      "Bioconstrucción",
+      "Tierra Compactada"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Refugio vinícola autosuficiente para la elaboración artesanal del vino Pintatani, edificado íntegramente con tierra local estabilizada y carpintería de eucalipto.",
+    "fuente_url": "https://www.municamarones.cl",
+    "materiales_principales": [
+      "Tierra apisonada",
+      "Caña brava",
+      "Madera"
+    ]
+  },
+  {
+    "id": "casa-valle-de-lluta",
+    "nombre_proyecto": "Casa del Valle de Lluta",
+    "arquitecto": "Arquitectura del Norte",
+    "arquitecto_principal": "Arquitectos Asociados",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Lluta Km 15, Arica",
+    "coordenadas": {
+      "lat": -18.425,
+      "lng": -70.22
+    },
+    "ano_diseno": "2013",
+    "anos_construccion": "2014",
+    "ano_inauguracion": "2014",
+    "estilos": [
+      "Contemporáneo"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Vivienda moderna levantada sobre zócalos de mampostería de piedra para protegerse de las crecidas esporádicas del río Lluta, con amplias terrazas sombreadas.",
+    "fuente_url": "https://www.archdaily.cl",
+    "materiales_principales": [
+      "Piedra de río",
+      "Hormigón armado",
+      "Madera tratada"
+    ]
+  },
+  {
+    "id": "cabanas-altiplano-putre",
+    "nombre_proyecto": "Cabañas del Altiplano Putre",
+    "arquitecto": "Equipo de Turismo Sustentable",
+    "arquitecto_principal": "Arquitectura Andina",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Camino Las Vicuñas s/n, Putre",
+    "coordenadas": {
+      "lat": -18.199,
+      "lng": -69.562
+    },
+    "ano_diseno": "2009",
+    "anos_construccion": "2010",
+    "ano_inauguracion": "2010",
+    "estilos": [
+      "Vernáculo Altiplánico"
+    ],
+    "programa": [
+      "Hotelero / Turístico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Módulos de alojamiento diseñados con muros dobles de quincha y piedra volcánica que almacenan el calor solar diurno para liberarlo en las gélidas noches de altura.",
+    "fuente_url": "https://www.sernatur.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Quincha",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "casa-mirador-del-morro-arica",
+    "nombre_proyecto": "Casa Mirador del Morro",
+    "arquitecto": "Estudio Assadi & Asociados Norte",
+    "arquitecto_principal": "Arquitectura Costera",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Faldas del Morro, Calle Sotomayor alta, Arica",
+    "coordenadas": {
+      "lat": -18.481,
+      "lng": -70.323
+    },
+    "ano_diseno": "2002",
+    "anos_construccion": "2003",
+    "ano_inauguracion": "2003",
+    "estilos": [
+      "Minimalismo Costero"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Volumen cúbico blanco empotrado en la ladera rocosa del Morro con ventanales de piso a cielo que enmarcan la vista panorámica del puerto y la bahía.",
+    "fuente_url": "https://www.colegiodearquitectos.cl",
+    "materiales_principales": [
+      "Hormigón blanco",
+      "Vidrio templado",
+      "Acero inoxidable"
+    ]
+  },
+  {
+    "id": "casa-panamericana-north-arica",
+    "nombre_proyecto": "Casa Panamericana North",
+    "arquitecto": "Taller del Desierto",
+    "arquitecto_principal": "Arquitectos Arica",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Acceso Norte, Ruta 5, Arica",
+    "coordenadas": {
+      "lat": -18.435,
+      "lng": -70.298
+    },
+    "ano_diseno": "2012",
+    "anos_construccion": "2013",
+    "ano_inauguracion": "2013",
+    "estilos": [
+      "Arquitectura del Desierto"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Vivienda suburbana que combina patios ingleses excavados para generar sombra y frescor, y chimeneas solares que inducen ventilación convectiva continua.",
+    "fuente_url": "https://www.archdaily.cl",
+    "materiales_principales": [
+      "Bloques de cemento celular",
+      "Madera",
+      "Grava volcánica"
+    ]
+  },
+  {
+    "id": "casa-brisas-chinchorro-arica",
+    "nombre_proyecto": "Casa Las Brisas de Chinchorro",
+    "arquitecto": "Estudio Costero Arica",
+    "arquitecto_principal": "Arquitectura de Playa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Las Dunas, Playa Chinchorro, Arica",
+    "coordenadas": {
+      "lat": -18.452,
+      "lng": -70.306
+    },
+    "ano_diseno": "2008",
+    "anos_construccion": "2009",
+    "ano_inauguracion": "2009",
+    "estilos": [
+      "Costero Moderno"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Residencia de playa con amplios aleros de madera para repeler la insolación directa, terrazas de madera teca y cerramientos móviles de lamas orientables.",
+    "fuente_url": "https://www.plataformaarquitectura.cl",
+    "materiales_principales": [
+      "Madera tratada",
+      "Hormigón visto",
+      "Aluminio marino"
+    ]
+  },
+  {
+    "id": "cabanas-parque-lauca-putre",
+    "nombre_proyecto": "Cabañas de Guardaparques y Visitantes Parque Lauca",
+    "arquitecto": "Corporación Nacional Forestal (CONAF)",
+    "arquitecto_principal": "Departamento de Infraestructura CONAF",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Las Cuevas, Parque Nacional Lauca, Putre",
+    "coordenadas": {
+      "lat": -18.175,
+      "lng": -69.36
+    },
+    "ano_diseno": "2003",
+    "anos_construccion": "2004",
+    "ano_inauguracion": "2004",
+    "estilos": [
+      "Infraestructura en Ecosistema Frágil"
+    ],
+    "programa": [
+      "Infraestructura de Parque / Refugio"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Refugios bioclimáticos de alta montaña a 4.500 msnm con energía solar fotovoltaica, captación térmica de muro masivo y reciclaje de agua para resguardar la flora y fauna altiplánica.",
+    "fuente_url": "https://www.conaf.cl",
+    "materiales_principales": [
+      "Piedra andina",
+      "Madera termo-tratada",
+      "Placas de policarbonato alveolar"
+    ]
+  },
+  {
+    "id": "casa-en-chinisey-azapa",
+    "nombre_proyecto": "Casa en Chinisey",
+    "arquitecto": "Taller Regional",
+    "arquitecto_principal": "Arquitectos de Azapa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Chinisey, Valle de Azapa Km 18, Arica",
+    "coordenadas": {
+      "lat": -18.525,
+      "lng": -70.15
+    },
+    "ano_diseno": "2018",
+    "anos_construccion": "2019",
+    "ano_inauguracion": "2019",
+    "estilos": [
+      "Contemporáneo"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Vivienda compacta levantada con estructuras de acero ligero y paneles aislantes térmicos revestidos en cañizo tradicional del valle.",
+    "fuente_url": "https://www.archdaily.cl",
+    "materiales_principales": [
+      "Estructura de acero liviano (Metalcon)",
+      "Cañizo",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "casa-saucache-arica",
+    "nombre_proyecto": "Casa Saucache",
+    "arquitecto": "Estudio Urbano Arica",
+    "arquitecto_principal": "Arquitectos Urbanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Barrio Saucache, Arica",
+    "coordenadas": {
+      "lat": -18.491,
+      "lng": -70.301
+    },
+    "ano_diseno": "2006",
+    "anos_construccion": "2007",
+    "ano_inauguracion": "2007",
+    "estilos": [
+      "Residencial Moderno"
+    ],
+    "programa": [
+      "Residencial"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Casa de ciudad que reinterpreta el patio central colonial mediante un claustro moderno ajardinado alrededor del cual se organizan las estancias diurnas y nocturnas.",
+    "fuente_url": "https://www.arquitour.com",
+    "materiales_principales": [
+      "Albañilería confinada",
+      "Vigas de madera laminada",
+      "Hormigón"
+    ]
+  },
+  {
+    "id": "pukara-de-san-lorenzo-azapa",
+    "nombre_proyecto": "Pukara de San Lorenzo",
+    "arquitecto": "Cultura Tiwanaku / Cabuza / Arica",
+    "arquitecto_principal": "Pobladores Originarios Andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "San Lorenzo Km 10, Valle de Azapa, Arica",
+    "coordenadas": {
+      "lat": -18.516,
+      "lng": -70.235
+    },
+    "ano_diseno": "Siglo XII",
+    "anos_construccion": "1100-1200",
+    "ano_inauguracion": "Siglo XII",
+    "estilos": [
+      "Arquitectura Precolombina Fortificada"
+    ],
+    "programa": [
+      "Arqueológico / Fortificación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Asentamiento fortificado erigido en la cumbre de un espolón que domina el valle agrícola de Azapa. Presenta recintos circulares y rectangulares con muros dobles de piedra calzada y mortero de arcilla.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra de cerro",
+      "Mortero de barro",
+      "Troncos de algarrobo"
+    ]
+  },
+  {
+    "id": "pukara-de-copaquilla",
+    "nombre_proyecto": "Pukara de Copaquilla",
+    "arquitecto": "Señoríos Andinos Regionales",
+    "arquitecto_principal": "Constructores Prehispánicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 11-CH Km 100, Precordillera de Putre",
+    "coordenadas": {
+      "lat": -18.397,
+      "lng": -69.645
+    },
+    "ano_diseno": "Siglo XII",
+    "anos_construccion": "1150-1250",
+    "ano_inauguracion": "Siglo XII",
+    "estilos": [
+      "Pukara Andino Prehispánico"
+    ],
+    "programa": [
+      "Arqueológico / Defensivo"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional ubicado al borde de un precipicio de 150 metros sobre la quebrada de Copaquilla. Conserva una muralla defensiva doble con parapetos y vanos trapezoidales.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra pircada en seco",
+      "Roca madre",
+      "Tierra compacta"
+    ]
+  },
+  {
+    "id": "pukara-de-belen",
+    "nombre_proyecto": "Pukara de Belén (Incuyo)",
+    "arquitecto": "Cultura Pre-Inca y Tawantinsuyu",
+    "arquitecto_principal": "Constructores Andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cerro Huaihuarani / Incuyo, Belén, Putre",
+    "coordenadas": {
+      "lat": -18.472,
+      "lng": -69.522
+    },
+    "ano_diseno": "Siglo XIV",
+    "anos_construccion": "1350-1450",
+    "ano_inauguracion": "Siglo XIV",
+    "estilos": [
+      "Arquitectura Defensiva Andina"
+    ],
+    "programa": [
+      "Arqueológico / Asentamiento"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Complejo habitacional y militar con más de 120 recintos aterrazados escalonados en la roca, silos de granos (colcas) y atalayas de vigilancia hacia las quebradas fértiles.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Piedra pómez",
+      "Arcilla roja"
+    ]
+  },
+  {
+    "id": "tambo-de-chungara",
+    "nombre_proyecto": "Tambo de Chungará (Qhapaq Ñan)",
+    "arquitecto": "Ingenieros del Imperio Incaico (Tawantinsuyu)",
+    "arquitecto_principal": "Incas",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta Incaica, orillas del Lago Chungará, Putre",
+    "coordenadas": {
+      "lat": -18.258,
+      "lng": -69.172
+    },
+    "ano_diseno": "Siglo XV",
+    "anos_construccion": "1470-1500",
+    "ano_inauguracion": "Siglo XV",
+    "estilos": [
+      "Arquitectura Imperial Inca",
+      "Qhapaq Ñan"
+    ],
+    "programa": [
+      "Transporte / Almacén Arqueológico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Estación de relevo del Camino del Inca a 4.550 msnm para chasquis y caravanas de llamas entre el lago Titicaca y la costa del Pacífico. Recintos ortogonales de piedra con hornacinas trapezoidales.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica labrada",
+      "Barro arcilloso",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "aldea-de-zapahuira",
+    "nombre_proyecto": "Aldea de Zapahuira y Chullpas Funerarias",
+    "arquitecto": "Señoríos Altiplánicos Preincaicos",
+    "arquitecto_principal": "Constructores Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Zapahuira, Ruta 11-CH Km 95, Putre",
+    "coordenadas": {
+      "lat": -18.351,
+      "lng": -69.605
+    },
+    "ano_diseno": "Siglo XIV",
+    "anos_construccion": "1300-1400",
+    "ano_inauguracion": "Siglo XIV",
+    "estilos": [
+      "Arquitectura Mortuoria y Habitacional Andina"
+    ],
+    "programa": [
+      "Arqueológico / Funerario"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Conjunto de chullpas (torres funerarias de piedra y adobe) de planta circular y rectangular junto a recintos habitacionales y colcas para la preservación de semillas en clima seco.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe prehispánico",
+      "Piedra laja",
+      "Madera de queñoa"
+    ]
+  },
+  {
+    "id": "pukara-de-saxamar",
+    "nombre_proyecto": "Pukara de Saxamar",
+    "arquitecto": "Señoríos Andinos de la Precordillera",
+    "arquitecto_principal": "Constructores Andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Saxamar, Putre",
+    "coordenadas": {
+      "lat": -18.53,
+      "lng": -69.57
+    },
+    "ano_diseno": "Siglo XII",
+    "anos_construccion": "1150-1200",
+    "ano_inauguracion": "Siglo XII",
+    "estilos": [
+      "Pukara Andino"
+    ],
+    "programa": [
+      "Arqueológico / Defensivo"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Fortificación de valle sobre promontorio escarpado, con muros concéntricos de contención de piedra seca que protegían las áreas agrícolas y habitacionales.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra basalto",
+      "Tierra",
+      "Gravas"
+    ]
+  },
+  {
+    "id": "inkawasi-de-caquena",
+    "nombre_proyecto": "Inkawasi de Caquena (Tambo Incaico)",
+    "arquitecto": "Ingenieros del Imperio Incaico",
+    "arquitecto_principal": "Tawantinsuyu",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Caquena, General Lagos",
+    "coordenadas": {
+      "lat": -18.062,
+      "lng": -69.215
+    },
+    "ano_diseno": "Siglo XV",
+    "anos_construccion": "1480-1500",
+    "ano_inauguracion": "Siglo XV",
+    "estilos": [
+      "Arquitectura Imperial Incaica"
+    ],
+    "programa": [
+      "Arqueológico / Tambo"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Complejo administrativo estatal incaico emplazado en la zona ganadera más rica en camélidos del altiplano norte. Destacan sus muros de piedra con aparejo almohadillado.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica almohadillada",
+      "Mortero de calicanto inca",
+      "Paja"
+    ]
+  },
+  {
+    "id": "aldea-de-cerro-blanco-camarones",
+    "nombre_proyecto": "Aldea de Cerro Blanco",
+    "arquitecto": "Pobladores de Quebradas Tarapaqueñas",
+    "arquitecto_principal": "Comunidades Andinas",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Cerro Blanco, Camarones",
+    "coordenadas": {
+      "lat": -18.98,
+      "lng": -69.82
+    },
+    "ano_diseno": "Siglo XII",
+    "anos_construccion": "1100-1250",
+    "ano_inauguracion": "Siglo XII",
+    "estilos": [
+      "Arquitectura Habitacional de Piedra"
+    ],
+    "programa": [
+      "Arqueológico"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Aldea de piedra construida sobre laderas áridas con recintos circulares semienterrados para protección del viento y conservación de calor ambiental.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra arenisca",
+      "Barro",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "chullpas-de-guacollo",
+    "nombre_proyecto": "Chullpas de Guacollo",
+    "arquitecto": "Cultura Aymara Carangas / Pacajes",
+    "arquitecto_principal": "Maestros Canteros Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Meseta de Guacollo, General Lagos",
+    "coordenadas": {
+      "lat": -17.81,
+      "lng": -69.41
+    },
+    "ano_diseno": "Siglo XV",
+    "anos_construccion": "1400-1500",
+    "ano_inauguracion": "Siglo XV",
+    "estilos": [
+      "Arquitectura Funeraria Andina"
+    ],
+    "programa": [
+      "Arqueológico / Funerario"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Torres funerarias de noble factura en piedra canteada levantadas para honrar a los mallkus (líderes andinos). Presentan falsa cúpula por aproximación de hiladas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Bloques de toba volcánica",
+      "Paja brava",
+      "Tierra greda"
+    ]
+  },
+  {
+    "id": "aldea-caleta-camarones-chinchorro",
+    "nombre_proyecto": "Aldea de Caleta Camarones (Sitio Arcaico Chinchorro)",
+    "arquitecto": "Cultura Chinchorro",
+    "arquitecto_principal": "Pescadores Arcaicos Chinchorro",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Desembocadura Río Camarones, Caleta Camarones",
+    "coordenadas": {
+      "lat": -19.195,
+      "lng": -70.265
+    },
+    "ano_diseno": "5000 a.C.",
+    "anos_construccion": "5000 a.C. - 2000 a.C.",
+    "ano_inauguracion": "5000 a.C.",
+    "estilos": [
+      "Arquitectura Vernácula Arcaica",
+      "Patrimonio Mundial UNESCO"
+    ],
+    "programa": [
+      "Arqueológico / Asentamiento Arcaico"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Patrimonio Mundial de la Humanidad UNESCO. Sitio de los asentamientos y momificación artificial más antiguos del planeta, con refugios semicirculares de postes de madera de chañar, costillas de ballena y esteras de totora.",
+    "fuente_url": "https://whc.unesco.org/en/list/1634",
+    "materiales_principales": [
+      "Postes de chañar",
+      "Hueso de cetáceo",
+      "Esteras de totora",
+      "Pieles de lobo marino"
+    ]
+  },
+  {
+    "id": "tambo-de-huaytane",
+    "nombre_proyecto": "Tambo de Huaytane (Qhapaq Ñan)",
+    "arquitecto": "Incas",
+    "arquitecto_principal": "Tawantinsuyu",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta Altiplánica, General Lagos",
+    "coordenadas": {
+      "lat": -17.75,
+      "lng": -69.38
+    },
+    "ano_diseno": "Siglo XV",
+    "anos_construccion": "1480-1510",
+    "ano_inauguracion": "Siglo XV",
+    "estilos": [
+      "Qhapaq Ñan",
+      "Incaico"
+    ],
+    "programa": [
+      "Arqueológico / Transporte"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Punto de abastecimiento sobre el tramo transversal del camino incaico que unía la meseta boliviana con los valles occidentales. Preserva kallankas (grandes salas comunales) de piedra.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Argamasa de barro",
+      "Vigas de queñoa"
+    ]
+  },
+  {
+    "id": "chullpas-de-tacora",
+    "nombre_proyecto": "Chullpas de Tacora",
+    "arquitecto": "Pobladores Aymara de Tacora",
+    "arquitecto_principal": "Constructores Altiplánicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Faldas del Volcán Tacora, General Lagos",
+    "coordenadas": {
+      "lat": -17.72,
+      "lng": -69.77
+    },
+    "ano_diseno": "Siglo XV",
+    "anos_construccion": "1450-1520",
+    "ano_inauguracion": "Siglo XV",
+    "estilos": [
+      "Arquitectura Funeraria Altiplánica"
+    ],
+    "programa": [
+      "Arqueológico / Funerario"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Monumentos funerarios cilíndricos erigidos a más de 4.200 msnm con bloques de piedra volcánica porosa y cúpulas de adobe resistentes al hielo permanente.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Adobe resistente a heladas",
+      "Paja"
+    ]
+  },
+  {
+    "id": "casas-de-piedra-ancuta",
+    "nombre_proyecto": "Casas de Piedra de Ancuta",
+    "arquitecto": "Pastores Aymara Altiplánicos",
+    "arquitecto_principal": "Comunidad Pastoril",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Ancuta, cerca de Guallatire, Putre",
+    "coordenadas": {
+      "lat": -18.46,
+      "lng": -69.21
+    },
+    "ano_diseno": "Siglo XIX",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1860",
+    "estilos": [
+      "Arquitectura Ganadera de Bofedal"
+    ],
+    "programa": [
+      "Vernáculo / Ganadero"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Conjunto de estancias ganaderas tradicionales de alpaca y llama. Viviendas de piedra de baja altura con corrales circulares cerrados (pircas) estratégicamente ubicados en el bofedal.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra laja",
+      "Paja brava",
+      "Cuero crudo"
+    ]
+  },
+  {
+    "id": "estancia-altiplanica-chucuyo",
+    "nombre_proyecto": "Estancia Altiplánica Chucuyo",
+    "arquitecto": "Pastores Aymara",
+    "arquitecto_principal": "Comunidad Chucuyo",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Chucuyo, Parque Nacional Lauca, Putre",
+    "coordenadas": {
+      "lat": -18.235,
+      "lng": -69.282
+    },
+    "ano_diseno": "Siglo XIX",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1880",
+    "estilos": [
+      "Pastoral Andino"
+    ],
+    "programa": [
+      "Vernáculo / Ganadero"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Poblado tradicional de pastores trashumantes situado entre los volcanes Pomerape y Parinacota, célebre por sus tejedurías de lana de vicuña y sus casas de piedra encalada.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra encalada",
+      "Tierra greda",
+      "Paja de páramo"
+    ]
+  },
+  {
+    "id": "aldea-vernacula-de-parinacota",
+    "nombre_proyecto": "Aldea Vernácula de Parinacota",
+    "arquitecto": "Comunidad Tradicional Aymara",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Parinacota, Parque Nacional Lauca, Putre",
+    "coordenadas": {
+      "lat": -18.2,
+      "lng": -69.27
+    },
+    "ano_diseno": "Siglo XVIII",
+    "anos_construccion": "Siglos XVIII-XIX",
+    "ano_inauguracion": "1780",
+    "estilos": [
+      "Trama Urbana Andina Tradicional"
+    ],
+    "programa": [
+      "Urbanismo / Vernáculo"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Zona Típica protegida por el Consejo de Monumentos Nacionales. Trama de callejuelas estrechas encaladas en blanco orientadas para cortar el viento cordillerano y converger en la plaza de la iglesia.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica blanca",
+      "Barro encalado",
+      "Madera de queñoa"
+    ]
+  },
+  {
+    "id": "poblado-historico-de-belen",
+    "nombre_proyecto": "Poblado Histórico de Belén",
+    "arquitecto": "Colonizadores Españoles y Comunidad Aymara",
+    "arquitecto_principal": "Comunidad Andina",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Belén, Precordillera de Putre",
+    "coordenadas": {
+      "lat": -18.467,
+      "lng": -69.515
+    },
+    "ano_diseno": "1580",
+    "anos_construccion": "Siglo XVI",
+    "ano_inauguracion": "1620",
+    "estilos": [
+      "Trama Urbana Colonial e Incaica"
+    ],
+    "programa": [
+      "Urbanismo Patrimonial"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "El único pueblo fundado por los españoles en la sierra de Arica en 1625, superpuesto sobre terrazas agrícolas incaicas con dos templos tutelares (San Santiago y Nuestra Señora del Carmen).",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Adobe",
+      "Madera de queñoa"
+    ]
+  },
+  {
+    "id": "aldea-de-humapalca",
+    "nombre_proyecto": "Aldea de Humapalca",
+    "arquitecto": "Comunidad Ganadera Altiplánica",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Humapalca, Comuna de General Lagos",
+    "coordenadas": {
+      "lat": -17.68,
+      "lng": -69.62
+    },
+    "ano_diseno": "Siglo XIX",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1890",
+    "estilos": [
+      "Asentamiento Ganadero Altiplánico"
+    ],
+    "programa": [
+      "Vernáculo"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Asentamiento pastoral próximo a los bofedales de altura, con viviendas de piedra volcánica asentada en barro y techos de paja amarrados con tientos de cuero de llama.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Paja brava",
+      "Cuero"
+    ]
+  },
+  {
+    "id": "casas-de-piedra-de-chilcaya",
+    "nombre_proyecto": "Casas de Piedra de Chilcaya (Salar de Surire)",
+    "arquitecto": "Mineros del Bórax y Pastores",
+    "arquitecto_principal": "Constructores Tradicionales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Borde sur del Salar de Surire, Putre",
+    "coordenadas": {
+      "lat": -18.91,
+      "lng": -69.08
+    },
+    "ano_diseno": "Siglo XIX",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1895",
+    "estilos": [
+      "Arquitectura Minero-Pastoral de Salar"
+    ],
+    "programa": [
+      "Vernáculo / Industrial Histórico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Construcciones rústicas de piedra y caliza ubicadas a 4.250 msnm en el Salar de Surire, vinculadas a la histórica explotación del bórax y a la crianza de camélidos.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra de salar",
+      "Cal",
+      "Chapa metálica"
+    ]
+  },
+  {
+    "id": "estancia-guallatire",
+    "nombre_proyecto": "Estancia Guallatire",
+    "arquitecto": "Comunidad Aymara de Guallatire",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Guallatire, Reserva Las Vicuñas, Putre",
+    "coordenadas": {
+      "lat": -18.51,
+      "lng": -69.16
+    },
+    "ano_diseno": "Siglo XIX",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1875",
+    "estilos": [
+      "Pastoral Andino"
+    ],
+    "programa": [
+      "Vernáculo"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Conjunto tradicional pastoral con viviendas bajas, corrales de piedra pircada y secaderos de carne al sol (charqui) en la inmensidad del altiplano volcánico.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra",
+      "Paja brava",
+      "Barro"
+    ]
+  },
+  {
+    "id": "poblado-historico-de-codpa",
+    "nombre_proyecto": "Poblado Histórico de Codpa",
+    "arquitecto": "Comunidad Andina y Doctrinares Coloniales",
+    "arquitecto_principal": "Comunidad de Codpa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.832,
+      "lng": -69.744
+    },
+    "ano_diseno": "1620",
+    "anos_construccion": "Siglos XVII-XIX",
+    "ano_inauguracion": "1650",
+    "estilos": [
+      "Traza Colonial de Valle Andino"
+    ],
+    "programa": [
+      "Urbanismo Patrimonial"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Pueblo oasis encajonado en la quebrada de Vitor, con casas coloniales de adobe encalado, lagares tradicionales para pisar uvas y canales de regadío incaicos en continuo funcionamiento.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Madera nativa",
+      "Teja de barro"
+    ]
+  }
+]

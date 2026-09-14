@@ -1,0 +1,1515 @@
+[
+  {
+    "id": "oficina-salitrera-humberstone",
+    "nombre_proyecto": "Oficina Salitrera Santiago Humberstone",
+    "arquitecto": "Compañía Salitrera Peruana / James Thomas Humberstone",
+    "arquitecto_principal": "James Thomas Humberstone",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 5 Norte Km 1812, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.2072,
+      "lng": -69.7918
+    },
+    "ano_diseno": "1872",
+    "anos_construccion": "1872-1934",
+    "ano_inauguracion": "1872",
+    "estilos": [
+      "Patrimonio Mundial UNESCO",
+      "Industrial Salitrero",
+      "Art Déco Pampeano"
+    ],
+    "programa": [
+      "Industrial",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Patrimonio de la Humanidad UNESCO. Testimonio supremo de la era del 'oro blanco' con plaza central cívica, teatro de pino oregón con proscenio art déco, pulpería monumental, escuela, piscina pública de planchas de barco y campamento obrero jerárquico.",
+    "fuente_url": "https://whc.unesco.org/en/list/1178",
+    "materiales_principales": [
+      "Pino oregón americano",
+      "Hierro corrugado",
+      "Hormigón",
+      "Calicanto"
+    ]
+  },
+  {
+    "id": "oficina-salitrera-santa-laura",
+    "nombre_proyecto": "Oficina Salitrera Santa Laura (Planta de Yodo)",
+    "arquitecto": "Guillermo Wendell / The Rosario Nitrate Company",
+    "arquitecto_principal": "Ingenieros Salitreros",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Ruta 5 Norte Km 1810, frente a Humberstone, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.2104,
+      "lng": -69.809
+    },
+    "ano_diseno": "1872",
+    "anos_construccion": "1872-1934",
+    "ano_inauguracion": "1872",
+    "estilos": [
+      "Patrimonio Mundial UNESCO",
+      "Arqueología Industrial"
+    ],
+    "programa": [
+      "Industrial",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Patrimonio Mundial UNESCO. Conserva intacta la majestuosa torre de lixiviación de madera y la única planta industrial procesadora de yodo del sistema Shanks conservada en el mundo.",
+    "fuente_url": "https://whc.unesco.org/en/list/1178",
+    "materiales_principales": [
+      "Pino oregón de grandes escuadrías",
+      "Chapa de acero galvanizado",
+      "Tuberías de hierro forjado"
+    ]
+  },
+  {
+    "id": "oficina-salitrera-santiago-hamburguesa-pena-chica",
+    "nombre_proyecto": "Oficina Salitrera Peña Chica (Santiago Hamburguesa)",
+    "arquitecto": "Empresarios Salitreros Alemanes",
+    "arquitecto_principal": "Ingenieros de Minas",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cantón Central, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.24,
+      "lng": -69.815
+    },
+    "ano_diseno": "1878",
+    "anos_construccion": "1880",
+    "ano_inauguracion": "1880",
+    "estilos": [
+      "Industrial Salitrero"
+    ],
+    "programa": [
+      "Industrial",
+      "Patrimonio"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Oficina salitrera del cantón Nebraska con restos notables de campamentos de obreros solteros y casados, y estructuras de trituración primaria de caliche.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Calamina",
+      "Costras de sal"
+    ]
+  },
+  {
+    "id": "oficina-salitrera-mapocho",
+    "nombre_proyecto": "Oficina Salitrera Mapocho",
+    "arquitecto": "Compañía Salitrera Mapocho",
+    "arquitecto_principal": "Ingenieros de Producción",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cantón San Antonio, Huara",
+    "coordenadas": {
+      "lat": -19.98,
+      "lng": -69.75
+    },
+    "ano_diseno": "1885",
+    "anos_construccion": "1888",
+    "ano_inauguracion": "1888",
+    "estilos": [
+      "Industrial Salitrero"
+    ],
+    "programa": [
+      "Industrial / Ruinas Históricas"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Importante enclave salitrero de Huara con remanentes de su chimenea industrial de ladrillo refractario, tortas de ripios monumentales y campamento de administración.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Ladrillo refractario",
+      "Estructura de pino oregón",
+      "Fierro fundido"
+    ]
+  },
+  {
+    "id": "oficina-salitrera-iris",
+    "nombre_proyecto": "Oficina Salitrera Iris",
+    "arquitecto": "The Iris Nitrate Company",
+    "arquitecto_principal": "Ingenieros Británicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cantón Sur, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.65,
+      "lng": -69.78
+    },
+    "ano_diseno": "1908",
+    "anos_construccion": "1910",
+    "ano_inauguracion": "1910",
+    "estilos": [
+      "Industrial Salitrero"
+    ],
+    "programa": [
+      "Industrial"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Una de las últimas salitreras del sistema Shanks en operar activamente en el siglo XX, conservando calderas a vapor, tanques de cristalización y talleres mecánicos.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hierro remachado",
+      "Pino oregón",
+      "Acero"
+    ]
+  },
+  {
+    "id": "oficina-salitrera-keryma",
+    "nombre_proyecto": "Oficina Salitrera Keryma",
+    "arquitecto": "Ingenieros Salitreros",
+    "arquitecto_principal": "The Nitrate Syndicate",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pampa del Tamarugal, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.35,
+      "lng": -69.8
+    },
+    "ano_diseno": "1909",
+    "anos_construccion": "1911",
+    "ano_inauguracion": "1911",
+    "estilos": [
+      "Industrial del Desierto"
+    ],
+    "programa": [
+      "Industrial / Patrimonio"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Planta de procesamiento de caliche representativa del apogeo de las inversiones salitreras previas a la Primera Guerra Mundial.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Acero corrugado",
+      "Calamina"
+    ]
+  },
+  {
+    "id": "estacion-ferrocarril-pisagua",
+    "nombre_proyecto": "Estación de Ferrocarril de Pisagua",
+    "arquitecto": "Nitrate Railways Co. Ltd.",
+    "arquitecto_principal": "Ingenieros Ferroviarios Británicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Costanera de Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.5985,
+      "lng": -70.214
+    },
+    "ano_diseno": "1868",
+    "anos_construccion": "1870",
+    "ano_inauguracion": "1870",
+    "estilos": [
+      "Arquitectura Ferroviaria en Pino Oregón",
+      "Victoriano Costero"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional. Estación terminal que recibía el salitre de la pampa y lo transfería a los lanchones de exportación. Edificio de dos pisos íntegramente en madera con corredor perimetral y mirador superior.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón importado",
+      "Fundaciones de piedra",
+      "Chapa metálica"
+    ]
+  },
+  {
+    "id": "teatro-municipal-de-pisagua",
+    "nombre_proyecto": "Teatro Municipal de Pisagua",
+    "arquitecto": "Comunidad Británica y Municipalidad de Pisagua",
+    "arquitecto_principal": "Carpinteros Navales y Maestros de Ribera",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.598,
+      "lng": -70.2135
+    },
+    "ano_diseno": "1890",
+    "anos_construccion": "1892",
+    "ano_inauguracion": "1892",
+    "estilos": [
+      "Victoriano en Pino Oregón",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Cultura",
+      "Teatro"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Emblema del esplendor del puerto salitrero. Estructurado en pino oregón con platea en herradura, palcos tallados a mano y proscenio neoclásico que acogió compañías líricas europeas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón americano",
+      "Fierro fundido",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "carcel-de-pisagua",
+    "nombre_proyecto": "Cárcel de Pisagua",
+    "arquitecto": "Dirección de Obras Públicas",
+    "arquitecto_principal": "MOP",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Borde del acantilado, Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.596,
+      "lng": -70.215
+    },
+    "ano_diseno": "1905",
+    "anos_construccion": "1908-1910",
+    "ano_inauguracion": "1910",
+    "estilos": [
+      "Arquitectura Penitenciaria Histórica",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Institucional / Sitio de Memoria"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Edificio penitenciario levantado en mampostería de piedra y celosías de pino oregón al pie del acantilado costero. Sitio de Memoria Histórica de Chile.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Pino oregón",
+      "Rejas de hierro forjado"
+    ]
+  },
+  {
+    "id": "hospital-de-pisagua",
+    "nombre_proyecto": "Hospital de Pisagua",
+    "arquitecto": "Junta de Beneficencia de Pisagua",
+    "arquitecto_principal": "Constructores Portuarios",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cerro de Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.599,
+      "lng": -70.212
+    },
+    "ano_diseno": "1882",
+    "anos_construccion": "1884-1885",
+    "ano_inauguracion": "1885",
+    "estilos": [
+      "Victoriano en Madera",
+      "Salud Histórica"
+    ],
+    "programa": [
+      "Salud / Patrimonio"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Conjunto hospitalario de pabellones en madera sobre pilotes ventilados, diseñado para el aislamiento y curación de enfermedades endémicas en el puerto salitrero.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Pilotes de madera tratada",
+      "Zinc"
+    ]
+  },
+  {
+    "id": "torre-reloj-de-pisagua",
+    "nombre_proyecto": "Torre Reloj de Pisagua",
+    "arquitecto": "Ingenieros Británicos / Ferrocarril Salitrero",
+    "arquitecto_principal": "Nitrate Railways",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Prat de Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.5975,
+      "lng": -70.2138
+    },
+    "ano_diseno": "1873",
+    "anos_construccion": "1875",
+    "ano_inauguracion": "1875",
+    "estilos": [
+      "Victoriano",
+      "Hito Urbano"
+    ],
+    "programa": [
+      "Monumento Cívico"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Torre de madera de dos pisos con maquinaria de relojería inglesa que marcaba los turnos de embarque del salitre sobre la rada portuaria.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Maquinaria de bronce y hierro",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "muelle-de-pisagua",
+    "nombre_proyecto": "Muelle Histórico de Pisagua",
+    "arquitecto": "Nitrate Railways Co. / Compañías Exportadoras",
+    "arquitecto_principal": "Ingenieros de Puertos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Rada de Pisagua, Huara",
+    "coordenadas": {
+      "lat": -19.597,
+      "lng": -70.2155
+    },
+    "ano_diseno": "1878",
+    "anos_construccion": "1880",
+    "ano_inauguracion": "1880",
+    "estilos": [
+      "Ingeniería Portuaria Salitrera"
+    ],
+    "programa": [
+      "Infraestructura Portuaria"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Estructura portuaria sobre pilotes de hierro y muelle de madera de pino oregón con pescantes a vapor para izar sacos de salitre a lanchones.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pilotes de hierro forjado",
+      "Pino oregón",
+      "Acero"
+    ]
+  },
+  {
+    "id": "planta-industrial-yodo-santa-laura",
+    "nombre_proyecto": "Planta Industrial de Yodo Santa Laura (Máquina Pampa)",
+    "arquitecto": "The Rosario Nitrate Co.",
+    "arquitecto_principal": "Ingenieros Químicos e Industriales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Oficina Santa Laura, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.211,
+      "lng": -69.8085
+    },
+    "ano_diseno": "1898",
+    "anos_construccion": "1900",
+    "ano_inauguracion": "1900",
+    "estilos": [
+      "Arqueología Industrial",
+      "Patrimonio UNESCO"
+    ],
+    "programa": [
+      "Industrial"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Complejo químico monumental en madera y hierro donde el agua madre del caliche era tratada con bisulfito de sodio para precipitar el yodo en retortas de sublimación.",
+    "fuente_url": "https://whc.unesco.org/en/list/1178",
+    "materiales_principales": [
+      "Pino oregón",
+      "Fierro fundido",
+      "Plomo",
+      "Ladrillo"
+    ]
+  },
+  {
+    "id": "pulperia-de-humberstone",
+    "nombre_proyecto": "Pulpería de la Salitrera Humberstone",
+    "arquitecto": "Compañía Salitrera de Tarapacá y Antofagasta (COSATAN)",
+    "arquitecto_principal": "Ingenieros de COSATAN",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Central de Humberstone, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.2078,
+      "lng": -69.7925
+    },
+    "ano_diseno": "1928",
+    "anos_construccion": "1929-1930",
+    "ano_inauguracion": "1930",
+    "estilos": [
+      "Neoclásico Pampeano",
+      "Art Déco Industrial"
+    ],
+    "programa": [
+      "Comercial / Abastos"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Edificio cívico y comercial donde los trabajadores salitreros canjeaban sus fichas por alimentos y víveres. Presenta una gran columnata porticada, cámaras de refrigeración a vapor y claraboyas industriales.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Madera",
+      "Hierro corrugado"
+    ]
+  },
+  {
+    "id": "hotel-de-humberstone",
+    "nombre_proyecto": "Hotel de la Salitrera Humberstone",
+    "arquitecto": "COSATAN",
+    "arquitecto_principal": "Arquitectos de COSATAN",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sector Cívico, Humberstone, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.2065,
+      "lng": -69.791
+    },
+    "ano_diseno": "1934",
+    "anos_construccion": "1935-1936",
+    "ano_inauguracion": "1936",
+    "estilos": [
+      "Art Déco Pampeano"
+    ],
+    "programa": [
+      "Hotelero / Social"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Residencia de visitas y técnicos internacionales de la salitrera, con líneas aerodinámicas art déco en sus balcones curvos, comedor con parquet de maderas importadas y bar americano.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón",
+      "Pino oregón",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "piscina-de-humberstone",
+    "nombre_proyecto": "Piscina de la Salitrera Humberstone",
+    "arquitecto": "COSATAN",
+    "arquitecto_principal": "Ingenieros Navales y de Minas",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Complejo Deportivo Humberstone, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.2085,
+      "lng": -69.7905
+    },
+    "ano_diseno": "1929",
+    "anos_construccion": "1930",
+    "ano_inauguracion": "1930",
+    "estilos": [
+      "Ingeniería Estructural / Recreación"
+    ],
+    "programa": [
+      "Deportivo"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Piscina al aire libre en medio del desierto de Atacama, construida íntegramente con gruesas planchas de acero remachadas de cascos de buques desguazados y graderías en pino oregón.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Chapas de acero naval remachadas",
+      "Pino oregón",
+      "Tuberías de fundición"
+    ]
+  },
+  {
+    "id": "palacio-astoreca-iquique",
+    "nombre_proyecto": "Palacio Astoreca",
+    "arquitecto": "Alberto Cruz Montt",
+    "arquitecto_principal": "Alberto Cruz Montt",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Paseo Baquedano 737, Iquique",
+    "coordenadas": {
+      "lat": -20.2173,
+      "lng": -70.1517
+    },
+    "ano_diseno": "1903",
+    "anos_construccion": "1903-1904",
+    "ano_inauguracion": "1904",
+    "estilos": [
+      "Art Nouveau",
+      "Georgiano en Madera",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Residencial Patrimonial / Cultura"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Máxima expresión residencial de los barones del salitre. Construido íntegramente en madera de pino oregón y roble americano sobre una manzana completa, con vitrales Art Nouveau franceses y mobiliario Luis XVI.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Roble americano",
+      "Vitrales de plomo",
+      "Mármol de Carrara"
+    ]
+  },
+  {
+    "id": "teatro-municipal-de-iquique",
+    "nombre_proyecto": "Teatro Municipal de Iquique",
+    "arquitecto": "Diego y Eduardo Avendaño",
+    "arquitecto_principal": "Hermanos Avendaño",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Prat s/n, Iquique",
+    "coordenadas": {
+      "lat": -20.2138,
+      "lng": -70.1528
+    },
+    "ano_diseno": "1888",
+    "anos_construccion": "1889",
+    "ano_inauguracion": "1889",
+    "estilos": [
+      "Neoclásico en Madera",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Cultura",
+      "Teatro"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Obra cumbre de la carpintería neoclásica sudamericana levantada en pino oregón. Posee un foyer decorado con querubines y musas de la mitología griega pintadas en el cielo por artistas franceses.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Tabiquería de quincha de caña",
+      "Estuco de yeso"
+    ]
+  },
+  {
+    "id": "torre-reloj-plaza-prat-iquique",
+    "nombre_proyecto": "Torre Reloj de la Plaza Prat",
+    "arquitecto": "Compañía de Joyería y Relojería Benson de Londres",
+    "arquitecto_principal": "Ingenieros Británicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Centro de la Plaza Prat, Iquique",
+    "coordenadas": {
+      "lat": -20.2142,
+      "lng": -70.1525
+    },
+    "ano_diseno": "1876",
+    "anos_construccion": "1877",
+    "ano_inauguracion": "1877",
+    "estilos": [
+      "Victoriano Neogótico en Madera",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Monumento Cívico"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Erigida en 1877 bajo administración peruana en madera de pino oregón con una altura de 25 metros dividida en tres niveles escalonados con arcos góticos ojivales y cuatro esferas horarias.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Maquinaria de relojería inglesa",
+      "Bronce"
+    ]
+  },
+  {
+    "id": "edificio-sociedad-empleados-tarapaca",
+    "nombre_proyecto": "Edificio de la Sociedad Protectora de Empleados de Tarapacá",
+    "arquitecto": "Miguel Retornano",
+    "arquitecto_principal": "Miguel Retornano",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Prat con Serrano, Iquique",
+    "coordenadas": {
+      "lat": -20.2135,
+      "lng": -70.152
+    },
+    "ano_diseno": "1910",
+    "anos_construccion": "1911",
+    "ano_inauguracion": "1911",
+    "estilos": [
+      "Victoriano en Pino Oregón"
+    ],
+    "programa": [
+      "Institucional / Gremial"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Sede gremial con galería corrida de arcos rebajados en primer piso, balcones con balaustradas torneadas en madera y una cúpula esquinera de remate que domina la plaza.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Zinc estampado",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "casa-cultura-iquique-ex-aduana",
+    "nombre_proyecto": "Casa de la Cultura de Iquique / Ex Aduana",
+    "arquitecto": "Manuel Aldunate",
+    "arquitecto_principal": "Manuel Aldunate",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Aníbal Pinto con Bolívar, Iquique",
+    "coordenadas": {
+      "lat": -20.211,
+      "lng": -70.1545
+    },
+    "ano_diseno": "1870",
+    "anos_construccion": "1871",
+    "ano_inauguracion": "1871",
+    "estilos": [
+      "Colonial Republicano Peruano",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Edificio aduanero levantado por el gobierno de Perú con patio claustral de doble arquería de madera y muros perimetrales de ladrillos de cal y canto traídos como lastre en veleros.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Ladrillo de cal y canto",
+      "Piedra"
+    ]
+  },
+  {
+    "id": "ex-estacion-ferrocarril-salitrero-iquique",
+    "nombre_proyecto": "Ex Estación del Ferrocarril Salitrero de Iquique",
+    "arquitecto": "Nitrate Railways Co. Ltd.",
+    "arquitecto_principal": "Ingenieros Británicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Bolívar con Sotomayor, Iquique",
+    "coordenadas": {
+      "lat": -20.2118,
+      "lng": -70.1495
+    },
+    "ano_diseno": "1881",
+    "anos_construccion": "1882-1883",
+    "ano_inauguracion": "1883",
+    "estilos": [
+      "Ferroviario Victoriano",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Cabecera administrativa y andén central del Ferrocarril Salitrero de Tarapacá que transportaba millones de toneladas desde la pampa hasta los muelles iquiqueños.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Acero forjado",
+      "Zinc acanalado"
+    ]
+  },
+  {
+    "id": "casino-espanol-de-iquique",
+    "nombre_proyecto": "Casino Español de Iquique",
+    "arquitecto": "Miguel Retornano",
+    "arquitecto_principal": "Miguel Retornano",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Prat 584, Iquique",
+    "coordenadas": {
+      "lat": -20.214,
+      "lng": -70.153
+    },
+    "ano_diseno": "1903",
+    "anos_construccion": "1904",
+    "ano_inauguracion": "1904",
+    "estilos": [
+      "Neo-Mudéjar / Hispanomusulmán",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Social / Cultura"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Deslumbrante recreación de la Alhambra de Granada en madera y yeso policromado. Sus salones interiores reproducen mocárabes, arcos polilobulados, caligrafía árabe cúfica y cuadros de la historia hispánica.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Yeso policromado",
+      "Pino oregón",
+      "Cerámica vidriada sevillana"
+    ]
+  },
+  {
+    "id": "catedral-inmaculada-concepcion-iquique",
+    "nombre_proyecto": "Catedral Inmaculada Concepción de Iquique",
+    "arquitecto": "Monseñor Camilo Ortúzar / Constructores Navales",
+    "arquitecto_principal": "Camilo Ortúzar",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Obispo Labbé con Bolívar, Iquique",
+    "coordenadas": {
+      "lat": -20.2125,
+      "lng": -70.1518
+    },
+    "ano_diseno": "1880",
+    "anos_construccion": "1881-1882",
+    "ano_inauguracion": "1882",
+    "estilos": [
+      "Neoclásico en Madera",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Templo catedralicio construido tras el voraz incendio de 1873. Su estructura de tres naves con bóveda de cañón corrido está levantada enteramente en pino oregón con columnas corintias de madera.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Tabiquería de caña",
+      "Planchas de zinc"
+    ]
+  },
+  {
+    "id": "palacio-logia-masonica-iquique",
+    "nombre_proyecto": "Palacio de la Logia Masónica N° 4 Pioneer",
+    "arquitecto": "Comunidad Masónica de Iquique",
+    "arquitecto_principal": "Arquitectos Masones Británicos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Aníbal Pinto con Gorostiaga, Iquique",
+    "coordenadas": {
+      "lat": -20.2155,
+      "lng": -70.1528
+    },
+    "ano_diseno": "1908",
+    "anos_construccion": "1909-1910",
+    "ano_inauguracion": "1910",
+    "estilos": [
+      "Neoclásico Costero en Madera"
+    ],
+    "programa": [
+      "Institucional / Filosófico"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Templo masónico con pórtico monumental jónico tetrástilo en madera, frontón triangular tallado y salas de tenida con pisos ajedrezados y bóvedas celestes estrelladas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Roble americano",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "banco-italia-rio-plata-iquique",
+    "nombre_proyecto": "Edificio del Banco de Italia y Río de la Plata",
+    "arquitecto": "Inversionistas Italianos de Tarapacá",
+    "arquitecto_principal": "Maestros Canteros y Carpinteros",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle San Martín con Serrano, Iquique",
+    "coordenadas": {
+      "lat": -20.213,
+      "lng": -70.1538
+    },
+    "ano_diseno": "1888",
+    "anos_construccion": "1889-1890",
+    "ano_inauguracion": "1890",
+    "estilos": [
+      "Neorrenacentista Italiano en Madera"
+    ],
+    "programa": [
+      "Financiero / Comercial"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Inmueble bancario de esquina con almohadillado simulado en tablas de madera, cornisas molduradas voladas y amplios ventanales en arco de medio punto.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Vidrio biselado",
+      "Hierro"
+    ]
+  },
+  {
+    "id": "casa-maroto-iquique",
+    "nombre_proyecto": "Casa Maroto",
+    "arquitecto": "Familia Maroto / Salitreros",
+    "arquitecto_principal": "Constructores Urbanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Baquedano con Gorostiaga, Iquique",
+    "coordenadas": {
+      "lat": -20.2165,
+      "lng": -70.1519
+    },
+    "ano_diseno": "1906",
+    "anos_construccion": "1907-1908",
+    "ano_inauguracion": "1908",
+    "estilos": [
+      "Georgiano Americano en Madera"
+    ],
+    "programa": [
+      "Residencial Patrimonial"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Residencia representativa del Paseo Baquedano con sistema constructivo 'balloon frame', doble fachada con persianas venecianas móviles y linterna de cubierta para ventilación.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Tabique de caña de Guayaquil",
+      "Cal y arena"
+    ]
+  },
+  {
+    "id": "paseo-baquedano-conjunto-iquique",
+    "nombre_proyecto": "Paseo Baquedano (Conjunto Urbano Patrimonial)",
+    "arquitecto": "Municipalidad de Iquique / Inmigrantes Salitreros",
+    "arquitecto_principal": "Varios Constructores Siglo XIX",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Baquedano entre Plaza Prat y Plaza Slava, Iquique",
+    "coordenadas": {
+      "lat": -20.218,
+      "lng": -70.1515
+    },
+    "ano_diseno": "1880",
+    "anos_construccion": "1880-1910",
+    "ano_inauguracion": "1910",
+    "estilos": [
+      "Zona Típica",
+      "Georgiano",
+      "Victoriano"
+    ],
+    "programa": [
+      "Espacio Público / Urbano Patrimonial"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Zona Típica nacional caracterizada por su tranvía histórico a tracción animal (carros de sangre), pavimentos de adoquines y más de una veintena de palacetes de madera con linternas cenitales.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Adoquines de granito",
+      "Rieles de hierro"
+    ]
+  },
+  {
+    "id": "edificio-club-ingles-iquique",
+    "nombre_proyecto": "Edificio del Club de Setiembre / Club Inglés",
+    "arquitecto": "Colonia Británica de Iquique",
+    "arquitecto_principal": "Ingenieros Salitreros",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Prat con Aníbal Pinto, Iquique",
+    "coordenadas": {
+      "lat": -20.2138,
+      "lng": -70.1522
+    },
+    "ano_diseno": "1888",
+    "anos_construccion": "1890",
+    "ano_inauguracion": "1890",
+    "estilos": [
+      "Victoriano Clásico"
+    ],
+    "programa": [
+      "Social / Club"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Centro de reunión de los directores británicos de las oficinas salitreras y del ferrocarril. Dotado de biblioteca con chimeneas de caoba, salas de billar y bar tradicional inglés.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Caoba",
+      "Bronce",
+      "Cristales grabados"
+    ]
+  },
+  {
+    "id": "mercado-centenario-de-iquique",
+    "nombre_proyecto": "Mercado Centenario de Iquique",
+    "arquitecto": "Municipalidad de Iquique",
+    "arquitecto_principal": "Ingeniería de Obras Municipales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Barros Arana con Latorre, Iquique",
+    "coordenadas": {
+      "lat": -20.216,
+      "lng": -70.1475
+    },
+    "ano_diseno": "1928",
+    "anos_construccion": "1929-1930",
+    "ano_inauguracion": "1930",
+    "estilos": [
+      "Arquitectura en Hierro",
+      "Industrial Comercial"
+    ],
+    "programa": [
+      "Comercial / Abastos",
+      "Monumento Nacional"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional. Nave central monumental con armaduras de acero traídas de Europa, lucernarios continuos de ventilación cenital y perímetro de locales comerciales de abastecimiento popular.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Acero estructural",
+      "Albañilería de ladrillo",
+      "Mortero"
+    ]
+  },
+  {
+    "id": "iglesia-san-antonio-padua-iquique",
+    "nombre_proyecto": "Iglesia San Antonio de Padua de Iquique (San Francisco)",
+    "arquitecto": "Orden Franciscana",
+    "arquitecto_principal": "Hermanos Franciscanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Almirante Latorre 1364, Iquique",
+    "coordenadas": {
+      "lat": -20.2195,
+      "lng": -70.146
+    },
+    "ano_diseno": "1902",
+    "anos_construccion": "1903-1904",
+    "ano_inauguracion": "1904",
+    "estilos": [
+      "Neogótico en Madera",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso",
+      "Sitio Histórico"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Templo franciscano de esbelto campanario neogótico construido en madera. Adyacente a la escuela Santa María de Iquique, acogió heridos y víctimas de la huelga salitrera de 1907.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Tabiquería de yeso y caña",
+      "Zinc"
+    ]
+  },
+  {
+    "id": "casa-musso-iquique",
+    "nombre_proyecto": "Casa Musso",
+    "arquitecto": "Familia Musso",
+    "arquitecto_principal": "Constructores Urbanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Paseo Baquedano 950, Iquique",
+    "coordenadas": {
+      "lat": -20.219,
+      "lng": -70.151
+    },
+    "ano_diseno": "1914",
+    "anos_construccion": "1915",
+    "ano_inauguracion": "1915",
+    "estilos": [
+      "Ecléctico en Madera"
+    ],
+    "programa": [
+      "Residencial Patrimonial"
+    ],
+    "ciudad": "Iquique",
+    "pais": "Chile",
+    "descripcion": "Casona aristocrática con torreón mirador acristalado de tres plantas que permitía a los armadores mercantes avistar la entrada de los barcos veleros a la rada de Iquique.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Vidrio",
+      "Herrajes de bronce"
+    ]
+  },
+  {
+    "id": "santuario-nuestra-senora-del-carmen-tirana",
+    "nombre_proyecto": "Santuario de Nuestra Señora del Carmen de La Tirana",
+    "arquitecto": "Obispado de Iquique / MOP",
+    "arquitecto_principal": "Constructores Religiosos del Norte",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de La Tirana, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.334,
+      "lng": -69.654
+    },
+    "ano_diseno": "1968",
+    "anos_construccion": "1970-1971",
+    "ano_inauguracion": "1971",
+    "estilos": [
+      "Arquitectura Religiosa Masiva",
+      "Regionalismo Andino"
+    ],
+    "programa": [
+      "Religioso",
+      "Santuario"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Epicentro de la fiesta religiosa más multitudinaria de Chile. Diseñado con una inmensa nave abierta con arcos parabólicos de hormigón y explanada atrial para 200.000 peregrinos y cofradías de bailes religiosos.",
+    "fuente_url": "https://www.iglesiadeiquique.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Madera de algarrobo y pino",
+      "Piedra"
+    ]
+  },
+  {
+    "id": "iglesia-san-lorenzo-de-tarapaca",
+    "nombre_proyecto": "Iglesia San Lorenzo de Tarapacá",
+    "arquitecto": "Dirección de Arquitectura MOP / Reconstrucción Histórica",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Tarapacá, Huara",
+    "coordenadas": {
+      "lat": -19.9245,
+      "lng": -69.5108
+    },
+    "ano_diseno": "1760",
+    "anos_construccion": "1760 / Reconstruida 2012",
+    "ano_inauguracion": "2012",
+    "estilos": [
+      "Barroco Andino",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Santuario del 'Tata Lorenzo', santo patrono de los mineros y transportistas del norte. Destruida por el terremoto de 2005 y reconstruida con tecnología antisísmica de geocalla, adobes masivos y retablo barroco dorado.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe antisísmico",
+      "Piedra toba",
+      "Madera de algarrobo",
+      "Pan de oro"
+    ]
+  },
+  {
+    "id": "iglesia-de-mamina",
+    "nombre_proyecto": "Iglesia de Nuestra Señora del Rosario de Mamiña",
+    "arquitecto": "Doctrinares Franciscanos y Canteros Andinos",
+    "arquitecto_principal": "Maestros Canteros de Mamiña",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de Mamiña, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.0715,
+      "lng": -69.2175
+    },
+    "ano_diseno": "1625",
+    "anos_construccion": "1632",
+    "ano_inauguracion": "1632",
+    "estilos": [
+      "Barroco Mestizo en Cantería",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Templo célebre por sus dos torres campanario gemelas construidas enteramente en piedra liparita rosada volcánica con motivos fitomorfos tallados en relieve y atrio escalonado.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra liparita rosada",
+      "Calicanto",
+      "Madera de algarrobo"
+    ]
+  },
+  {
+    "id": "iglesia-de-camina",
+    "nombre_proyecto": "Iglesia de Santo Tomás de Camiña",
+    "arquitecto": "Misioneros y Comunidad Aymara de Camiña",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Camiña",
+    "coordenadas": {
+      "lat": -19.313,
+      "lng": -69.426
+    },
+    "ano_diseno": "1690",
+    "anos_construccion": "1700",
+    "ano_inauguracion": "1700",
+    "estilos": [
+      "Barroco Mestizo",
+      "Arquitectura Andina"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camiña",
+    "pais": "Chile",
+    "descripcion": "Templo matriz de la quebrada de Camiña con fachada de adobón reforzado, campanario adosado y portada barroca mestiza con tallas de uvas, flores y símbolos prehispánicos.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobón",
+      "Piedra labrada",
+      "Madera nativa",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-de-matilla",
+    "nombre_proyecto": "Iglesia de San Antonio de Matilla y Campanario Exento",
+    "arquitecto": "Comunidad de Matilla y Padres Mercedarios",
+    "arquitecto_principal": "Maestros Canteros de Matilla",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Oasis de Matilla, Pica",
+    "coordenadas": {
+      "lat": -20.514,
+      "lng": -69.358
+    },
+    "ano_diseno": "1735",
+    "anos_construccion": "1740",
+    "ano_inauguracion": "1740",
+    "estilos": [
+      "Barroco Andino en Piedra Volcánica",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Pica",
+    "pais": "Chile",
+    "descripcion": "Monumento Nacional. Destaca su célebre campanario exento de dos niveles de piedra volcánica con arcos de medio punto y su capilla interior con una representación en tamaño natural de la Última Cena tallada en madera.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica liparita",
+      "Cal viva",
+      "Algarrobo",
+      "Caña"
+    ]
+  },
+  {
+    "id": "iglesia-san-andres-de-pica",
+    "nombre_proyecto": "Iglesia de San Andrés de Pica",
+    "arquitecto": "Comunidad de Pica / Obispado",
+    "arquitecto_principal": "Maestros Carpinteros del Tamarugal",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de Armas de Pica",
+    "coordenadas": {
+      "lat": -20.49,
+      "lng": -69.33
+    },
+    "ano_diseno": "1880",
+    "anos_construccion": "1883-1886",
+    "ano_inauguracion": "1886",
+    "estilos": [
+      "Neoclásico en Pino Oregón y Quincha",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Pica",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional en el corazón del oasis de Pica. Majestuosa basílica con frontón neoclásico, dos torres simétricas de madera de pino oregón y cúpula central encamonada sobre tambor cilíndrico.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Quincha de caña y barro",
+      "Yeso moldurado"
+    ]
+  },
+  {
+    "id": "iglesia-de-sibaya",
+    "nombre_proyecto": "Iglesia de Sibaya (Santa Catalina)",
+    "arquitecto": "Misioneros y Comunidad Aymara de Sibaya",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Sibaya, Huara",
+    "coordenadas": {
+      "lat": -19.785,
+      "lng": -69.26
+    },
+    "ano_diseno": "1730",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1755",
+    "estilos": [
+      "Barroco Andino de Quebrada"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Templo de quebrada profunda con muros masivos de adobe, portal de piedra tallada y coro alto con escalinata exterior de cantería.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra andesita",
+      "Queñoa",
+      "Barro"
+    ]
+  },
+  {
+    "id": "iglesia-de-huavina",
+    "nombre_proyecto": "Iglesia de Huaviña",
+    "arquitecto": "Comunidad de Huaviña",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Huaviña, Quebrada de Tarapacá, Huara",
+    "coordenadas": {
+      "lat": -19.82,
+      "lng": -69.31
+    },
+    "ano_diseno": "1740",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1760",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Templo rural emplazado en bancales agrícolas andinos, con techumbre de tijerales de queñoa y atrio amurallado para procesiones comunales.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Queñoa",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-de-moquella",
+    "nombre_proyecto": "Iglesia de Moquella",
+    "arquitecto": "Comunidad de Moquella",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Valle de Camiña, Moquella",
+    "coordenadas": {
+      "lat": -19.34,
+      "lng": -69.46
+    },
+    "ano_diseno": "1670",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1690",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camiña",
+    "pais": "Chile",
+    "descripcion": "Capilla histórica del valle agrícola de Camiña con portada de mampostería policromada y retablo tallado en madera nativa colonial.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Caña",
+      "Barro"
+    ]
+  },
+  {
+    "id": "iglesia-de-sotoca",
+    "nombre_proyecto": "Iglesia de Sotoca",
+    "arquitecto": "Comunidad Indígena de Sotoca",
+    "arquitecto_principal": "Canteros Andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Sotoca, precordillera de Huara",
+    "coordenadas": {
+      "lat": -19.605,
+      "lng": -69.23
+    },
+    "ano_diseno": "1690",
+    "anos_construccion": "1700",
+    "ano_inauguracion": "1700",
+    "estilos": [
+      "Barroco Mestizo",
+      "Monumento Nacional"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Templo andino construido con piedra volcánica labrada sin argamasa en sus esquinas y contrafuertes monumentales para resistir terremotos altiplánicos.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Paja brava",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-limaxina",
+    "nombre_proyecto": "Iglesia de Limaxiña",
+    "arquitecto": "Comunidad de Limaxiña",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Tarapacá, Huara",
+    "coordenadas": {
+      "lat": -19.86,
+      "lng": -69.41
+    },
+    "ano_diseno": "1750",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1775",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Iglesia de pueblo oasis con campanario de adobe exento rematado en pirámide truncada y muros gruesos pintados a la cal.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Algarrobo",
+      "Caña",
+      "Piedra"
+    ]
+  },
+  {
+    "id": "iglesia-de-nama",
+    "nombre_proyecto": "Iglesia de Nama",
+    "arquitecto": "Comunidad de Nama",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Nama, Quebrada alta de Camiña",
+    "coordenadas": {
+      "lat": -19.22,
+      "lng": -69.4
+    },
+    "ano_diseno": "1740",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1765",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camiña",
+    "pais": "Chile",
+    "descripcion": "Capilla de alta montaña asentada al pie de farallones rocosos multicolores con muro perimetral de pirca de piedra y arco de ingreso.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Adobe",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-de-macaya",
+    "nombre_proyecto": "Iglesia de Macaya",
+    "arquitecto": "Comunidad de Macaya",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Macaya, Pozo Almonte",
+    "coordenadas": {
+      "lat": -20.12,
+      "lng": -69.18
+    },
+    "ano_diseno": "1730",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1750",
+    "estilos": [
+      "Barroco Andino en Piedra Liparita"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Pozo Almonte",
+    "pais": "Chile",
+    "descripcion": "Erigida en la quebrada termal de Macaya con mampostería de piedra volcánica labrada, arco toral de piedra y techumbre de madera de cardón.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra liparita",
+      "Madera de cactus cardón",
+      "Barro"
+    ]
+  },
+  {
+    "id": "iglesia-de-mocha",
+    "nombre_proyecto": "Iglesia de Mocha",
+    "arquitecto": "Comunidad de Mocha",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Mocha, Quebrada de Tarapacá, Huara",
+    "coordenadas": {
+      "lat": -19.81,
+      "lng": -69.29
+    },
+    "ano_diseno": "1650",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1680",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Templo rústico de adobe y techumbre vegetal con atrio procesional y campanario exento de un cuerpo.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Barro",
+      "Madera nativa"
+    ]
+  },
+  {
+    "id": "iglesia-de-pachica",
+    "nombre_proyecto": "Iglesia de Pachica",
+    "arquitecto": "Comunidad de Pachica",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pachica, Quebrada de Tarapacá, Huara",
+    "coordenadas": {
+      "lat": -19.88,
+      "lng": -69.43
+    },
+    "ano_diseno": "1760",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1785",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Huara",
+    "pais": "Chile",
+    "descripcion": "Capilla de valle con portada neoclásica de yesería popular andina y nave de adobe con cubiertas a dos aguas de caña y torta de barro.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Caña brava",
+      "Yeso",
+      "Piedra"
+    ]
+  }
+]

@@ -1,0 +1,1001 @@
+[
+  {
+    "id": "catedral-de-san-marcos-arica",
+    "nombre_proyecto": "Catedral de San Marcos de Arica",
+    "arquitecto": "Gustave Eiffel",
+    "arquitecto_principal": "Gustave Eiffel",
+    "colaboradores": "Talleres Eiffel (París)",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza Colón, San Marcos 202, Arica",
+    "coordenadas": {
+      "lat": -18.4795,
+      "lng": -70.3204
+    },
+    "ano_diseno": "1871",
+    "anos_construccion": "1875-1876",
+    "ano_inauguracion": "1876",
+    "estilos": [
+      "Neogótico",
+      "Arquitectura en Hierro"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estructura metálica prefabricada en los talleres de Gustave Eiffel en Francia, encargada por el presidente peruano José Balta para Ancón y destinada finalmente a Arica tras el terremoto de 1868. Posee muros y pilares de hierro colado con vitrales y una esbelta torre campanario.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hierro fundido prefabricado",
+      "Chapa de acero",
+      "Vidrio catedral"
+    ]
+  },
+  {
+    "id": "iglesia-san-antonio-padua-pobre",
+    "nombre_proyecto": "Iglesia San Antonio de Padua de Pobre",
+    "arquitecto": "Misioneros y Comunidad local",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pueblo de Pobre, Putre, Región de Arica y Parinacota",
+    "coordenadas": {
+      "lat": -18.1965,
+      "lng": -69.5592
+    },
+    "ano_diseno": "1650",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1680",
+    "estilos": [
+      "Barroco Andino",
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo andino de adobe y piedra de la Ruta de las Misiones. Presenta nave única con techumbre de tijerales de queñoa y paja brava, campanario exento y un retablo rústico policromado de profundo valor sincrético.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra andesita",
+      "Madera de queñoa",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-san-pedro-esquina",
+    "nombre_proyecto": "Iglesia de San Pedro de Esquiña",
+    "arquitecto": "Comunidad Andina",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Esquiña, Comuna de Camarones",
+    "coordenadas": {
+      "lat": -19.0142,
+      "lng": -69.7028
+    },
+    "ano_diseno": "1580",
+    "anos_construccion": "Siglo XVI",
+    "ano_inauguracion": "1590",
+    "estilos": [
+      "Barroco Andino",
+      "Vernáculo"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Una de las iglesias más tempranas del norte chileno, construida en la quebrada de Esquiña. Su fábrica de piedra canteada con mortero de barro exhibe contrafuertes monumentales y un portal tallado en cantería.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra canteada",
+      "Barro",
+      "Queñoa",
+      "Caña"
+    ]
+  },
+  {
+    "id": "iglesia-virgen-rosario-codpa",
+    "nombre_proyecto": "Iglesia de Virgen del Rosario de Codpa",
+    "arquitecto": "Comunidad andina y clero doctrinero",
+    "arquitecto_principal": "Comunidad andina",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza del Pueblo de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.8315,
+      "lng": -69.7431
+    },
+    "ano_diseno": "1660",
+    "anos_construccion": "1668",
+    "ano_inauguracion": "1668",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Hito fundamental del Valle de Codpa, célebre por su producción vitivinícola y su templo de nave longitudinal con coro alto de madera tallada y pintura mural andina con motivos fitomorfos y ángeles arcabuceros.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Madera nativa",
+      "Teja de barro"
+    ]
+  },
+  {
+    "id": "iglesia-de-pachama",
+    "nombre_proyecto": "Iglesia de Pachama (Nuestra Señora de la Candelaria)",
+    "arquitecto": "Misioneros y maestros andinos",
+    "arquitecto_principal": "Maestros andinos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Pachama, precordillera de Putre",
+    "coordenadas": {
+      "lat": -18.4556,
+      "lng": -69.5898
+    },
+    "ano_diseno": "1710",
+    "anos_construccion": "1718",
+    "ano_inauguracion": "1718",
+    "estilos": [
+      "Barroco Mestizo Andino"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Reconocida mundialmente por poseer el ciclo muralístico barroco andino más completo de los Andes australes. La totalidad de sus muros interiores está recubierta con frescos coloniales del Juicio Final, Vía Crucis y figuras de santos enmarcados en pan de oro.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Pintura al temple mural",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-san-santiago-belen",
+    "nombre_proyecto": "Iglesia San Santiago de Belén",
+    "arquitecto": "Misioneros Franciscanos",
+    "arquitecto_principal": "Misioneros Franciscanos",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Plaza de Belén, Putre",
+    "coordenadas": {
+      "lat": -18.4682,
+      "lng": -69.5165
+    },
+    "ano_diseno": "1620",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1625",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo tutelar del único pueblo fundado por españoles en la sierra de Arica. Sobresale su pórtico labrado en cantería de piedra y su torre campanario exenta de dos niveles coronada con cúpula rústica.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra andesita",
+      "Madera de cactus cardón",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-socoroma",
+    "nombre_proyecto": "Iglesia de San Francisco de Socoroma",
+    "arquitecto": "Comunidad Aymara y Franciscanos",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Socoroma, Comuna de Putre",
+    "coordenadas": {
+      "lat": -18.2612,
+      "lng": -69.5843
+    },
+    "ano_diseno": "1560",
+    "anos_construccion": "1560 / 1770",
+    "ano_inauguracion": "1770",
+    "estilos": [
+      "Arquitectura Andina Tradicional",
+      "Barroco Mestizo"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Templo enclavado en terrazas de cultivo andinas a 3.000 metros de altitud. Destaca su muro perimetral de piedra pircada, portal labrado en toba volcánica y un retablo con policromía colonial.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobón",
+      "Piedra toba volcánica",
+      "Paja brava",
+      "Madera"
+    ]
+  },
+  {
+    "id": "iglesia-de-chitita",
+    "nombre_proyecto": "Iglesia de Chitita (San Pedro)",
+    "arquitecto": "Misioneros Doctrinares",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Chitita, Valle de Codpa, Camarones",
+    "coordenadas": {
+      "lat": -18.8103,
+      "lng": -69.7188
+    },
+    "ano_diseno": "1650",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1680",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Ubicada en la histórica Ruta del Mercurio que transportaba azogue desde Huancavelica a Potosí. Capilla de proporciones íntimas con atrio amurallado, campanario de un cuerpo y techumbre vegetal.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra rústica",
+      "Madera de chañar",
+      "Caña"
+    ]
+  },
+  {
+    "id": "iglesia-de-guallatire",
+    "nombre_proyecto": "Iglesia de Guallatire (Virgen de la Inmaculada Concepción)",
+    "arquitecto": "Comunidad pastoril aymara",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Guallatire, Reserva Las Vicuñas, Putre",
+    "coordenadas": {
+      "lat": -18.5061,
+      "lng": -69.1554
+    },
+    "ano_diseno": "1820",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1840",
+    "estilos": [
+      "Vernáculo Altiplánico"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Erigida a 4.300 metros de altitud frente al imponente Volcán Guallatiri activo y humeante. Se alza sobre una pequeña colina rodeada de un muro perimetral con arcos de acceso encalados en blanco absoluto.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro encalado",
+      "Paja brava",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-parinacota",
+    "nombre_proyecto": "Iglesia de Parinacota (Virgen de la Natividad)",
+    "arquitecto": "Maestros constructores Aymara",
+    "arquitecto_principal": "Comunidad Aymara",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Parinacota, Parque Nacional Lauca, Putre",
+    "coordenadas": {
+      "lat": -18.2011,
+      "lng": -69.2687
+    },
+    "ano_diseno": "1775",
+    "anos_construccion": "1789",
+    "ano_inauguracion": "1789",
+    "estilos": [
+      "Barroco Andino",
+      "Patrimonio Mundial Indicativo"
+    ],
+    "programa": [
+      "Religioso",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Putre",
+    "pais": "Chile",
+    "descripcion": "Joya cumbre del altiplano chileno a 4.400 msnm. Muros de calicanto encalados, arco triunfal interior, frescos del infierno y purgatorio y un atrio cercado con torrecillas esquineras coronadas por esculturas antropomorfas en piedra.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Calicanto",
+      "Paja brava",
+      "Cuero de vicuña"
+    ]
+  },
+  {
+    "id": "iglesia-de-caquena",
+    "nombre_proyecto": "Iglesia de Caquena",
+    "arquitecto": "Comunidad Aymara de Caquena",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Bofedal de Caquena, General Lagos",
+    "coordenadas": {
+      "lat": -18.0558,
+      "lng": -69.2014
+    },
+    "ano_diseno": "1880",
+    "anos_construccion": "1885-1890",
+    "ano_inauguracion": "1890",
+    "estilos": [
+      "Vernáculo Andino Altiplánico"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Templo andino altiplánico situado en uno de los bofedales más extensos de la frontera tripartita. Campanario adosado de baja altura para resistir vientos catabáticos y sismos extremos.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra laja",
+      "Barro",
+      "Paja brava",
+      "Queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-cosapilla",
+    "nombre_proyecto": "Iglesia de Cosapilla",
+    "arquitecto": "Arrieros y pastores de Guacollo",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Cosapilla, General Lagos",
+    "coordenadas": {
+      "lat": -17.8423,
+      "lng": -69.4589
+    },
+    "ano_diseno": "1850",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1870",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Templo de piedra y cal asentado en la meseta andina septentrional. Su volumetría pura y compacta responde a la protección térmica contra las temperaturas bajo cero del altiplano.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra blanca",
+      "Cal viva",
+      "Tijerales de queñoa"
+    ]
+  },
+  {
+    "id": "iglesia-de-visviri",
+    "nombre_proyecto": "Iglesia de Visviri",
+    "arquitecto": "Comunidad Aymara Fronteriza",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Hito Tripartito, Visviri, General Lagos",
+    "coordenadas": {
+      "lat": -17.5962,
+      "lng": -69.4828
+    },
+    "ano_diseno": "1870",
+    "anos_construccion": "Siglo XIX",
+    "ano_inauguracion": "1885",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "General Lagos",
+    "pais": "Chile",
+    "descripcion": "Hito arquitectónico en el punto más septentrional de Chile, adyacente a la feria dominical tripartita entre Chile, Bolivia y Perú. Representa la persistencia de las técnicas constructivas prehispánicas.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra volcánica",
+      "Barro",
+      "Paja brava"
+    ]
+  },
+  {
+    "id": "iglesia-de-timar",
+    "nombre_proyecto": "Iglesia de San Juan Bautista de Timar",
+    "arquitecto": "Comunidad de Timar",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Timar, Camarones",
+    "coordenadas": {
+      "lat": -18.7516,
+      "lng": -69.6922
+    },
+    "ano_diseno": "1730",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1750",
+    "estilos": [
+      "Barroco Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Templo de quebrada construido con mampostería de piedra rústica y argamasa de barro. Destaca su pórtico enmarcado con pilastras y un calvario atrial en el acceso.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra",
+      "Barro",
+      "Caña brava",
+      "Madera nativa"
+    ]
+  },
+  {
+    "id": "iglesia-de-cobija",
+    "nombre_proyecto": "Iglesia de Cobija (Camarones)",
+    "arquitecto": "Pobladores de Cobija",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Poblado de Cobija, Camarones",
+    "coordenadas": {
+      "lat": -18.9667,
+      "lng": -69.75
+    },
+    "ano_diseno": "1640",
+    "anos_construccion": "Siglo XVII",
+    "ano_inauguracion": "1670",
+    "estilos": [
+      "Arquitectura Rupestre-Andina"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Camarones",
+    "pais": "Chile",
+    "descripcion": "Estructura rústica levantada con grandes bloques de piedra ensamblados al seco y repellados interiormente con greda blanca. Forma parte del patrimonio sacro de las quebradas altas.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Piedra del lugar",
+      "Barro",
+      "Paja"
+    ]
+  },
+  {
+    "id": "iglesia-de-sora",
+    "nombre_proyecto": "Iglesia de Sora",
+    "arquitecto": "Comunidad de Sora",
+    "arquitecto_principal": "Comunidad local",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Quebrada de Sora, Valle de Lluta alto, Arica",
+    "coordenadas": {
+      "lat": -18.15,
+      "lng": -69.8
+    },
+    "ano_diseno": "1740",
+    "anos_construccion": "Siglo XVIII",
+    "ano_inauguracion": "1765",
+    "estilos": [
+      "Vernáculo Andino"
+    ],
+    "programa": [
+      "Religioso"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Capilla rústica andina emplazada en el curso superior del río Lluta. Su sobria volumetría con campanario integrado en el hastial responde a las formas ancestrales de los tambos.",
+    "fuente_url": "https://rutadelasmisiones.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Piedra",
+      "Madera de cactus"
+    ]
+  },
+  {
+    "id": "ex-aduana-de-arica",
+    "nombre_proyecto": "Ex-Aduana de Arica / Casa de la Cultura",
+    "arquitecto": "Gustave Eiffel",
+    "arquitecto_principal": "Gustave Eiffel",
+    "colaboradores": "Talleres Eiffel",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Máximo Lira s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4772,
+      "lng": -70.3223
+    },
+    "ano_diseno": "1871",
+    "anos_construccion": "1871-1874",
+    "ano_inauguracion": "1874",
+    "estilos": [
+      "Neoclásico",
+      "Arquitectura en Hierro"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Monumento Histórico Nacional diseñado por Gustave Eiffel en París. Estructura metálica prefabricada con muros de ladrillos importados de Inglaterra montados en seco, techumbre de cerchas metálicas y doble fachada ventilada.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hierro fundido",
+      "Ladrillo inglés",
+      "Pino oregón"
+    ]
+  },
+  {
+    "id": "casa-bolognesi-arica",
+    "nombre_proyecto": "Casa Bolognesi",
+    "arquitecto": "Desconocido (Período Republicano Peruano)",
+    "arquitecto_principal": "Constructores locales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Yungay 102 con Colón, Arica",
+    "coordenadas": {
+      "lat": -18.4808,
+      "lng": -70.3208
+    },
+    "ano_diseno": "1865",
+    "anos_construccion": "1868-1870",
+    "ano_inauguracion": "1870",
+    "estilos": [
+      "Colonial Republicano Peruano",
+      "Vernáculo Urbano"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Casona histórica de dos niveles con corredor superior de madera, carpintería de pino oregón y patio central interior. Testigo de los hechos del Morro de Arica durante la Guerra del Pacífico.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Adobe",
+      "Tabiquería de caña guayaquil",
+      "Pino oregón"
+    ]
+  },
+  {
+    "id": "estacion-ferrocarril-arica-la-paz",
+    "nombre_proyecto": "Estación del Ferrocarril Arica-La Paz (FCALP)",
+    "arquitecto": "Empresa de los Ferrocarriles del Estado (EFE) / MOP",
+    "arquitecto_principal": "Ingenieros EFE",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Chile s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4725,
+      "lng": -70.3182
+    },
+    "ano_diseno": "1906",
+    "anos_construccion": "1909-1913",
+    "ano_inauguracion": "1913",
+    "estilos": [
+      "Neoclásico Industrial",
+      "Arquitectura Ferroviaria"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio Histórico"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estación terminal del histórico ferrocarril binacional derivado del Tratado de 1904 entre Chile y Bolivia. Combina mampostería de piedra, andenes techados con marquesinas de acero y oficinas neoclásicas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Acero estructural",
+      "Hormigón",
+      "Pino oregón",
+      "Piedra"
+    ]
+  },
+  {
+    "id": "estacion-ferrocarril-arica-tacna",
+    "nombre_proyecto": "Estación del Ferrocarril Arica-Tacna",
+    "arquitecto": "Walton Evans",
+    "arquitecto_principal": "Walton Evans",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Máximo Lira con 21 de Mayo, Arica",
+    "coordenadas": {
+      "lat": -18.4758,
+      "lng": -70.3211
+    },
+    "ano_diseno": "1853",
+    "anos_construccion": "1854-1856",
+    "ano_inauguracion": "1856",
+    "estilos": [
+      "Industrial Británico-Americano"
+    ],
+    "programa": [
+      "Transporte",
+      "Patrimonio"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "El ferrocarril internacional más antiguo aún en operaciones en Sudamérica y el segundo construido en Chile/Perú. Destaca su terminal de carpintería clásica en madera y su maestranza de locomotoras históricas.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Pino oregón",
+      "Hierro galvanizado",
+      "Rieles de acero"
+    ]
+  },
+  {
+    "id": "mercado-central-de-arica",
+    "nombre_proyecto": "Mercado Central de Arica",
+    "arquitecto": "Talleres franceses / Muelle y Abastos Arica",
+    "arquitecto_principal": "Ingeniería Francesa",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Bolognesi con Colón, Arica",
+    "coordenadas": {
+      "lat": -18.4789,
+      "lng": -70.3188
+    },
+    "ano_diseno": "1874",
+    "anos_construccion": "1875",
+    "ano_inauguracion": "1875",
+    "estilos": [
+      "Arquitectura en Hierro",
+      "Industrial Comercial"
+    ],
+    "programa": [
+      "Comercial",
+      "Patrimonio"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Estructura de hierro fundido importada desde Europa con celosías de ventilación superior adaptadas al clima desértico marítimo. Articula el corazón del comercio tradicional de valles de Azapa y Lluta.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hierro fundido",
+      "Chapa metálica ondulada",
+      "Mampostería"
+    ]
+  },
+  {
+    "id": "teatro-municipal-de-arica",
+    "nombre_proyecto": "Teatro Municipal de Arica (Ex Cine Colón)",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Baquedano 234, Arica",
+    "coordenadas": {
+      "lat": -18.4791,
+      "lng": -70.3195
+    },
+    "ano_diseno": "1978",
+    "anos_construccion": "1980-1984",
+    "ano_inauguracion": "1984",
+    "estilos": [
+      "Postmodernismo Cívico",
+      "Brutalismo"
+    ],
+    "programa": [
+      "Cultura",
+      "Teatro"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Principal sala escénica de la región, concebida con volumetría escultórica en hormigón visto martillado y muros acústicos texturados para acoger conciertos, ópera y danza.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Madera acústica",
+      "Acero"
+    ]
+  },
+  {
+    "id": "gobernacion-maritima-de-arica",
+    "nombre_proyecto": "Gobernación Marítima de Arica",
+    "arquitecto": "Armada de Chile / MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Comandante San Martín s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4782,
+      "lng": -70.3236
+    },
+    "ano_diseno": "1923",
+    "anos_construccion": "1924-1925",
+    "ano_inauguracion": "1925",
+    "estilos": [
+      "Neoclásico Tardío"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio cívico costero con pórtico monumental dórico, balcones sobre la rada portuaria y remate de torre de observación meteorológica y marítima.",
+    "fuente_url": "https://www.armada.cl",
+    "materiales_principales": [
+      "Albañilería de ladrillo reforzado",
+      "Yeso y estuco",
+      "Madera"
+    ]
+  },
+  {
+    "id": "casino-municipal-de-arica",
+    "nombre_proyecto": "Casino Municipal de Arica",
+    "arquitecto": "Junta de Adelanto de Arica (JAA)",
+    "arquitecto_principal": "Arquitectos JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez 955, Arica",
+    "coordenadas": {
+      "lat": -18.4798,
+      "lng": -70.3135
+    },
+    "ano_diseno": "1958",
+    "anos_construccion": "1959-1960",
+    "ano_inauguracion": "1960",
+    "estilos": [
+      "Movimiento Moderno"
+    ],
+    "programa": [
+      "Recreación / Entretenimiento"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "El primer casino municipal del extremo norte, construido como emblema turístico del Puerto Libre por la JAA. Presenta amplias losas en voladizo, muros cortina y jardines xerófitos subtropicales.",
+    "fuente_url": "https://www.aricacity.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Vidrio",
+      "Mármol reconstituido"
+    ]
+  },
+  {
+    "id": "edificio-municipalidad-de-arica",
+    "nombre_proyecto": "Edificio Consistorial de la Ilustre Municipalidad de Arica",
+    "arquitecto": "Junta de Adelanto de Arica / MOP",
+    "arquitecto_principal": "Arquitectos JAA",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Sotomayor 415, Arica",
+    "coordenadas": {
+      "lat": -18.4777,
+      "lng": -70.3185
+    },
+    "ano_diseno": "1969",
+    "anos_construccion": "1970-1972",
+    "ano_inauguracion": "1972",
+    "estilos": [
+      "Racionalismo Institucional",
+      "Brutalismo"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio cívico con celosías de brise-soleil horizontales de hormigón armado concebidas para el control térmico del desierto marítimo, planta libre y patio cívico ceremonial.",
+    "fuente_url": "https://www.municipalidaddearica.cl",
+    "materiales_principales": [
+      "Hormigón armado visto",
+      "Vidrio",
+      "Aluminio anodizado"
+    ]
+  },
+  {
+    "id": "ex-cine-tacora-arica",
+    "nombre_proyecto": "Ex Cine Tacora",
+    "arquitecto": "Desconocido",
+    "arquitecto_principal": "Constructores modernos locales",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. Santa María con Diego Portales, Arica",
+    "coordenadas": {
+      "lat": -18.4718,
+      "lng": -70.3072
+    },
+    "ano_diseno": "1953",
+    "anos_construccion": "1954-1955",
+    "ano_inauguracion": "1955",
+    "estilos": [
+      "Expresionismo Moderno"
+    ],
+    "programa": [
+      "Cultura",
+      "Patrimonio Moderno"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio icónico de la época de oro del cine en el norte chileno. Su fachada curva expresionista de hormigón armado y marquesina flotante constituyen un símbolo del paisaje urbano ariqueño.",
+    "fuente_url": "https://www.monumentos.gob.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Estuco pintado",
+      "Vidrio"
+    ]
+  },
+  {
+    "id": "faro-del-morro-de-arica",
+    "nombre_proyecto": "Faro del Morro de Arica",
+    "arquitecto": "Servicio de Señalización Marítima de Chile",
+    "arquitecto_principal": "Ingenieros de la Armada",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Cima del Morro de Arica",
+    "coordenadas": {
+      "lat": -18.4815,
+      "lng": -70.3262
+    },
+    "ano_diseno": "1912",
+    "anos_construccion": "1913",
+    "ano_inauguracion": "1913",
+    "estilos": [
+      "Arquitectura Faro Industrial"
+    ],
+    "programa": [
+      "Infraestructura Marítima"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Torre cilíndrica de planchas de acero remachadas situada sobre el histórico promontorio rocoso del Morro a 130 metros sobre el nivel del mar, orientando el tráfico marítimo del Pacífico Sur.",
+    "fuente_url": "https://www.armada.cl",
+    "materiales_principales": [
+      "Acero remachado",
+      "Fundación de hormigón",
+      "Óptica de Fresnel"
+    ]
+  },
+  {
+    "id": "consultorio-bertin-soto-arica",
+    "nombre_proyecto": "Ex Consultorio Dr. Víctor Bertín Soto",
+    "arquitecto": "Corporación de la Vivienda (CORVI)",
+    "arquitecto_principal": "Equipo de Arquitectura CORVI",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Belén 1635, Arica",
+    "coordenadas": {
+      "lat": -18.4831,
+      "lng": -70.3015
+    },
+    "ano_diseno": "1963",
+    "anos_construccion": "1964-1965",
+    "ano_inauguracion": "1965",
+    "estilos": [
+      "Movimiento Moderno",
+      "Racionalismo"
+    ],
+    "programa": [
+      "Salud"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Infraestructura pública de salud moderna diseñada con pabellones lineales interconectados por patios sombreados, ventilación cruzada continua y cubiertas aislantes al sol del desierto.",
+    "fuente_url": "https://www.saludarica.cl",
+    "materiales_principales": [
+      "Albañilería confinada",
+      "Losa de hormigón",
+      "Celosías cerámicas"
+    ]
+  },
+  {
+    "id": "edificio-correos-de-chile-arica",
+    "nombre_proyecto": "Edificio Correos de Chile de Arica",
+    "arquitecto": "Dirección de Arquitectura MOP",
+    "arquitecto_principal": "MOP Arquitectura",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle 21 de Mayo con Prat, Arica",
+    "coordenadas": {
+      "lat": -18.4784,
+      "lng": -70.319
+    },
+    "ano_diseno": "1968",
+    "anos_construccion": "1969-1970",
+    "ano_inauguracion": "1970",
+    "estilos": [
+      "Modernismo Cívico"
+    ],
+    "programa": [
+      "Institucional / Gubernamental"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Edificio postal en esquina con trama de brise-soleil modular en fachada y amplio hall público a doble altura que vincula el paseo peatonal más tradicional de la ciudad.",
+    "fuente_url": "https://www.correos.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Muro cortina",
+      "Granito pulido"
+    ]
+  },
+  {
+    "id": "escuela-gabriela-mistral-arica",
+    "nombre_proyecto": "Escuela Gabriela Mistral",
+    "arquitecto": "Sociedad Constructora de Establecimientos Educacionales (SCEE)",
+    "arquitecto_principal": "Equipo de Arquitectura SCEE",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Calle Baquedano 630, Arica",
+    "coordenadas": {
+      "lat": -18.482,
+      "lng": -70.3175
+    },
+    "ano_diseno": "1942",
+    "anos_construccion": "1944-1945",
+    "ano_inauguracion": "1945",
+    "estilos": [
+      "Racionalismo Educacional",
+      "Barco / Streamline Moderne"
+    ],
+    "programa": [
+      "Educación"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Colegio público que aplica los cánones de la arquitectura naval y moderna promovidos por la SCEE: esquinas redondeadas, ventanas corridas y amplios patios cubiertos para recreación escolar.",
+    "fuente_url": "https://www.patrimoniochileno.cl",
+    "materiales_principales": [
+      "Hormigón armado",
+      "Albañilería de ladrillo",
+      "Ventanas de acero"
+    ]
+  },
+  {
+    "id": "regimiento-rancagua-arica",
+    "nombre_proyecto": "Regimiento Rancagua (Cuartel Histórico)",
+    "arquitecto": "Dirección General de Obras Públicas",
+    "arquitecto_principal": "Ingenieros Militares MOP",
+    "ano_pritzker": null,
+    "fotografia_url": "",
+    "direccion": "Av. General Velásquez s/n, Arica",
+    "coordenadas": {
+      "lat": -18.4842,
+      "lng": -70.311
+    },
+    "ano_diseno": "1926",
+    "anos_construccion": "1927-1928",
+    "ano_inauguracion": "1928",
+    "estilos": [
+      "Neoclásico Militar"
+    ],
+    "programa": [
+      "Militar / Institucional"
+    ],
+    "ciudad": "Arica",
+    "pais": "Chile",
+    "descripcion": "Conjunto militar amurallado con pabellones de oficiales simétricos, arquerías en claustro y portal monumental de ingreso que consolidó la presencia cívico-militar chilena post Tratado de Lima.",
+    "fuente_url": "https://www.ejercito.cl",
+    "materiales_principales": [
+      "Albañilería reforzada",
+      "Hormigón",
+      "Madera nativa"
+    ]
+  }
+]

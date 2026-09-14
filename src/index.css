@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAFAFA;
+    color: #111111;
+  }
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Custom Minimalist Monochrome Map Styling */
+.architect-map-monochrome .leaflet-tile-pane {
+  filter: grayscale(100%) contrast(104%);
+}
+
+.architect-map-dark .leaflet-tile-pane {
+  filter: grayscale(100%) invert(100%) contrast(120%) brightness(92%);
+}
+
+.architect-map-osm .leaflet-tile-pane {
+  filter: contrast(103%) saturate(95%);
+}
+
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* Leaflet control overrides for modernist B&W look */
+.leaflet-bar {
+  box-shadow: none !important;
+  border: 1px solid #111111 !important;
+  border-radius: 0 !important;
+}
+.leaflet-bar a {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+  transition: all 0.15s ease-in-out;
+}
+.leaflet-bar a:hover {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+}
+.leaflet-container {
+  background-color: #ECECEC !important;
+  outline: none;
+}
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #111111 !important;
+  border-radius: 0px !important;
+  border: 1px solid #111111 !important;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.9) !important;
+  padding: 0 !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+}
+
+/* Minimalist Marker Styles */
+.arch-marker-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arch-marker-pin:hover {
+  transform: scale(1.35);
+  z-index: 9999 !important;
+}
+
+.arch-marker-inner {
+  width: 14px;
+  height: 14px;
+  background-color: #111111;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.arch-marker-pin.selected .arch-marker-inner {
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Pritzker distinction: Rotated Diamond with high-contrast inner core */
+.arch-marker-pritzker .arch-marker-inner {
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+  transform: rotate(45deg);
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 1.5px #000000, 0 3px 6px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-marker-pritzker-core {
+  width: 3px;
+  height: 3px;
+  background-color: #FFFFFF;
+}
+
+.arch-marker-pin.selected.arch-marker-pritzker .arch-marker-inner {
+  width: 19px;
+  height: 19px;
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Completely suppress all map watermarks and attributions */
+.leaflet-control-attribution,
+.leaflet-control-attribution a,
+.leaflet-bottom.leaflet-right {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
