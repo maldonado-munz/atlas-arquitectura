@@ -37,9 +37,6 @@ export const Header: React.FC<HeaderProps> = ({
           <h1 className="text-sm md:text-base font-bold tracking-tight text-black uppercase">
             {t.appTitle}
           </h1>
-          <p className="hidden sm:block text-[11px] text-neutral-500 font-sans">
-            {t.appSubtitle}
-          </p>
         </div>
       </div>
 

@@ -81,7 +81,6 @@ export function traducirPrograma(programa: string, idioma: Idioma): string {
 export const I18N_TEXTS = {
   es: {
     appTitle: 'Atlas de Arquitectura',
-    appSubtitle: 'Mapa interactivo de arquitectura y Premios Pritzker',
     pritzkerPrize: 'Premio Pritzker',
     classicReferent: 'Clásico / Referente',
     searchPlaceholder: 'Buscar por obra, arquitecto, ciudad...',
@@ -135,7 +134,6 @@ export const I18N_TEXTS = {
   },
   en: {
     appTitle: 'Architecture Atlas',
-    appSubtitle: 'Interactive map of contemporary architecture and Pritzker laureates',
     pritzkerPrize: 'Pritzker Prize',
     classicReferent: 'Landmark / Masterpiece',
     searchPlaceholder: 'Search by project, architect, city...',

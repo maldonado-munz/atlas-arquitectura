@@ -32,7 +32,7 @@ interface MapViewerProps {
   idioma?: Idioma;
 }
 
-type TileProviderId = 'esri_light' | 'osm' | 'esri_streets' | 'esri_dark';
+type TileProviderId = 'esri_light' | 'osm' | 'esri_dark';
 
 interface TileProviderConfig {
   id: TileProviderId;
@@ -56,23 +56,13 @@ const TILE_PROVIDERS: Record<TileProviderId, TileProviderConfig> = {
   },
   osm: {
     id: 'osm',
-    name: 'OpenStreetMap (Calles y trama)',
-    description: 'Cartografía urbana detallada con calles, barrios y equipamiento',
-    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    name: 'OpenStreetMap',
+    description: 'Cartografía estándar con calles, manzanas y nombres de barrios',
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     options: {
-      subdomains: ['a', 'b', 'c', 'd'],
-      maxZoom: 20,
-      attribution: '© OpenStreetMap contributors © CARTO',
-    },
-  },
-  esri_streets: {
-    id: 'esri_streets',
-    name: 'Esri World Street Map',
-    description: 'Red vial completa, carreteras, topografía y puntos de interés',
-    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
-    options: {
+      subdomains: ['a', 'b', 'c'],
       maxZoom: 19,
-      attribution: 'Tiles © Esri',
+      attribution: '© OpenStreetMap contributors',
     },
   },
   esri_dark: {
@@ -126,7 +116,6 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     const map = mapInstanceRef.current;
     if (!map) return;
 
-    // Check if layer is already active and attached
     if (activeTileProviderRef.current === providerId && tileLayerRef.current && map.hasLayer(tileLayerRef.current)) {
       return;
     }
@@ -134,19 +123,18 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     const config = TILE_PROVIDERS[providerId];
     if (!config) return;
 
-    // 1. Remove all existing tile layers from the map to prevent conflicts or stalled connections
+    // Cleanly remove any existing TileLayers
     map.eachLayer((layer) => {
       if (layer instanceof L.TileLayer) {
         try {
           map.removeLayer(layer);
         } catch {
-          // Ignore removal exceptions
+          // ignore
         }
       }
     });
     tileLayerRef.current = null;
 
-    // 2. Instantiate and attach the requested tile layer
     const newLayer = L.tileLayer(config.url, config.options);
     newLayer.addTo(map);
 
@@ -154,7 +142,6 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     activeTileProviderRef.current = providerId;
     setActiveTileProvider(providerId);
 
-    // 3. Immediately invalidate map size so viewport tiles are fetched cleanly
     map.invalidateSize({ pan: false });
   };
 
@@ -166,12 +153,6 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       aplicarProveedor('esri_light');
     }
   }, [modoOscuroMapa]);
-
-  // Manual layer selection from menu
-  const seleccionarCapaManual = (providerId: TileProviderId) => {
-    aplicarProveedor(providerId);
-    setMenuCapasAbierto(false);
-  };
 
   // Initialize Map
   useEffect(() => {
@@ -185,10 +166,10 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       minZoom: 2,
       maxZoom: 18,
       zoomControl: false, // Custom modernist controls
-      attributionControl: false, // Disables all default Leaflet watermarks/attributions
+      attributionControl: false, // Disables default Leaflet watermarks/attributions
     });
 
-    // Primary tile layer: Esri Light Gray Canvas (or dark if requested)
+    // Primary tile layer: Esri Light Gray Canvas (or dark)
     const initialProviderId: TileProviderId = modoOscuroMapa ? 'esri_dark' : 'esri_light';
     const provider = TILE_PROVIDERS[initialProviderId];
     const initialTileLayer = L.tileLayer(provider.url, provider.options).addTo(map);
@@ -215,10 +196,14 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       });
     });
 
-    // Pure manual zoom tracking for telemetry: NEVER trigger automatic layer switches
     map.on('zoomend', () => {
       const currentZoom = Math.round(map.getZoom());
       setZoomLevel(currentZoom);
+    });
+
+    // Close layer menu on map click
+    map.on('click', () => {
+      setMenuCapasAbierto(false);
     });
 
     // ResizeObserver for reliable dimension adjustments
@@ -383,7 +368,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       <div
         ref={mapContainerRef}
         className={`w-full h-full ${
-          modoOscuroMapa
+          activeTileProvider === 'esri_dark'
             ? 'architect-map-dark'
             : activeTileProvider === 'osm'
             ? 'architect-map-osm'
@@ -446,7 +431,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           <Globe className="w-4 h-4" />
         </button>
 
-        {/* Tile Provider Layer Switcher (Purely Manual) */}
+        {/* Tile Provider Layer Switcher (Manual) */}
         <div className="relative">
           <button
             id="btn-map-capas"
@@ -454,8 +439,8 @@ export const MapViewer: React.FC<MapViewerProps> = ({
             className={`w-9 h-9 border border-[#111111] flex items-center justify-center transition-colors cursor-pointer relative ${
               menuCapasAbierto ? 'bg-black text-white' : 'bg-white hover:bg-black text-black hover:text-white'
             }`}
-            title="Selector de capas cartográficas (manual)"
-            aria-label="Selector de capas cartográficas (manual)"
+            title="Selector de capas cartográficas"
+            aria-label="Selector de capas cartográficas"
           >
             <Layers className="w-4 h-4" />
           </button>
@@ -464,10 +449,10 @@ export const MapViewer: React.FC<MapViewerProps> = ({
             <div
               id="menu-capas-cartograficas"
               onClick={(e) => e.stopPropagation()}
-              className="absolute right-full top-0 mr-2 w-72 bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] p-3 z-50 text-xs flex flex-col gap-2 animate-in fade-in slide-in-from-right-2 duration-150"
+              className="absolute right-full top-0 mr-2 w-64 bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] p-3 z-50 text-xs flex flex-col gap-2 animate-in fade-in slide-in-from-right-2 duration-150"
             >
               <div className="font-mono-code font-bold uppercase text-[10px] text-neutral-500 pb-1.5 border-b border-neutral-200 flex items-center justify-between">
-                <span>{idioma === 'en' ? 'Cartographic Layer (Manual)' : 'Capa Cartográfica (Manual)'}</span>
+                <span>{idioma === 'en' ? 'Cartographic Layer' : 'Capa Cartográfica'}</span>
               </div>
               <div className="space-y-1.5">
                 {(Object.keys(TILE_PROVIDERS) as TileProviderId[]).map((id) => {
@@ -477,7 +462,10 @@ export const MapViewer: React.FC<MapViewerProps> = ({
                     <button
                       key={id}
                       id={`btn-capa-${id}`}
-                      onClick={() => seleccionarCapaManual(id)}
+                      onClick={() => {
+                        aplicarProveedor(id);
+                        setMenuCapasAbierto(false);
+                      }}
                       className={`w-full text-left px-2.5 py-2 text-xs transition-colors flex flex-col gap-0.5 cursor-pointer border ${
                         isCurrent
                           ? 'bg-black text-white border-black font-medium'
@@ -679,8 +667,8 @@ export const MapViewer: React.FC<MapViewerProps> = ({
         </div>
         <span className="text-neutral-300">|</span>
         <div className="flex items-center gap-1.5">
-          <span className="text-[10px] text-neutral-700 uppercase font-semibold">
-            {TILE_PROVIDERS[activeTileProvider].name}
+          <span className="text-[10px] text-neutral-500 uppercase font-medium">
+            ESRI CANVAS | EPSG:3857
           </span>
         </div>
       </div>
