@@ -13692,8 +13692,8 @@ export const PROYECTOS_DATA: ProyectoArquitectura[] = [
     "fotografia_url": "",
     "direccion": "Av. General Velásquez 955, Arica",
     "coordenadas": {
-      "lat": -18.4802,
-      "lng": -70.313
+      "lat": -18.474039366390894,
+      "lng": -70.31510927383765
     },
     "ano_diseno": "2018",
     "anos_construccion": "2019-2020",
