@@ -58,7 +58,10 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
         ) : (
           proyectos.map((proyecto) => {
             const isSelected = proyectoSeleccionado?.id === proyecto.id;
-            const arqPrincipal = proyecto.arquitecto_principal || proyecto.arquitecto;
+            const arqPrincipal =
+              proyecto.arquitecto_responsable ||
+              proyecto.arquitecto_principal ||
+              proyecto.arquitecto;
 
             return (
               <div

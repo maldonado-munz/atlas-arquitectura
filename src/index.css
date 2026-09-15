@@ -150,3 +150,39 @@
   pointer-events: none !important;
 }
 
+/* User Location Pin Styles */
+.custom-user-location-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+@keyframes user-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+  }
+}
+
+.user-pulse-ring {
+  position: absolute;
+  left: 17px;
+  top: 42.5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(253, 225, 125, 0.45);
+  border: 1.5px solid #111111;
+  animation: user-pulse 2.2s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+

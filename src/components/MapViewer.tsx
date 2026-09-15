@@ -15,8 +15,11 @@ import {
   Calendar,
   Maximize2,
   ExternalLink,
+  LocateFixed,
 } from 'lucide-react';
 import { traducirEstilo, traducirPrograma } from '../i18n';
+import { useGeolocationTracking } from '../hooks/useGeolocationTracking';
+import { createUserLocationIcon } from './UserLocationPin';
 
 interface MapViewerProps {
   proyectos: ProyectoArquitectura[];
@@ -48,7 +51,7 @@ const TILE_PROVIDERS: Record<TileProviderId, TileProviderConfig> = {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
     options: {
       maxNativeZoom: 16,
-      maxZoom: 19,
+      maxZoom: 20,
       crossOrigin: true,
       attribution: '',
     },
@@ -58,7 +61,8 @@ const TILE_PROVIDERS: Record<TileProviderId, TileProviderConfig> = {
     name: 'OpenStreetMap B&W',
     url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     options: {
-      maxZoom: 19,
+      maxNativeZoom: 19,
+      maxZoom: 20,
       crossOrigin: true,
       attribution: '',
     },
@@ -69,7 +73,7 @@ const TILE_PROVIDERS: Record<TileProviderId, TileProviderConfig> = {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
     options: {
       maxNativeZoom: 16,
-      maxZoom: 19,
+      maxZoom: 20,
       crossOrigin: true,
       attribution: '',
     },
@@ -94,6 +98,11 @@ export const MapViewer: React.FC<MapViewerProps> = ({
   const mapInstanceRef = useRef<L.Map | null>(null);
   const tileLayerRef = useRef<L.TileLayer | null>(null);
   const markersLayerRef = useRef<L.LayerGroup | null>(null);
+  const userMarkerRef = useRef<L.Marker | null>(null);
+  const userAccuracyCircleRef = useRef<L.Circle | null>(null);
+  const centerOnNextFixRef = useRef<boolean>(false);
+  const activeTileProviderRef = useRef<TileProviderId>('esri_light');
+  const cambiarProveedorCapaRef = useRef<(providerId: TileProviderId) => void>(() => {});
 
   const [activeTileProvider, setActiveTileProvider] = useState<TileProviderId>('esri_light');
   const [menuCapasAbierto, setMenuCapasAbierto] = useState<boolean>(false);
@@ -103,12 +112,64 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     lng: -70.6693,
   });
 
+  // Real-time GPS Tracking Hook with high accuracy & watchPosition
+  const {
+    userLocation,
+    isTracking: isTrackingUser,
+    isLocating: isLocatingUser,
+    error: gpsError,
+    startTracking,
+    stopTracking,
+  } = useGeolocationTracking();
+
+  // Handle Tile Provider Change with seamless transition & invalidateSize()
+  const cambiarProveedorCapa = (providerId: TileProviderId) => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (activeTileProviderRef.current === providerId && tileLayerRef.current) {
+      return;
+    }
+
+    const oldLayer = tileLayerRef.current;
+    const config = TILE_PROVIDERS[providerId];
+    const newLayer = L.tileLayer(config.url, config.options);
+
+    // Add new layer to map
+    newLayer.addTo(map);
+    tileLayerRef.current = newLayer;
+    activeTileProviderRef.current = providerId;
+    setActiveTileProvider(providerId);
+
+    // Clean up old layer once new tiles start rendering to prevent gray canvas
+    let oldLayerRemoved = false;
+    const cleanupOldLayer = () => {
+      if (!oldLayerRemoved && oldLayer && map.hasLayer(oldLayer)) {
+        oldLayerRemoved = true;
+        map.removeLayer(oldLayer);
+      }
+    };
+
+    newLayer.once('load', cleanupOldLayer);
+    setTimeout(cleanupOldLayer, 300);
+
+    // Rule 2: Execute invalidateSize with setTimeout(..., 100)
+    setTimeout(() => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.invalidateSize();
+      }
+    }, 100);
+  };
+
+  cambiarProveedorCapaRef.current = cambiarProveedorCapa;
+
   // Switch to dark canvas if dark mode toggled from header
   useEffect(() => {
     if (modoOscuroMapa) {
       cambiarProveedorCapa('esri_dark');
     } else {
-      cambiarProveedorCapa('esri_light');
+      const currentZoom = mapInstanceRef.current ? mapInstanceRef.current.getZoom() : 6;
+      cambiarProveedorCapa(currentZoom >= 17 ? 'osm_mono' : 'esri_light');
     }
   }, [modoOscuroMapa]);
 
@@ -121,15 +182,18 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       center: [-33.4489, -70.6693],
       zoom: 6.2,
       minZoom: 2,
-      maxZoom: 18,
+      maxZoom: 20,
       zoomControl: false, // Custom modernist controls
       attributionControl: false, // Disables all default Leaflet watermarks/attributions
     });
 
     // Primary tile layer: Esri Light Gray Canvas (No API key, zero watermarks)
-    const provider = TILE_PROVIDERS[activeTileProvider];
+    const initialProviderId: TileProviderId = modoOscuroMapa ? 'esri_dark' : 'esri_light';
+    const provider = TILE_PROVIDERS[initialProviderId];
     const initialTileLayer = L.tileLayer(provider.url, provider.options).addTo(map);
     tileLayerRef.current = initialTileLayer;
+    activeTileProviderRef.current = initialProviderId;
+    setActiveTileProvider(initialProviderId);
 
     // Markers layer group
     const markersGroup = L.layerGroup().addTo(map);
@@ -150,8 +214,29 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       });
     });
 
+    // Automatic Zoom Threshold Handler:
+    // Zoom <= 16: Esri Light Gray Canvas (or Esri Dark)
+    // Zoom >= 17: OpenStreetMap B&W
     map.on('zoomend', () => {
-      setZoomLevel(Math.round(map.getZoom()));
+      const currentZoom = map.getZoom();
+      setZoomLevel(Math.round(currentZoom));
+
+      const targetProvider: TileProviderId =
+        currentZoom >= 17
+          ? 'osm_mono'
+          : modoOscuroMapa
+          ? 'esri_dark'
+          : 'esri_light';
+
+      if (activeTileProviderRef.current !== targetProvider) {
+        cambiarProveedorCapaRef.current(targetProvider);
+      } else {
+        setTimeout(() => {
+          if (mapInstanceRef.current) {
+            mapInstanceRef.current.invalidateSize();
+          }
+        }, 100);
+      }
     });
 
     // ResizeObserver
@@ -164,26 +249,18 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       clearTimeout(t1);
       clearTimeout(t2);
       resizeObserver.disconnect();
+      if (userMarkerRef.current) {
+        userMarkerRef.current.remove();
+        userMarkerRef.current = null;
+      }
+      if (userAccuracyCircleRef.current) {
+        userAccuracyCircleRef.current.remove();
+        userAccuracyCircleRef.current = null;
+      }
       map.remove();
       mapInstanceRef.current = null;
     };
   }, []);
-
-  // Handle Tile Provider Change
-  const cambiarProveedorCapa = (providerId: TileProviderId) => {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-
-    if (tileLayerRef.current) {
-      map.removeLayer(tileLayerRef.current);
-    }
-
-    const config = TILE_PROVIDERS[providerId];
-    const newLayer = L.tileLayer(config.url, config.options).addTo(map);
-    tileLayerRef.current = newLayer;
-    setActiveTileProvider(providerId);
-    setMenuCapasAbierto(false);
-  };
 
   // Update Markers when projects change
   useEffect(() => {
@@ -283,6 +360,120 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     }
   }, [proyectoSeleccionado]);
 
+  // Real-time GPS User Marker & Accuracy Circle synchronization
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (!userLocation) {
+      if (userMarkerRef.current) {
+        map.removeLayer(userMarkerRef.current);
+        userMarkerRef.current = null;
+      }
+      if (userAccuracyCircleRef.current) {
+        map.removeLayer(userAccuracyCircleRef.current);
+        userAccuracyCircleRef.current = null;
+      }
+      return;
+    }
+
+    const { lat, lng, accuracy } = userLocation;
+
+    // 1. Maintain or update accuracy circle
+    if (!userAccuracyCircleRef.current) {
+      const circle = L.circle([lat, lng], {
+        radius: Math.max(accuracy, 10),
+        color: '#111111',
+        weight: 1,
+        opacity: 0.35,
+        fillColor: '#FDE17D',
+        fillOpacity: 0.14,
+        dashArray: '4, 4',
+      }).addTo(map);
+      userAccuracyCircleRef.current = circle;
+    } else {
+      userAccuracyCircleRef.current.setLatLng([lat, lng]);
+      userAccuracyCircleRef.current.setRadius(Math.max(accuracy, 10));
+    }
+
+    // 2. Maintain or update user drop pin marker (#FDE17D)
+    if (!userMarkerRef.current) {
+      const icon = createUserLocationIcon();
+      const marker = L.marker([lat, lng], {
+        icon,
+        zIndexOffset: 1500, // Always stays above standard markers
+        title: idioma === 'en' ? 'Your Location' : 'Tu Ubicación',
+      }).addTo(map);
+
+      const tooltipContent = `
+        <div style="padding: 4px 8px; background-color: #111111; color: #FFFFFF; font-family: monospace; font-size: 11px; border: 1px solid #333333; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #FDE17D; border: 1px solid #111111;"></span>
+            <strong style="font-weight: 700; text-transform: uppercase;">${idioma === 'en' ? 'Your Location' : 'Tu Ubicación'}</strong>
+          </div>
+          <div style="color: #D4D4D4; font-size: 9px; margin-top: 2px;">
+            ${idioma === 'en' ? 'GPS Accuracy' : 'Precisión GPS'}: ±${Math.round(accuracy)}m
+          </div>
+        </div>
+      `;
+
+      marker.bindTooltip(tooltipContent, {
+        direction: 'top',
+        offset: [0, -42],
+        opacity: 1,
+        className: 'user-pin-tooltip',
+      });
+
+      marker.on('click', () => {
+        map.flyTo([lat, lng], Math.max(map.getZoom(), 16), { duration: 1.2 });
+      });
+
+      userMarkerRef.current = marker;
+    } else {
+      // Seamless position update without flickering or remounting
+      userMarkerRef.current.setLatLng([lat, lng]);
+      userMarkerRef.current.setTooltipContent(`
+        <div style="padding: 4px 8px; background-color: #111111; color: #FFFFFF; font-family: monospace; font-size: 11px; border: 1px solid #333333; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #FDE17D; border: 1px solid #111111;"></span>
+            <strong style="font-weight: 700; text-transform: uppercase;">${idioma === 'en' ? 'Your Location' : 'Tu Ubicación'}</strong>
+          </div>
+          <div style="color: #D4D4D4; font-size: 9px; margin-top: 2px;">
+            ${idioma === 'en' ? 'GPS Accuracy' : 'Precisión GPS'}: ±${Math.round(accuracy)}m
+          </div>
+        </div>
+      `);
+    }
+
+    // 3. Smooth flyTo on first fix or when center requested
+    if (centerOnNextFixRef.current) {
+      centerOnNextFixRef.current = false;
+      map.flyTo([lat, lng], Math.max(map.getZoom(), 16), {
+        duration: 1.2,
+      });
+    }
+  }, [userLocation, idioma]);
+
+  // Center on user location handler
+  const handleMiUbicacion = () => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (!isTrackingUser) {
+      centerOnNextFixRef.current = true;
+      startTracking();
+      return;
+    }
+
+    if (userLocation) {
+      map.flyTo([userLocation.lat, userLocation.lng], Math.max(map.getZoom(), 16), {
+        duration: 1.2,
+      });
+    } else {
+      centerOnNextFixRef.current = true;
+    }
+  };
+
   // Zoom controls
   const handleZoomIn = () => {
     mapInstanceRef.current?.zoomIn();
@@ -335,6 +526,28 @@ export const MapViewer: React.FC<MapViewerProps> = ({
 
         <div className="h-[1px] bg-[#D4D4D4] my-0.5" />
 
+        {/* User GPS Location Button (Mi Ubicación) */}
+        <button
+          id="btn-map-mi-ubicacion"
+          onClick={handleMiUbicacion}
+          className={`w-9 h-9 border border-[#111111] flex items-center justify-center transition-colors cursor-pointer relative ${
+            isTrackingUser
+              ? 'bg-[#FDE17D] text-black font-bold shadow-xs'
+              : 'bg-white hover:bg-black text-black hover:text-white'
+          }`}
+          title={
+            isTrackingUser
+              ? (idioma === 'en' ? 'Center on my location (GPS active)' : 'Centrar en mi ubicación (GPS activo)')
+              : (idioma === 'en' ? 'Track my location (GPS)' : 'Rastrear mi ubicación (GPS)')
+          }
+          aria-label={idioma === 'en' ? 'My Location' : 'Mi Ubicación'}
+        >
+          <LocateFixed className={`w-4 h-4 ${isLocatingUser ? 'animate-spin' : ''}`} />
+          {isTrackingUser && (
+            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-black border border-white rounded-full"></span>
+          )}
+        </button>
+
         <button
           id="btn-map-focus-chile"
           onClick={handleVerChile}
@@ -370,15 +583,19 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           </button>
 
           {menuCapasAbierto && (
-            <div className="absolute right-full top-0 mr-2 w-56 bg-white border border-[#111111] shadow-xl p-2 z-50 text-xs">
-              <div className="font-mono-code font-bold uppercase text-[10px] text-neutral-400 mb-1.5 pb-1 border-b border-[#E5E5E5]">
-                Capa Cartográfica (Sin Marcas)
+            <div className="absolute right-full top-0 mr-2 w-64 bg-white border border-[#111111] shadow-xl p-2.5 z-50 text-xs">
+              <div className="font-mono-code font-bold uppercase text-[10px] text-neutral-400 mb-1.5 pb-1 border-b border-[#E5E5E5] flex items-center justify-between">
+                <span>Capa Cartográfica</span>
+                <span className="text-[9px] text-neutral-500 font-normal">Auto Z16/17</span>
               </div>
               <div className="space-y-1">
                 {(Object.keys(TILE_PROVIDERS) as TileProviderId[]).map((id) => (
                   <button
                     key={id}
-                    onClick={() => cambiarProveedorCapa(id)}
+                    onClick={() => {
+                      cambiarProveedorCapa(id);
+                      setMenuCapasAbierto(false);
+                    }}
                     className={`w-full text-left px-2 py-1.5 text-xs transition-colors flex items-center justify-between cursor-pointer ${
                       activeTileProvider === id
                         ? 'bg-black text-white font-semibold'
@@ -390,10 +607,28 @@ export const MapViewer: React.FC<MapViewerProps> = ({
                   </button>
                 ))}
               </div>
+              <div className="mt-2 pt-1.5 border-t border-neutral-200 text-[10px] font-mono-code text-neutral-500">
+                {zoomLevel >= 17 ? '• Z≥17: OpenStreetMap B&W activo' : '• Z≤16: Esri Light Gray activo'}
+              </div>
             </div>
           )}
         </div>
       </div>
+
+      {/* GPS Notification / Error Toast */}
+      {gpsError && (
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[500] bg-black text-white px-3 py-1.5 text-xs font-mono-code border border-neutral-700 shadow-xl flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-150">
+          <span className="w-2 h-2 rounded-full bg-[#FDE17D] inline-block"></span>
+          <span>{gpsError}</span>
+          <button
+            onClick={() => stopTracking()}
+            className="ml-1 text-neutral-400 hover:text-white cursor-pointer"
+            title="Cerrar"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
 
       {/* Floating Architectural Ficha directly on top of the Map */}
       {proyectoSeleccionado && (
@@ -468,8 +703,18 @@ export const MapViewer: React.FC<MapViewerProps> = ({
               {proyectoSeleccionado.nombre_proyecto}
             </h3>
             <p className="text-xs font-semibold text-neutral-800 mt-0.5">
-              {proyectoSeleccionado.arquitecto_principal || proyectoSeleccionado.arquitecto}
+              {proyectoSeleccionado.arquitecto_responsable ||
+                proyectoSeleccionado.arquitecto_principal ||
+                proyectoSeleccionado.arquitecto}
             </p>
+            {proyectoSeleccionado.instituciones && proyectoSeleccionado.instituciones.length > 0 && (
+              <p className="text-[11px] text-neutral-500 mt-0.5 truncate" title={proyectoSeleccionado.instituciones.join(', ')}>
+                <span className="font-mono-code text-[10px] uppercase font-bold text-neutral-600">
+                  {idioma === 'en' ? 'INST:' : 'INST:'}
+                </span>{' '}
+                {proyectoSeleccionado.instituciones.join(', ')}
+              </p>
+            )}
             <div className="flex items-center gap-2 text-[11px] font-mono-code text-neutral-500 mt-1 flex-wrap">
               <span className="flex items-center gap-1">
                 <MapPin className="w-3 h-3 text-neutral-400" />
@@ -551,6 +796,15 @@ export const MapViewer: React.FC<MapViewerProps> = ({
         </div>
         <span className="text-neutral-300">|</span>
         <span className="text-[10px] text-neutral-500 uppercase">{TILE_PROVIDERS[activeTileProvider].name}</span>
+        {isTrackingUser && userLocation && (
+          <>
+            <span className="text-neutral-300">|</span>
+            <div className="flex items-center gap-1 text-[10px] text-neutral-800 font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#FDE17D] border border-[#111111] inline-block animate-pulse"></span>
+              <span>GPS: ±{Math.round(userLocation.accuracy)}m</span>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

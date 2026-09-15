@@ -1,7 +1,11 @@
-import rawData from '../../proyectos_arquitectura.json';
+import { PROYECTOS_DATA } from './proyectos_data';
 import { ProyectoArquitectura } from '../types';
+import { normalizarProyecto } from './architectNormalizer';
+import { extractAvailableDecades } from '../utils/decadeUtils';
 
-export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = rawData as ProyectoArquitectura[];
+export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = PROYECTOS_DATA.map(
+  normalizarProyecto
+);
 
 export const ORDEN_CANONICO_ESTILOS = [
   'Modernismo',
@@ -63,30 +67,23 @@ export const TODOS_LOS_PROGRAMAS = ORDEN_PROGRAMAS.filter((prog) =>
   programasEnDataset.has(prog)
 );
 
-// Arquitectos más relevantes al principio (arquitecto_principal)
+// Menú desplegable: arquitectos en formato "Nombre Arquitecto (Nombre Oficina)" o "No aplica / Anónimo"
 export const TODOS_LOS_ARQUITECTOS = Array.from(
   new Set(
-    PROYECTOS_ARQUITECTURA.map(
-      (p) => p.arquitecto_principal || p.arquitecto
-    ).filter(Boolean)
+    PROYECTOS_ARQUITECTURA.map((p) => p.arquitecto_filtro || p.arquitecto_responsable).filter(
+      (arq): arq is string => Boolean(arq && ((arq.includes('(') && arq.includes(')')) || arq === 'No aplica / Anónimo'))
+    )
   )
-).sort((a, b) => a.localeCompare(b, 'es'));
+).sort((a, b) => {
+  if (a === 'No aplica / Anónimo') return 1;
+  if (b === 'No aplica / Anónimo') return -1;
+  return a.localeCompare(b, 'es');
+});
 
 export const TODOS_LOS_PAISES = Array.from(
   new Set(PROYECTOS_ARQUITECTURA.map((p) => p.pais))
 ).sort((a, b) => a.localeCompare(b, 'es'));
 
-export const DECADAS_DISPONIBLES = [
-  { label: { es: 'Todas las décadas', en: 'All decades' }, value: 'all' },
-  { label: { es: '1930s', en: '1930s' }, value: '1930' },
-  { label: { es: '1940s', en: '1940s' }, value: '1940' },
-  { label: { es: '1950s', en: '1950s' }, value: '1950' },
-  { label: { es: '1960s', en: '1960s' }, value: '1960' },
-  { label: { es: '1970s', en: '1970s' }, value: '1970' },
-  { label: { es: '1980s', en: '1980s' }, value: '1980' },
-  { label: { es: '1990s', en: '1990s' }, value: '1990' },
-  { label: { es: '2000s', en: '2000s' }, value: '2000' },
-  { label: { es: '2010s+', en: '2010s+' }, value: '2010' },
-];
+export const DECADAS_DISPONIBLES = extractAvailableDecades(PROYECTOS_ARQUITECTURA);
 
 

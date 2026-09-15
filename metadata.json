@@ -1,6 +1,6 @@
 {
   "name": "Atlas de Arquitectura",
   "description": "Mapa interactivo monocromático de arquitectura contemporánea y ganadores del Premio Pritzker.",
-  "requestFramePermissions": [],
+  "requestFramePermissions": ["geolocation"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

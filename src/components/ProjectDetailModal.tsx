@@ -14,6 +14,7 @@ import {
   Copy,
   Check,
   Users,
+  Landmark,
 } from 'lucide-react';
 import { ProyectoArquitectura, Idioma } from '../types';
 import { I18N_TEXTS, traducirEstilo, traducirPrograma } from '../i18n';
@@ -101,12 +102,27 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   };
 
   const nombreFuente = obtenerNombreFuente(proyecto.fuente_url);
-  const arquitectoPrincipal = proyecto.arquitecto_principal || proyecto.arquitecto;
-  const tieneColaboradores = Boolean(
-    proyecto.colaboradores ||
-    (proyecto.arquitecto && proyecto.arquitecto !== arquitectoPrincipal)
+  const arquitectoDisplay =
+    (proyecto.arquitecto_filtro && proyecto.arquitecto_filtro !== 'No aplica / Anónimo')
+      ? proyecto.arquitecto_filtro
+      : (proyecto.arquitecto_filtro === 'No aplica / Anónimo'
+          ? (idioma === 'es' ? 'No aplica / Anónimo' : 'Not applicable / Anonymous')
+          : (proyecto.arquitecto_responsable || proyecto.arquitecto_principal || proyecto.arquitecto));
+
+  const autorEspecifico = proyecto.autor_especifico_ficha;
+  const mostrarAutorEspecifico = Boolean(
+    autorEspecifico &&
+    autorEspecifico !== arquitectoDisplay &&
+    autorEspecifico !== 'Anónimo'
   );
-  const textoColaboradores = proyecto.colaboradores || proyecto.arquitecto;
+
+  const tieneColaboradores = Boolean(
+    proyecto.colaboradores &&
+    (!autorEspecifico || !autorEspecifico.includes(proyecto.colaboradores))
+  );
+  const tieneInstituciones = Boolean(
+    proyecto.instituciones && proyecto.instituciones.length > 0
+  );
 
   return (
     <div
@@ -221,20 +237,66 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               {proyecto.nombre_proyecto}
             </h2>
 
-            {/* Most relevant architect at the top */}
-            <div className="space-y-1">
-              <p className="text-base md:text-lg font-bold text-neutral-900 flex items-center gap-2">
-                <span>{arquitectoPrincipal}</span>
-              </p>
+            {/* Architect & Office */}
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-base md:text-lg font-bold text-neutral-950">
+                  {arquitectoDisplay}
+                </span>
+                {proyecto.oficina && !arquitectoDisplay.includes(`(${proyecto.oficina})`) && (
+                  <span className="text-xs font-mono-code px-2 py-0.5 bg-neutral-100 border border-neutral-200 text-neutral-700">
+                    {proyecto.oficina}
+                  </span>
+                )}
+              </div>
+
+              {/* Specific Authorship / Technical sheet attribution */}
+              {mostrarAutorEspecifico && (
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                  <Users className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5">
+                      {idioma === 'es' ? 'Autoría Específica / Ficha Técnica' : 'Specific Authorship / Technical Attribution'}:
+                    </span>
+                    <span className="leading-relaxed font-sans font-medium text-neutral-900">
+                      {autorEspecifico}
+                    </span>
+                  </div>
+                </div>
+              )}
 
               {/* Collaborators and team shown in full detail */}
               {tieneColaboradores && (
-                <div className="flex items-start gap-1.5 text-xs text-neutral-600 pt-0.5">
-                  <Users className="w-3.5 h-3.5 text-neutral-400 mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="font-semibold text-neutral-700">{t.collaborators}:</strong>{' '}
-                    {textoColaboradores}
-                  </span>
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                  <Users className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5">
+                      {t.collaboratorsLabel}:
+                    </span>
+                    <span className="leading-relaxed font-sans">{proyecto.colaboradores}</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Institutions associated with the project */}
+              {tieneInstituciones && (
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                  <Landmark className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-1">
+                      {t.institutionsLabel}:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {proyecto.instituciones!.map((inst) => (
+                        <span
+                          key={inst}
+                          className="px-2.5 py-0.5 bg-white border border-neutral-300 text-neutral-800 text-[11px] font-sans font-medium shadow-2xs"
+                        >
+                          {inst}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

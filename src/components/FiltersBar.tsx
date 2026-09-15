@@ -1,17 +1,11 @@
 import React from 'react';
 import { Search, X, RotateCcw, Award } from 'lucide-react';
-import { FiltrosState, Idioma } from '../types';
-import {
-  TODOS_LOS_ESTILOS,
-  TODOS_LOS_PROGRAMAS,
-  TODOS_LOS_ARQUITECTOS,
-  TODOS_LOS_PAISES,
-  DECADAS_DISPONIBLES,
-} from '../data/proyectos';
+import { FiltrosState, Idioma, OpcionesFiltrosDisponibles } from '../types';
 import { I18N_TEXTS, traducirEstilo, traducirPrograma } from '../i18n';
 
 interface FiltersBarProps {
   filtros: FiltrosState;
+  opcionesDisponibles: OpcionesFiltrosDisponibles;
   idioma: Idioma;
   onActualizarFiltros: (nuevosFiltros: Partial<FiltrosState>) => void;
   onResetFiltros: () => void;
@@ -20,29 +14,13 @@ interface FiltersBarProps {
 
 export const FiltersBar: React.FC<FiltersBarProps> = ({
   filtros,
+  opcionesDisponibles,
   idioma,
   onActualizarFiltros,
   onResetFiltros,
   totalFiltrados,
 }) => {
   const t = I18N_TEXTS[idioma];
-
-  // Quick remove helper for active tags
-  const toggleEstilo = (estilo: string) => {
-    const yaExiste = filtros.estilosSeleccionados.includes(estilo);
-    const nuevosEstilos = yaExiste
-      ? filtros.estilosSeleccionados.filter((e) => e !== estilo)
-      : [...filtros.estilosSeleccionados, estilo];
-    onActualizarFiltros({ estilosSeleccionados: nuevosEstilos });
-  };
-
-  const togglePrograma = (prog: string) => {
-    const yaExiste = filtros.programasSeleccionados.includes(prog);
-    const nuevosProgramas = yaExiste
-      ? filtros.programasSeleccionados.filter((p) => p !== prog)
-      : [...filtros.programasSeleccionados, prog];
-    onActualizarFiltros({ programasSeleccionados: nuevosProgramas });
-  };
 
   const hayFiltrosActivos =
     filtros.busqueda.trim() !== '' ||
@@ -52,6 +30,57 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
     filtros.paisSeleccionado !== '' ||
     filtros.decadaSeleccionada !== 'all' ||
     filtros.soloPritzker;
+
+  // Safe option lists ensuring current value is selectable during any transition
+  const listaProgramas = [...opcionesDisponibles.programas];
+  if (
+    filtros.programasSeleccionados[0] &&
+    !listaProgramas.includes(filtros.programasSeleccionados[0])
+  ) {
+    listaProgramas.unshift(filtros.programasSeleccionados[0]);
+  }
+
+  const listaEstilos = [...opcionesDisponibles.estilos];
+  if (
+    filtros.estilosSeleccionados[0] &&
+    !listaEstilos.includes(filtros.estilosSeleccionados[0])
+  ) {
+    listaEstilos.unshift(filtros.estilosSeleccionados[0]);
+  }
+
+  const listaArquitectos = [...opcionesDisponibles.arquitectos];
+  if (
+    filtros.arquitectoSeleccionado &&
+    !listaArquitectos.includes(filtros.arquitectoSeleccionado)
+  ) {
+    listaArquitectos.unshift(filtros.arquitectoSeleccionado);
+  }
+
+  const listaPaises = [...opcionesDisponibles.paises];
+  if (
+    filtros.paisSeleccionado &&
+    !listaPaises.includes(filtros.paisSeleccionado)
+  ) {
+    listaPaises.unshift(filtros.paisSeleccionado);
+  }
+
+  const listaDecadas = [...opcionesDisponibles.decadas];
+  if (
+    filtros.decadaSeleccionada &&
+    filtros.decadaSeleccionada !== 'all' &&
+    !listaDecadas.some((d) => d.value === filtros.decadaSeleccionada)
+  ) {
+    const esReciente =
+      filtros.decadaSeleccionada === '2020' ||
+      parseInt(filtros.decadaSeleccionada, 10) >= 2020;
+    listaDecadas.push({
+      label: {
+        es: esReciente ? '2020+' : `${filtros.decadaSeleccionada}s`,
+        en: esReciente ? '2020+' : `${filtros.decadaSeleccionada}s`,
+      },
+      value: filtros.decadaSeleccionada,
+    });
+  }
 
   return (
     <div className="bg-white border-b border-[#E5E5E5] px-4 md:px-8 py-2.5 transition-all z-40 relative">
@@ -97,7 +126,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             <option value="" className="text-black bg-white">
               {t.allPrograms}
             </option>
-            {TODOS_LOS_PROGRAMAS.map((prog) => (
+            {listaProgramas.map((prog) => (
               <option key={prog} value={prog} className="text-black bg-white">
                 {traducirPrograma(prog, idioma)}
               </option>
@@ -124,7 +153,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             <option value="" className="text-black bg-white">
               {t.allStyles}
             </option>
-            {TODOS_LOS_ESTILOS.map((estilo) => (
+            {listaEstilos.map((estilo) => (
               <option key={estilo} value={estilo} className="text-black bg-white">
                 {traducirEstilo(estilo, idioma)}
               </option>
@@ -132,8 +161,8 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
           </select>
         </div>
 
-        {/* Architect Dropdown (Principal / Most relevant architects) */}
-        <div className="w-36 sm:w-44">
+        {/* Architect Dropdown: strictly Nombre Arquitecto (Nombre Oficina) */}
+        <div className="w-40 sm:w-56 lg:w-64">
           <select
             id="filtro-select-arquitecto"
             value={filtros.arquitectoSeleccionado}
@@ -149,7 +178,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             <option value="" className="text-black bg-white">
               {t.allArchitects}
             </option>
-            {TODOS_LOS_ARQUITECTOS.map((arq) => (
+            {listaArquitectos.map((arq) => (
               <option key={arq} value={arq} className="text-black bg-white">
                 {arq}
               </option>
@@ -174,7 +203,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             <option value="" className="text-black bg-white">
               {t.allCountries}
             </option>
-            {TODOS_LOS_PAISES.map((pais) => (
+            {listaPaises.map((pais) => (
               <option key={pais} value={pais} className="text-black bg-white">
                 {pais}
               </option>
@@ -196,7 +225,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
                 : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
             }`}
           >
-            {DECADAS_DISPONIBLES.map((dec) => (
+            {listaDecadas.map((dec) => (
               <option key={dec.value} value={dec.value} className="text-black bg-white">
                 {dec.label[idioma]}
               </option>
@@ -240,57 +269,6 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
           )}
         </div>
       </div>
-
-      {/* Selected tags row: Active styles & active programs */}
-      {(filtros.estilosSeleccionados.length > 0 || filtros.programasSeleccionados.length > 0) && (
-        <div className="flex flex-wrap items-center gap-1.5 mt-2 pt-2 border-t border-[#F0F0F0] text-[11px]">
-          {filtros.estilosSeleccionados.length > 0 && (
-            <>
-              <span className="text-[10px] font-mono-code uppercase text-neutral-400 mr-0.5 flex-shrink-0">
-                {t.activeStyles}
-              </span>
-              {filtros.estilosSeleccionados.map((estilo) => (
-                <span
-                  key={estilo}
-                  className="inline-flex items-center gap-1 bg-black text-white px-2 py-0.5 text-[10px] flex-shrink-0"
-                >
-                  {traducirEstilo(estilo, idioma)}
-                  <button
-                    onClick={() => toggleEstilo(estilo)}
-                    className="hover:text-neutral-300 cursor-pointer ml-0.5"
-                    title={t.clear}
-                  >
-                    ×
-                  </button>
-                </span>
-              ))}
-            </>
-          )}
-
-          {filtros.programasSeleccionados.length > 0 && (
-            <>
-              <span className="text-[10px] font-mono-code uppercase text-neutral-400 ml-2 mr-0.5 flex-shrink-0">
-                {t.activePrograms}
-              </span>
-              {filtros.programasSeleccionados.map((prog) => (
-                <span
-                  key={prog}
-                  className="inline-flex items-center gap-1 bg-neutral-800 text-white px-2 py-0.5 text-[10px] flex-shrink-0"
-                >
-                  {traducirPrograma(prog, idioma)}
-                  <button
-                    onClick={() => togglePrograma(prog)}
-                    className="hover:text-neutral-300 cursor-pointer ml-0.5"
-                    title={t.clear}
-                  >
-                    ×
-                  </button>
-                </span>
-              ))}
-            </>
-          )}
-        </div>
-      )}
     </div>
   );
 };

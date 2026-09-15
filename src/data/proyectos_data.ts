@@ -1,4 +1,6 @@
-[
+import { ProyectoArquitectura } from "../types";
+
+export const PROYECTOS_DATA: ProyectoArquitectura[] = [
   {
     "id": "niemeyer-interbau-berlin-1954",
     "nombre_proyecto": "Edificio de Viviendas Interbau Hansaviertel",
@@ -81392,4 +81394,4 @@
     "autor_especifico_ficha": "Kazuyo Sejima + Ryue Nishizawa / SANAA",
     "ano_construccion": 2010
   }
-]
+];

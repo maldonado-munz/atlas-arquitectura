@@ -11,6 +11,11 @@ import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { ProjectsListDrawer } from './components/ProjectsListDrawer';
 import { PROYECTOS_ARQUITECTURA } from './data/proyectos';
 import { ProyectoArquitectura, FiltrosState, Idioma } from './types';
+import {
+  filtrarProyectos,
+  calcularOpcionesDisponibles,
+  actualizarFiltrosConCascada,
+} from './utils/filterEngine';
 
 const FILTROS_INICIALES: FiltrosState = {
   busqueda: '',
@@ -48,90 +53,14 @@ export default function App() {
     }
   };
 
-  // Filtered projects computation
+  // Filtered projects derived dynamically from current filter state
   const proyectosFiltrados = useMemo(() => {
-    return PROYECTOS_ARQUITECTURA.filter((p) => {
-      // Búsqueda por texto
-      if (filtros.busqueda.trim() !== '') {
-        const query = filtros.busqueda.toLowerCase();
-        const coincideNombre = p.nombre_proyecto.toLowerCase().includes(query);
-        const coincideArquitecto = p.arquitecto.toLowerCase().includes(query);
-        const coincidePrincipal = (p.arquitecto_principal || '')
-          .toLowerCase()
-          .includes(query);
-        const coincideCiudad = p.ciudad.toLowerCase().includes(query);
-        const coincidePais = p.pais.toLowerCase().includes(query);
-        const coincideEstilo = p.estilos.some((e) =>
-          e.toLowerCase().includes(query)
-        );
-        const coincidePrograma = (p.programas || p.programa || []).some((prog) =>
-          prog.toLowerCase().includes(query)
-        );
+    return filtrarProyectos(PROYECTOS_ARQUITECTURA, filtros);
+  }, [filtros]);
 
-        if (
-          !coincideNombre &&
-          !coincideArquitecto &&
-          !coincidePrincipal &&
-          !coincideCiudad &&
-          !coincidePais &&
-          !coincideEstilo &&
-          !coincidePrograma
-        ) {
-          return false;
-        }
-      }
-
-      // Filtro por estilos (selección múltiple: debe coincidir con alguno de los seleccionados)
-      if (filtros.estilosSeleccionados.length > 0) {
-        const coincideConAlgunEstilo = filtros.estilosSeleccionados.some((estilo) =>
-          p.estilos.includes(estilo)
-        );
-        if (!coincideConAlgunEstilo) return false;
-      }
-
-      // Filtro por programa (selección múltiple: debe coincidir con alguno de los seleccionados)
-      if (filtros.programasSeleccionados.length > 0) {
-        const coincideConAlgunPrograma = filtros.programasSeleccionados.some(
-          (prog) => (p.programas || p.programa || []).includes(prog)
-        );
-        if (!coincideConAlgunPrograma) return false;
-      }
-
-      // Filtro por arquitecto (usando el arquitecto principal o nombre completo)
-      if (filtros.arquitectoSeleccionado) {
-        const coincideArqPrincipal =
-          p.arquitecto_principal === filtros.arquitectoSeleccionado;
-        const coincideNombreCompleto =
-          p.arquitecto === filtros.arquitectoSeleccionado ||
-          p.arquitecto.includes(filtros.arquitectoSeleccionado);
-        if (!coincideArqPrincipal && !coincideNombreCompleto) {
-          return false;
-        }
-      }
-
-      // Filtro por país
-      if (filtros.paisSeleccionado && p.pais !== filtros.paisSeleccionado) {
-        return false;
-      }
-
-      // Filtro solo Pritzker
-      if (filtros.soloPritzker && p.ano_pritzker === null) {
-        return false;
-      }
-
-      // Filtro por década (basado en año de inauguración)
-      if (filtros.decadaSeleccionada !== 'all') {
-        const anio = parseInt(p.ano_inauguracion, 10);
-        const decada = parseInt(filtros.decadaSeleccionada, 10);
-        if (decada === 2010) {
-          if (isNaN(anio) || anio < 2010) return false;
-        } else if (isNaN(anio) || anio < decada || anio >= decada + 10) {
-          return false;
-        }
-      }
-
-      return true;
-    });
+  // Derived available options for cascading dropdowns
+  const opcionesDisponibles = useMemo(() => {
+    return calcularOpcionesDisponibles(PROYECTOS_ARQUITECTURA, filtros);
   }, [filtros]);
 
   // Index of selected project in current filtered set
@@ -192,7 +121,9 @@ export default function App() {
   ]);
 
   const handleActualizarFiltros = (nuevos: Partial<FiltrosState>) => {
-    setFiltros((prev) => ({ ...prev, ...nuevos }));
+    setFiltros((prev) =>
+      actualizarFiltrosConCascada(PROYECTOS_ARQUITECTURA, prev, nuevos)
+    );
   };
 
   const handleResetFiltros = () => {
@@ -217,6 +148,7 @@ export default function App() {
       {mostrarFiltros && (
         <FiltersBar
           filtros={filtros}
+          opcionesDisponibles={opcionesDisponibles}
           idioma={idioma}
           onActualizarFiltros={handleActualizarFiltros}
           onResetFiltros={handleResetFiltros}
