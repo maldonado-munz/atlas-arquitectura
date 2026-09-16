@@ -129,6 +129,7 @@ export const KNOWN_ARCHITECTS_MAP: Record<string, string> = {
   'Carme Pinós': 'Carme Pinós (Estudio Carme Pinós)',
   'Rafael Moneo': 'Rafael Moneo (Estudio Rafael Moneo)',
   'Alberto Campo Baeza': 'Alberto Campo Baeza (Estudio Campo Baeza)',
+  'Philip Johnson': 'Philip Johnson (Philip Johnson Architects / John Burgee Architects)',
 };
 
 // Prefijos o términos colectivos, institucionales o genéricos que NO son un arquitecto responsable individual

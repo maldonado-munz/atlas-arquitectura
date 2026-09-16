@@ -21476,8 +21476,8 @@ export const PROYECTOS_DATA: ProyectoArquitectura[] = [
     "fotografia_url": "",
     "direccion": "Cochrane, Chile",
     "coordenadas": {
-      "lat": -47.254392,
-      "lng": -72.573522
+      "lat": -47.255442358775525, 
+      "lng": -72.57019117548951
     },
     "ano_diseno": "1978",
     "anos_construccion": "1978 / 2020",
@@ -81393,5 +81393,49 @@ export const PROYECTOS_DATA: ProyectoArquitectura[] = [
     "arquitecto_filtro": "Kazuyo Sejima & Ryue Nishizawa (SANAA)",
     "autor_especifico_ficha": "Kazuyo Sejima + Ryue Nishizawa / SANAA",
     "ano_construccion": 2010
-  }
+  },
+  {
+  "id": "johnson-glass-house-1949",
+  "nombre_proyecto": "Glass House (Casa de Cristal)",
+  "arquitecto": "Philip Johnson",
+  "ano_pritzker": 1979,
+  "fotografia_url": "",
+  "direccion": "798-856 Ponus Ridge Road, New Canaan, Connecticut, Estados Unidos",
+  "coordenadas": {
+    "lat": 41.1424,
+    "lng": -73.5294
+  },
+  "ano_diseno": "1947",
+  "anos_construccion": "1948-1949",
+  "ano_inauguracion": "1949",
+  "estilos": [
+    "Modernismo",
+    "Minimalismo",
+    "Internacional"
+  ],
+  "ciudad": "New Canaan",
+  "pais": "Estados Unidos",
+  "descripcion": "Diseñada por el arquitecto Philip Johnson como su propia residencia, es considerada una obra maestra del Modernismo y el Estilo Internacional. Inspirada fuertemente en el diseño de la Casa Farnsworth de Mies van der Rohe (aunque terminada antes), la estructura está conformada por proporciones perfectas y simetría, destacando por su cerramiento de vidrio continuo soportado por perfiles de acero, lo que desdibuja los límites entre el interior de la casa y el paisaje natural exterior. El único elemento opaco es un cilindro de ladrillo asimétrico que contiene el baño y la chimenea.",
+  "fuente_url": "https://theglasshouse.org/",
+  "materiales_principales": [
+    "Vidrio",
+    "Acero",
+    "Ladrillo"
+  ],
+  "fotografia_credito": "",
+  "arquitecto_principal": "Philip Johnson",
+  "colaboradores": "Richard Kelly (diseño de iluminación)",
+  "programa": [
+    "Residencial",
+    "Cultural"
+  ],
+  "programas": [
+    "Residencial",
+    "Cultural"
+  ],
+  "region": "Connecticut",
+  "arquitecto_filtro": "Philip Johnson (Philip Johnson Architects / John Burgee Architects)",
+  "autor_especifico_ficha": "Philip Johnson (Philip Johnson Architects / John Burgee Architects)",
+  "ano_construccion": 1949
+}
 ];

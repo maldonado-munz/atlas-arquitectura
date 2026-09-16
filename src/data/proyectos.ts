@@ -21,6 +21,7 @@ export const ORDEN_CANONICO_ESTILOS = [
   'Posmodernismo',
   'Neoclásico',
   'Barroco',
+  'Internacional',
   'Historicismo',
   'Art Déco',
   'Art Nouveau',
