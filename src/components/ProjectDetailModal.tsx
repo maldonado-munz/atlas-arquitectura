@@ -141,33 +141,33 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Bar */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-[#E5E5E5] bg-[#FBFBFB]">
-          <div className="flex items-center gap-2 text-xs font-mono-code uppercase tracking-wider text-neutral-600">
-            <span className="w-2 h-2 bg-black inline-block"></span>
+        <div className="flex items-center justify-between px-5 py-3 border-b border-[#E5E7EB] bg-[#F9FAFB]">
+          <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-neutral-600 font-medium">
+            <span className="w-2 h-2 bg-neutral-900 inline-block rounded-xs"></span>
             <span>{t.appTitle}</span>
             <span className="text-neutral-400">/</span>
-            <span className="text-neutral-500 truncate max-w-[160px] sm:max-w-[280px]">
+            <span className="text-neutral-600 truncate max-w-[160px] sm:max-w-[280px]">
               {proyecto.nombre_proyecto}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             {(tieneAnterior || tieneSiguiente) && (
-              <div className="flex items-center border border-[#E5E5E5] bg-white mr-2">
+              <div className="flex items-center border border-[#E5E7EB] bg-white rounded-md overflow-hidden mr-1">
                 <button
                   onClick={onAnterior}
                   disabled={!tieneAnterior}
-                  className="p-1 hover:bg-black hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-inherit transition-colors cursor-pointer"
+                  className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] disabled:opacity-30 disabled:hover:bg-transparent transition-colors cursor-pointer"
                   title={`${t.previous} (←)`}
                   aria-label={t.previous}
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <span className="w-[1px] h-4 bg-[#E5E5E5]"></span>
+                <span className="w-[1px] h-4 bg-[#E5E7EB]"></span>
                 <button
                   onClick={onSiguiente}
                   disabled={!tieneSiguiente}
-                  className="p-1 hover:bg-black hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-inherit transition-colors cursor-pointer"
+                  className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] disabled:opacity-30 disabled:hover:bg-transparent transition-colors cursor-pointer"
                   title={`${t.next} (→)`}
                   aria-label={t.next}
                 >
@@ -179,7 +179,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             <button
               id="btn-cerrar-modal-detalle"
               onClick={onCerrar}
-              className="p-1.5 text-black hover:bg-black hover:text-white border border-black transition-colors cursor-pointer"
+              className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] border border-[#E5E7EB] rounded-md transition-colors cursor-pointer"
               title={`${t.close} (Esc)`}
               aria-label={t.close}
             >
@@ -191,23 +191,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         {/* Scrollable Body */}
         <div className="overflow-y-auto flex-1 p-5 md:p-8 space-y-6">
           {/* Title and Architect Meta */}
-          <div className="border-b border-[#E5E5E5] pb-5">
+          <div className="border-b border-[#E5E7EB] pb-5">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex flex-wrap items-center gap-2">
-                {proyecto.ano_pritzker ? (
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-black text-white text-xs font-mono-code font-bold">
-                    <Award className="w-3.5 h-3.5" />
-                    <span>{t.pritzkerPrize.toUpperCase()} {proyecto.ano_pritzker}</span>
-                  </div>
-                ) : (
-                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 border border-neutral-300 text-neutral-600 text-[11px] font-mono-code">
-                    <span>{t.classicReferent.toUpperCase()}</span>
-                  </div>
+                {proyecto.ano_pritzker && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] text-neutral-800 text-xs font-medium rounded-full">
+                    <Award className="w-3.5 h-3.5 text-neutral-700" />
+                    <span>Pritzker {proyecto.ano_pritzker}</span>
+                  </span>
                 )}
-
-                <span className="text-xs font-mono-code text-neutral-400">
-                  REF: {proyecto.id}
-                </span>
               </div>
 
               {proyecto.fuente_url && (
@@ -216,38 +208,38 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     href={proyecto.fuente_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-black text-white hover:bg-neutral-800 text-[11px] font-mono-code uppercase transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F3F4F6] hover:bg-[#E5E7EB] border border-[#E5E7EB] text-neutral-800 text-xs font-medium rounded-md transition-colors cursor-pointer"
                     title={t.sourceDoc}
                   >
                     <span>{nombreFuente}</span>
-                    <ExternalLink className="w-3 h-3" />
+                    <ExternalLink className="w-3.5 h-3.5 text-neutral-500" />
                   </a>
 
                   <button
                     type="button"
                     onClick={copiarEnlaceFuente}
-                    className="inline-flex items-center gap-1 px-2 py-1 border border-neutral-300 hover:border-black text-neutral-700 hover:text-black text-[11px] font-mono-code transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 border border-[#E5E7EB] hover:bg-[#F3F4F6] text-neutral-700 text-xs font-medium rounded-md transition-colors cursor-pointer"
                     title="Copiar URL al portapapeles"
                   >
-                    {enlaceCopiado ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+                    {enlaceCopiado ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-neutral-500" />}
                     <span>{enlaceCopiado ? t.copiedUrl : t.copyUrl}</span>
                   </button>
                 </div>
               )}
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-black mb-1.5">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900 mb-2">
               {proyecto.nombre_proyecto}
             </h2>
 
             {/* Architect & Office */}
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-base md:text-lg font-bold text-neutral-950">
+                <span className="text-base md:text-lg font-semibold text-neutral-900">
                   {arquitectoDisplay}
                 </span>
                 {proyecto.oficina && !arquitectoDisplay.includes(`(${proyecto.oficina})`) && (
-                  <span className="text-xs font-mono-code px-2 py-0.5 bg-neutral-100 border border-neutral-200 text-neutral-700">
+                  <span className="px-2.5 py-0.5 bg-[#F3F4F6] border border-[#E5E7EB] rounded text-xs font-medium text-neutral-700">
                     {proyecto.oficina}
                   </span>
                 )}
@@ -255,13 +247,13 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
               {/* Specific Authorship / Technical sheet attribution */}
               {mostrarAutorEspecifico && (
-                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F9FAFB] p-3 border border-[#E5E7EB] rounded-md">
                   <Users className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
-                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5">
+                    <span className="uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5 tracking-wider">
                       {idioma === 'es' ? 'Autoría Específica / Ficha Técnica' : 'Specific Authorship / Technical Attribution'}:
                     </span>
-                    <span className="leading-relaxed font-sans font-medium text-neutral-900">
+                    <span className="leading-relaxed font-medium text-neutral-900">
                       {autorEspecifico}
                     </span>
                   </div>
@@ -270,30 +262,30 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
               {/* Collaborators and team shown in full detail */}
               {tieneColaboradores && (
-                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F9FAFB] p-3 border border-[#E5E7EB] rounded-md">
                   <Users className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
-                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5">
+                    <span className="uppercase font-semibold text-[11px] text-neutral-500 block mb-0.5 tracking-wider">
                       {t.collaboratorsLabel}:
                     </span>
-                    <span className="leading-relaxed font-sans">{proyecto.colaboradores}</span>
+                    <span className="leading-relaxed text-neutral-700">{proyecto.colaboradores}</span>
                   </div>
                 </div>
               )}
 
               {/* Institutions associated with the project */}
               {tieneInstituciones && (
-                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F7F7F7] p-3 border border-neutral-200">
+                <div className="flex items-start gap-2.5 text-xs text-neutral-800 bg-[#F9FAFB] p-3 border border-[#E5E7EB] rounded-md">
                   <Landmark className="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" />
                   <div className="flex-1">
-                    <span className="font-mono-code uppercase font-semibold text-[11px] text-neutral-500 block mb-1">
+                    <span className="uppercase font-semibold text-[11px] text-neutral-500 block mb-1 tracking-wider">
                       {t.institutionsLabel}:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {proyecto.instituciones!.map((inst) => (
                         <span
                           key={inst}
-                          className="px-2.5 py-0.5 bg-white border border-neutral-300 text-neutral-800 text-[11px] font-sans font-medium shadow-2xs"
+                          className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                         >
                           {inst}
                         </span>
@@ -307,8 +299,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
           {/* Fotografía Arquitectónica y Atribución Legal CC BY-SA 4.0 */}
           {proyecto.fotografia_url && (
-            <div className="space-y-1.5">
-              <div className="w-full bg-[#111111] overflow-hidden border border-[#E5E5E5] shadow-xs flex items-center justify-center max-h-[460px]">
+            <div className="space-y-2">
+              <div className="w-full bg-[#111111] overflow-hidden border border-[#E5E7EB] rounded-md shadow-xs flex items-center justify-center max-h-[460px]">
                 <img
                   src={proyecto.fotografia_url}
                   alt={proyecto.nombre_proyecto}
@@ -319,7 +311,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               </div>
 
               {/* Atribución sutil conforme a CC BY-SA 4.0 */}
-              <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-1 text-[11px] font-mono-code text-neutral-500">
+              <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-1 text-xs text-neutral-500">
                 <div className="flex items-center gap-1.5 flex-wrap">
                   <span className="text-neutral-400">Fotografía:</span>
                   {proyecto.fotografia_autor_url ? (
@@ -361,62 +353,62 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           )}
 
           {/* Chronology & Location Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-[#F7F7F7] border border-[#EBEBEB]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-[#F9FAFB] border border-[#E5E7EB] rounded-md">
             {/* Location */}
             <div>
-              <div className="text-[11px] font-mono-code uppercase text-neutral-500 mb-1 flex items-center gap-1">
-                <MapPin className="w-3 h-3" />
+              <div className="text-xs uppercase tracking-wider text-neutral-500 mb-1 flex items-center gap-1 font-medium">
+                <MapPin className="w-3.5 h-3.5 text-neutral-400" />
                 <span>{t.location}</span>
               </div>
-              <div className="text-xs font-semibold text-black">
+              <div className="text-xs font-semibold text-neutral-900">
                 {proyecto.ciudad}, {proyecto.pais}
               </div>
-              <div className="text-[11px] text-neutral-500 mt-0.5 line-clamp-1" title={proyecto.direccion}>
+              <div className="text-xs text-neutral-500 mt-0.5 line-clamp-1" title={proyecto.direccion}>
                 {proyecto.direccion}
               </div>
             </div>
 
             {/* Design Year */}
             <div>
-              <div className="text-[11px] font-mono-code uppercase text-neutral-500 mb-1 flex items-center gap-1">
-                <Calendar className="w-3 h-3" />
+              <div className="text-xs uppercase tracking-wider text-neutral-500 mb-1 flex items-center gap-1 font-medium">
+                <Calendar className="w-3.5 h-3.5 text-neutral-400" />
                 <span>{t.designYear}</span>
               </div>
-              <div className="text-xs font-mono-code font-bold text-black">
-                {proyecto.ano_diseno}
+              <div className="text-xs font-semibold text-neutral-900">
+                {proyecto.ano_diseno || '—'}
               </div>
             </div>
 
             {/* Construction Years */}
             <div>
-              <div className="text-[11px] font-mono-code uppercase text-neutral-500 mb-1 flex items-center gap-1">
-                <Calendar className="w-3 h-3" />
+              <div className="text-xs uppercase tracking-wider text-neutral-500 mb-1 flex items-center gap-1 font-medium">
+                <Calendar className="w-3.5 h-3.5 text-neutral-400" />
                 <span>{t.construction}</span>
               </div>
-              <div className="text-xs font-mono-code font-bold text-black">
-                {proyecto.anos_construccion}
+              <div className="text-xs font-semibold text-neutral-900">
+                {proyecto.anos_construccion || '—'}
               </div>
             </div>
 
             {/* Inauguration Year */}
             <div>
-              <div className="text-[11px] font-mono-code uppercase text-neutral-500 mb-1 flex items-center gap-1">
-                <Calendar className="w-3 h-3" />
+              <div className="text-xs uppercase tracking-wider text-neutral-500 mb-1 flex items-center gap-1 font-medium">
+                <Calendar className="w-3.5 h-3.5 text-neutral-400" />
                 <span>{t.inauguration}</span>
               </div>
-              <div className="text-xs font-mono-code font-bold text-black">
-                {proyecto.ano_inauguracion}
+              <div className="text-xs font-semibold text-neutral-900">
+                {proyecto.ano_inauguracion || '—'}
               </div>
             </div>
           </div>
 
-          {/* Architectural Periods, Styles & Program */}
+          {/* Architectural Periods, Styles & Program with Standardized Minimalist Tags */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Periods & Styles */}
             <div className="space-y-3">
               <div>
-                <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5" />
+                <h3 className="text-xs uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5 font-medium">
+                  <Layers className="w-3.5 h-3.5 text-neutral-400" />
                   <span>{idioma === 'es' ? 'Período y Estilos' : 'Period & Styles'}</span>
                 </h3>
                 
@@ -426,7 +418,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     {(proyecto.periodos || proyecto.periodo)!.map((per) => (
                       <span
                         key={per}
-                        className="px-2.5 py-0.5 text-xs bg-neutral-100 border border-neutral-300 font-mono-code text-neutral-800"
+                        className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                       >
                         {per}
                       </span>
@@ -440,7 +432,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     (proyecto.estilos || proyecto.estilo)!.map((estilo) => (
                       <span
                         key={estilo}
-                        className="px-2.5 py-1 text-xs bg-white border border-black font-medium text-black shadow-2xs"
+                        className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                       >
                         {traducirEstilo(estilo, idioma)}
                       </span>
@@ -455,8 +447,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             {/* Programs: Principal & Específico */}
             <div className="space-y-3">
               <div>
-                <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-                  <Building2 className="w-3.5 h-3.5" />
+                <h3 className="text-xs uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5 font-medium">
+                  <Building2 className="w-3.5 h-3.5 text-neutral-400" />
                   <span>{t.programLabel}</span>
                 </h3>
                 
@@ -466,7 +458,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     {proyecto.programa_principal.map((prog) => (
                       <span
                         key={prog}
-                        className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"
+                        className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                       >
                         {traducirPrograma(prog, idioma)}
                       </span>
@@ -481,7 +473,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                       {(proyecto.programa_especifico || proyecto['programa_específico'])!.map((esp) => (
                         <span
                           key={esp}
-                          className="px-2 py-0.5 text-xs bg-[#EFEFEF] border border-neutral-300 text-neutral-800 font-mono-code"
+                          className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                         >
                           {esp}
                         </span>
@@ -497,7 +489,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                       {(proyecto.programas || proyecto.programa)!.map((prog) => (
                         <span
                           key={prog}
-                          className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"
+                          className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                         >
                           {traducirPrograma(prog, idioma)}
                         </span>
@@ -511,15 +503,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           {/* Materials */}
           {proyecto.materiales_principales && proyecto.materiales_principales.length > 0 && (
             <div>
-              <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5" />
+              <h3 className="text-xs uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5 font-medium">
+                <Compass className="w-3.5 h-3.5 text-neutral-400" />
                 <span>{t.materialsLabel}</span>
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {proyecto.materiales_principales.map((mat) => (
                   <span
                     key={mat}
-                    className="px-2 py-0.5 text-xs bg-[#EFEFEF] text-neutral-800"
+                    className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
                   >
                     {mat}
                   </span>
@@ -530,17 +522,17 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
           {/* Architectural Description */}
           <div>
-            <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-              <FileText className="w-3.5 h-3.5" />
+            <h3 className="text-xs uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5 font-medium">
+              <FileText className="w-3.5 h-3.5 text-neutral-400" />
               <span>{t.conceptLabel}</span>
             </h3>
-            <div className="bg-[#FAFAFA] p-5 border-l-2 border-black text-sm text-neutral-800 leading-relaxed space-y-3 font-sans">
+            <div className="bg-[#F9FAFB] p-5 border-l-2 border-neutral-800 rounded-r-md text-sm text-neutral-700 leading-relaxed space-y-3 font-sans">
               <p>{proyecto.descripcion}</p>
             </div>
           </div>
 
           {/* Geographic Coordinates & Reference Footer */}
-          <div className="flex flex-wrap items-center justify-between text-xs font-mono-code text-neutral-500 pt-4 border-t border-[#E5E5E5] gap-3">
+          <div className="flex flex-wrap items-center justify-between text-xs text-neutral-500 pt-4 border-t border-[#E5E7EB] gap-3">
             <div className="flex items-center gap-3">
               <button
                 id="btn-modal-centrar-coordenadas"
@@ -552,15 +544,15 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     onCerrar();
                   }
                 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 bg-black hover:bg-neutral-800 text-white border border-black text-xs font-mono-code transition-all cursor-pointer shadow-xs group"
+                className="inline-flex items-center gap-2 px-3.5 py-2 bg-[#F3F4F6] hover:bg-[#E5E7EB] text-neutral-800 border border-[#E5E7EB] text-xs font-medium rounded-md transition-colors cursor-pointer group"
                 title={idioma === 'en' ? 'Center map on coordinates' : 'Centrar mapa en estas coordenadas'}
               >
-                <Compass className="w-3.5 h-3.5 text-[#FDE17D] group-hover:rotate-45 transition-transform" />
-                <span className="font-bold">
+                <Compass className="w-3.5 h-3.5 text-neutral-500 group-hover:rotate-45 transition-transform" />
+                <span>
                   {t.coordinatesLabel}: {formatearCoordenadas(proyecto.coordenadas.lat, proyecto.coordenadas.lng)}
                 </span>
-                <span className="text-[10px] uppercase font-mono-code px-1.5 py-0.5 bg-white/20 text-white ml-1">
-                  {idioma === 'en' ? 'View on map →' : 'Ver en mapa →'}
+                <span className="text-[10px] uppercase px-1.5 py-0.5 bg-white text-neutral-700 border border-[#E5E7EB] rounded ml-1 font-medium">
+                  {idioma === 'en' ? 'Focus map' : 'Ver en mapa'}
                 </span>
               </button>
             </div>
@@ -570,7 +562,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 href={proyecto.fuente_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-black hover:underline cursor-pointer"
+                className="inline-flex items-center gap-1 text-neutral-600 hover:text-black underline underline-offset-2 transition-colors cursor-pointer text-xs"
               >
                 <span>{proyecto.fuente_url}</span>
                 <ExternalLink className="w-3 h-3" />

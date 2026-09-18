@@ -143,7 +143,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
   });
 
   return (
-    <div className="bg-white border-b border-[#E5E5E5] px-3 sm:px-4 md:px-8 py-2.5 transition-all relative z-[1100]">
+    <div className="bg-white border-b border-[#E5E7EB] px-3 sm:px-4 md:px-8 py-2.5 transition-all relative z-[1100]">
       {/* Controles en el orden estricto solicitado:
           1. Buscador
           2. País (checkbox)
@@ -164,12 +164,12 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             placeholder={t.searchPlaceholder}
             value={filtros.busqueda}
             onChange={(e) => onActualizarFiltros({ busqueda: e.target.value })}
-            className="w-full bg-[#F5F5F5] border border-transparent focus:border-black focus:bg-white pl-8 pr-7 py-1.5 text-xs text-black placeholder-neutral-400 outline-none transition-all font-sans"
+            className="w-full bg-[#F3F4F6] border border-[#E5E7EB] focus:border-neutral-400 focus:bg-white pl-8 pr-7 py-1.5 text-xs text-neutral-900 placeholder-neutral-400 outline-none rounded-md transition-all font-sans"
           />
           {filtros.busqueda && (
             <button
               onClick={() => onActualizarFiltros({ busqueda: '' })}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-black cursor-pointer"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 cursor-pointer"
             >
               <X className="w-3 h-3" />
             </button>
@@ -195,10 +195,10 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             onChange={(e) =>
               onActualizarFiltros({ arquitectoSeleccionado: e.target.value })
             }
-            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border truncate ${
+            className={`w-full px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border rounded-md truncate font-sans ${
               filtros.arquitectoSeleccionado
-                ? 'bg-black text-white border-black font-medium shadow-xs'
-                : 'bg-[#F7F7F7] text-black border-neutral-200 hover:border-black focus:border-black focus:bg-white'
+                ? 'bg-neutral-900 text-white border-neutral-900 font-medium shadow-xs'
+                : 'bg-[#F3F4F6] text-neutral-800 border-[#E5E7EB] hover:bg-[#E5E7EB] hover:border-neutral-400 focus:border-neutral-400 focus:bg-white'
             }`}
           >
             <option value="" className="text-black bg-white">
@@ -285,10 +285,10 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
           onClick={() =>
             onActualizarFiltros({ soloPritzker: !filtros.soloPritzker })
           }
-          className={`px-2.5 py-1.5 text-xs border font-medium flex items-center gap-1.5 transition-all cursor-pointer ${
+          className={`px-2.5 py-1.5 text-xs border rounded-md font-medium flex items-center gap-1.5 transition-all cursor-pointer ${
             filtros.soloPritzker
-              ? 'bg-black text-white border-black shadow-xs'
-              : 'bg-[#F5F5F5] text-black border-transparent hover:border-black'
+              ? 'bg-neutral-900 text-white border-neutral-900 shadow-xs'
+              : 'bg-[#F3F4F6] text-neutral-800 border-[#E5E7EB] hover:bg-[#E5E7EB] hover:border-neutral-400'
           }`}
           title={t.pritzkerPrize}
         >
@@ -302,7 +302,7 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
             <button
               id="btn-limpiar-filtros"
               onClick={onResetFiltros}
-              className="text-xs text-neutral-600 hover:text-black flex items-center gap-1 underline underline-offset-4 cursor-pointer ml-1"
+              className="text-xs text-neutral-600 hover:text-black flex items-center gap-1.5 py-1 px-2 hover:bg-[#F3F4F6] rounded transition-colors cursor-pointer ml-1 font-medium"
               title={t.reset}
             >
               <RotateCcw className="w-3 h-3" />

@@ -616,7 +616,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
         </div>
       )}
 
-      {/* Floating Architectural Ficha directly on top of the Map */}
+      {/* Floating Architectural Ficha Resumen directly on top of the Map */}
       {proyectoSeleccionado && (
         <div
           id="ficha-flotante-mapa"
@@ -624,68 +624,57 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           onMouseDown={(e) => e.stopPropagation()}
           onTouchStart={(e) => e.stopPropagation()}
           onDoubleClick={(e) => e.stopPropagation()}
-          className="absolute top-4 left-4 sm:top-6 sm:left-6 z-[1200] max-w-md w-[calc(100%-2rem)] sm:w-[440px] max-h-[calc(100%-4rem)] overflow-y-auto bg-white border-2 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] p-4 md:p-5 flex flex-col gap-3 animate-in fade-in slide-in-from-top-3 duration-200 pointer-events-auto"
+          className="absolute top-4 left-4 sm:top-6 sm:left-6 z-[1200] w-[calc(100%-2rem)] sm:w-[360px] md:w-[380px] max-h-[calc(100%-4rem)] overflow-y-auto bg-white border border-[#E5E7EB] shadow-[0_8px_30px_rgba(0,0,0,0.08)] rounded-lg p-5 flex flex-col gap-4 animate-in fade-in slide-in-from-top-3 duration-200 pointer-events-auto"
         >
           {/* Card Header & Controls */}
-          <div className="flex items-center justify-between gap-2 border-b border-neutral-200 pb-2">
+          <div className="flex items-center justify-between gap-2 border-b border-[#E5E7EB] pb-2.5">
             <div className="flex items-center gap-2 flex-wrap">
-              {proyectoSeleccionado.ano_pritzker ? (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-black text-white text-[10px] font-mono-code font-bold uppercase">
-                  <Award className="w-3 h-3" />
-                  PRITZKER {proyectoSeleccionado.ano_pritzker}
-                </span>
-              ) : (proyectoSeleccionado.ciudad || '').toLowerCase().includes('chiloé') || (proyectoSeleccionado.nombre_proyecto || '').toLowerCase().includes('iglesia de') ? (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-neutral-900 text-white text-[10px] font-mono-code font-bold uppercase tracking-wider">
-                  PATRIMONIO UNESCO / HISTÓRICO
-                </span>
-              ) : (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 border border-neutral-300 text-neutral-700 text-[10px] font-mono-code uppercase">
-                  FICHA TÉCNICA
+              {proyectoSeleccionado.ano_pritzker && (
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#F3F4F6] border border-[#E5E7EB] text-neutral-800 text-xs font-medium rounded-full">
+                  <Award className="w-3.5 h-3.5 text-neutral-700" />
+                  <span>Pritzker {proyectoSeleccionado.ano_pritzker}</span>
                 </span>
               )}
-              <span className="text-[10px] font-mono-code text-neutral-400">
-                {proyectoSeleccionado.id}
-              </span>
             </div>
 
-            <div className="flex items-center gap-1 flex-shrink-0">
+            <div className="flex items-center gap-1.5 flex-shrink-0 ml-auto">
               {tieneAnterior && onAnterior && (
                 <button
                   id="btn-ficha-anterior"
                   onClick={onAnterior}
-                  className="p-1 hover:bg-black hover:text-white border border-neutral-300 transition-colors cursor-pointer text-neutral-700"
+                  className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] rounded-md transition-colors cursor-pointer"
                   title={idioma === 'en' ? 'Previous project' : 'Obra anterior'}
                   aria-label="Obra anterior"
                 >
-                  <ChevronLeft className="w-3.5 h-3.5" />
+                  <ChevronLeft className="w-4 h-4" />
                 </button>
               )}
               {tieneSiguiente && onSiguiente && (
                 <button
                   id="btn-ficha-siguiente"
                   onClick={onSiguiente}
-                  className="p-1 hover:bg-black hover:text-white border border-neutral-300 transition-colors cursor-pointer text-neutral-700"
+                  className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] rounded-md transition-colors cursor-pointer"
                   title={idioma === 'en' ? 'Next project' : 'Siguiente obra'}
                   aria-label="Siguiente obra"
                 >
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-4 h-4" />
                 </button>
               )}
               <button
                 id="btn-cerrar-ficha-mapa"
                 onClick={() => onSeleccionarProyecto(null)}
-                className="p-1 text-black hover:bg-black hover:text-white border border-black transition-colors cursor-pointer ml-1"
+                className="p-1.5 text-neutral-600 hover:text-black hover:bg-[#F3F4F6] rounded-md transition-colors cursor-pointer"
                 title={idioma === 'en' ? 'Close fiche' : 'Cerrar ficha'}
                 aria-label="Cerrar ficha"
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          {/* Project Thumbnail Image */}
+          {/* Project Image in 1:1 Square Aspect Ratio */}
           {proyectoSeleccionado.fotografia_url && (
-            <div className="relative w-full h-28 sm:h-32 bg-neutral-100 overflow-hidden border border-neutral-200">
+            <div className="relative w-full aspect-square bg-[#F3F4F6] rounded-md overflow-hidden border border-[#E5E7EB]">
               <img
                 src={proyectoSeleccionado.fotografia_url}
                 alt={proyectoSeleccionado.nombre_proyecto}
@@ -693,125 +682,99 @@ export const MapViewer: React.FC<MapViewerProps> = ({
                 referrerPolicy="no-referrer"
                 loading="lazy"
               />
-              <div className="absolute bottom-1 right-1.5 px-1 py-0.5 bg-black/70 text-[9px] font-mono-code text-neutral-200">
-                {proyectoSeleccionado.fotografia_credito || 'Vmorande'} • {proyectoSeleccionado.fotografia_licencia || 'CC BY-SA 4.0'}
-              </div>
+              {proyectoSeleccionado.fotografia_credito && (
+                <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-xs text-[10px] font-normal text-white/90 rounded">
+                  {proyectoSeleccionado.fotografia_credito}
+                </div>
+              )}
             </div>
           )}
 
-          {/* Project Details */}
-          <div>
-            <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
+          {/* Project Details: Title & Architect */}
+          <div className="space-y-1.5">
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-900 leading-snug">
               {proyectoSeleccionado.nombre_proyecto}
             </h3>
-            <p className="text-xs font-semibold text-neutral-800 mt-0.5">
-              {proyectoSeleccionado.arquitecto_responsable ||
-                proyectoSeleccionado.arquitecto_principal ||
-                proyectoSeleccionado.arquitecto}
-            </p>
-            {proyectoSeleccionado.instituciones && proyectoSeleccionado.instituciones.length > 0 && (
-              <p className="text-[11px] text-neutral-500 mt-0.5 truncate" title={proyectoSeleccionado.instituciones.join(', ')}>
-                <span className="font-mono-code text-[10px] uppercase font-bold text-neutral-600">
-                  {idioma === 'en' ? 'INST:' : 'INST:'}
-                </span>{' '}
-                {proyectoSeleccionado.instituciones.join(', ')}
-              </p>
-            )}
-            <div className="flex items-center gap-2 text-[11px] font-mono-code text-neutral-500 mt-1 flex-wrap">
-              <span className="flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-neutral-400" />
-                {proyectoSeleccionado.ciudad}, {proyectoSeleccionado.pais}
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1">
-                <Calendar className="w-3 h-3 text-neutral-400" />
-                {proyectoSeleccionado.ano_inauguracion}
+
+            {/* Architect + Office/Firm */}
+            {(() => {
+              const arquitectoDisplay =
+                (proyectoSeleccionado.arquitecto_filtro &&
+                  proyectoSeleccionado.arquitecto_filtro !== 'No aplica / Anónimo')
+                  ? proyectoSeleccionado.arquitecto_filtro
+                  : (proyectoSeleccionado.arquitecto_principal ||
+                     proyectoSeleccionado.arquitecto_responsable ||
+                     proyectoSeleccionado.arquitecto);
+              const oficina = proyectoSeleccionado.oficina;
+              const tieneOficina = oficina && !arquitectoDisplay?.includes(oficina);
+
+              return (
+                <p className="text-sm font-medium text-neutral-700">
+                  <span>{arquitectoDisplay}</span>
+                  {tieneOficina && (
+                    <span className="text-neutral-500 font-normal ml-1.5">
+                      / {oficina}
+                    </span>
+                  )}
+                </p>
+              );
+            })()}
+
+            {/* Address / Location */}
+            <div className="flex items-start gap-1.5 text-xs text-neutral-600 pt-1 font-normal">
+              <MapPin className="w-3.5 h-3.5 text-neutral-400 mt-0.5 flex-shrink-0" />
+              <span>
+                {[
+                  proyectoSeleccionado.direccion,
+                  proyectoSeleccionado.ciudad,
+                  proyectoSeleccionado.pais,
+                ]
+                  .filter(Boolean)
+                  .join(', ')}
               </span>
             </div>
 
-            {/* Reactive Coordinates Chip in Floating Card */}
-            <button
-              id="btn-ficha-coordenadas-mapa"
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (mapInstanceRef.current && proyectoSeleccionado) {
-                  mapInstanceRef.current.flyTo(
-                    [proyectoSeleccionado.coordenadas.lat, proyectoSeleccionado.coordenadas.lng],
-                    16,
-                    { duration: 1.2 }
-                  );
+            {/* Year of Construction / Inauguration */}
+            <div className="flex items-center gap-1.5 text-xs text-neutral-600 font-normal">
+              <Calendar className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0" />
+              <span>
+                {proyectoSeleccionado.anos_construccion
+                  ? (proyectoSeleccionado.ano_inauguracion &&
+                     proyectoSeleccionado.ano_inauguracion !== proyectoSeleccionado.anos_construccion
+                      ? `${idioma === 'en' ? 'Built' : 'Construcción'}: ${proyectoSeleccionado.anos_construccion} (${idioma === 'en' ? 'Inauguration' : 'Inauguración'}: ${proyectoSeleccionado.ano_inauguracion})`
+                      : `${idioma === 'en' ? 'Year' : 'Año'}: ${proyectoSeleccionado.anos_construccion}`)
+                  : `${idioma === 'en' ? 'Inauguration' : 'Inauguración'}: ${proyectoSeleccionado.ano_inauguracion || '—'}`
                 }
-              }}
-              className="group inline-flex items-center gap-1.5 px-2 py-0.5 bg-neutral-100 hover:bg-black text-neutral-800 hover:text-white border border-neutral-300 hover:border-black text-[10px] font-mono-code transition-all cursor-pointer shadow-2xs mt-1.5"
-              title={idioma === 'en' ? 'Center map on coordinates' : 'Centrar mapa en estas coordenadas'}
-            >
-              <Navigation className="w-2.5 h-2.5 text-neutral-500 group-hover:text-[#FDE17D] rotate-45 transition-colors" />
-              <span className="font-semibold tracking-tight">
-                {formatearCoordenadas(proyectoSeleccionado.coordenadas.lat, proyectoSeleccionado.coordenadas.lng)}
               </span>
-              <span className="text-[9px] text-neutral-400 group-hover:text-neutral-200 ml-0.5 uppercase font-normal">
-                ({idioma === 'en' ? 'Focus' : 'Centrar'})
-              </span>
-            </button>
+            </div>
+
+            {/* Main Program (programa_principal) with Standardized Minimalist Tags */}
+            {proyectoSeleccionado.programa_principal && proyectoSeleccionado.programa_principal.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {proyectoSeleccionado.programa_principal.map((prog) => (
+                  <span
+                    key={prog}
+                    className="px-2.5 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-md text-xs font-medium text-neutral-700"
+                  >
+                    {traducirPrograma(prog, lang)}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Styles & Program Badges */}
-          <div className="flex flex-wrap gap-1.5 max-h-16 overflow-y-auto">
-            {(proyectoSeleccionado.estilos || proyectoSeleccionado.estilo || [])
-              .slice(0, 3)
-              .map((estilo) => (
-                <span
-                  key={estilo}
-                  className="px-2 py-0.5 bg-neutral-100 text-neutral-800 text-[10px] font-mono-code border border-neutral-200"
-                >
-                  {traducirEstilo(estilo, lang)}
-                </span>
-              ))}
-            {(
-              proyectoSeleccionado.programa_principal ||
-              proyectoSeleccionado.programa ||
-              []
-            )
-              .slice(0, 2)
-              .map((prog) => (
-                <span
-                  key={prog}
-                  className="px-2 py-0.5 bg-neutral-50 text-neutral-600 text-[10px] font-mono-code border border-neutral-200"
-                >
-                  {traducirPrograma(prog, lang)}
-                </span>
-              ))}
-          </div>
-
-          {/* Excerpt */}
-          <p className="text-xs text-neutral-600 line-clamp-2 leading-relaxed">
-            {proyectoSeleccionado.descripcion}
-          </p>
-
-          {/* Action Footer */}
-          <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-100 mt-1">
+          {/* Action Footer: "Ver ficha completa" button */}
+          <div className="pt-2 border-t border-[#E5E7EB] mt-auto">
             {onAbrirModalCompleto && (
               <button
                 id="btn-abrir-modal-completo"
+                type="button"
                 onClick={() => onAbrirModalCompleto(proyectoSeleccionado)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-mono-code font-bold uppercase transition-colors cursor-pointer shadow-xs"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-900 hover:bg-black text-white text-xs font-medium rounded-md transition-colors cursor-pointer"
               >
-                <Maximize2 className="w-3.5 h-3.5" />
-                <span>{idioma === 'en' ? 'Full dossier' : 'Ver ficha completa'}</span>
+                <Maximize2 className="w-4 h-4" />
+                <span>{idioma === 'en' ? 'View full dossier' : 'Ver ficha completa'}</span>
               </button>
-            )}
-
-            {proyectoSeleccionado.fuente_url && (
-              <a
-                href={proyectoSeleccionado.fuente_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-[11px] font-mono-code text-neutral-600 hover:text-black underline transition-colors ml-auto"
-              >
-                <span>{idioma === 'en' ? 'Source doc' : 'Documentación'}</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
             )}
           </div>
         </div>

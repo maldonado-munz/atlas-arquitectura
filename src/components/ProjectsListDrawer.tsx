@@ -102,7 +102,7 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
                     )}
                   </div>
 
-                  <div className="flex items-center gap-1 mt-2 flex-wrap">
+                  <div className="flex items-center gap-1.5 mt-2 flex-wrap">
                     {/* Program pills */}
                     {(
                       proyecto.programa_principal ||
@@ -114,7 +114,7 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
                       .map((prog) => (
                         <span
                           key={prog}
-                          className="text-[9px] font-mono-code px-1.5 py-0.2 bg-black text-white"
+                          className="text-[10px] font-medium px-2 py-0.5 bg-[#F3F4F6] border border-[#E5E7EB] rounded text-neutral-700"
                         >
                           {traducirPrograma(prog, idioma)}
                         </span>
@@ -126,14 +126,14 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
                       .map((st) => (
                         <span
                           key={st}
-                          className="text-[9px] font-mono-code px-1.5 py-0.2 border border-neutral-200 text-neutral-600"
+                          className="text-[10px] font-medium px-2 py-0.5 bg-[#F3F4F6] border border-[#E5E7EB] rounded text-neutral-600"
                         >
                           {traducirEstilo(st, idioma)}
                         </span>
                       ))}
 
                     {(proyecto.estilos || proyecto.estilo || []).length > 2 && (
-                      <span className="text-[9px] font-mono-code text-neutral-400">
+                      <span className="text-[10px] text-neutral-400 font-normal">
                         +{(proyecto.estilos || proyecto.estilo || []).length - 2}
                       </span>
                     )}
@@ -149,13 +149,13 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
                         onSeleccionarProyecto(proyecto);
                         onAbrirDetalle(proyecto);
                       }}
-                      className="opacity-0 group-hover:opacity-100 text-[10px] font-mono-code px-2 py-1 bg-black text-white hover:bg-neutral-800 transition-opacity whitespace-nowrap"
+                      className="opacity-0 group-hover:opacity-100 text-xs font-medium px-2.5 py-1 bg-neutral-900 text-white rounded hover:bg-black transition-opacity whitespace-nowrap"
                       title="Ver ficha completa"
                     >
                       {idioma === 'en' ? 'Dossier' : 'Ficha'}
                     </button>
                   )}
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity text-black p-1">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity text-neutral-700 p-1">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>

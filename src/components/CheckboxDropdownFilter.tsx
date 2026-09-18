@@ -133,10 +133,10 @@ export const CheckboxDropdownFilter: React.FC<CheckboxDropdownFilterProps> = ({
         id={id}
         type="button"
         onClick={() => setAbierto(!abierto)}
-        className={`px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border flex items-center justify-between gap-1.5 select-none whitespace-nowrap ${
+        className={`px-2.5 py-1.5 text-xs outline-none cursor-pointer transition-all border rounded-md flex items-center justify-between gap-1.5 select-none whitespace-nowrap font-medium ${
           estaActivo
-            ? 'bg-black text-white border-black font-medium shadow-xs'
-            : 'bg-[#F7F7F7] text-neutral-800 border-neutral-200 hover:border-black hover:bg-[#EFEFEF] focus:border-black focus:bg-white'
+            ? 'bg-neutral-900 text-white border-neutral-900 shadow-xs'
+            : 'bg-[#F3F4F6] text-neutral-800 border-[#E5E7EB] hover:bg-[#E5E7EB] hover:border-neutral-400 focus:border-neutral-400 focus:bg-white'
         }`}
         title={selectedValues.join(', ')}
       >
@@ -148,7 +148,7 @@ export const CheckboxDropdownFilter: React.FC<CheckboxDropdownFilterProps> = ({
           {estaActivo && (
             <span
               onClick={limpiarSeleccion}
-              className="p-0.5 hover:bg-neutral-800 rounded-xs transition-colors cursor-pointer text-neutral-300 hover:text-white"
+              className="p-0.5 hover:bg-neutral-800 rounded transition-colors cursor-pointer text-neutral-300 hover:text-white"
               title="Limpiar"
             >
               <X className="w-3 h-3" />
@@ -167,11 +167,11 @@ export const CheckboxDropdownFilter: React.FC<CheckboxDropdownFilterProps> = ({
         <div
           className={`absolute ${
             alignRight ? 'right-0' : 'left-0'
-          } top-full mt-1 bg-white border border-black shadow-[0_10px_30px_rgba(0,0,0,0.2)] z-[1250] flex flex-col ${menuWidthClass} animate-in fade-in duration-100`}
+          } top-full mt-1.5 bg-white border border-[#E5E7EB] shadow-[0_10px_30px_rgba(0,0,0,0.1)] rounded-md z-[1250] flex flex-col ${menuWidthClass} animate-in fade-in duration-100 overflow-hidden`}
         >
           {/* Cabecera con Buscador o Acciones */}
           {options.length > 5 && (
-            <div className="p-2 border-b border-neutral-200 bg-[#FAFAFA]">
+            <div className="p-2 border-b border-[#E5E7EB] bg-[#F9FAFB]">
               <div className="relative">
                 <Search className="w-3 h-3 text-neutral-400 absolute left-2 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
@@ -180,7 +180,7 @@ export const CheckboxDropdownFilter: React.FC<CheckboxDropdownFilterProps> = ({
                   placeholder={placeholderSearch}
                   value={busquedaInterna}
                   onChange={(e) => setBusquedaInterna(e.target.value)}
-                  className="w-full bg-white border border-neutral-300 pl-7 pr-6 py-1 text-xs text-black placeholder-neutral-400 outline-none focus:border-black"
+                  className="w-full bg-white border border-[#E5E7EB] rounded pl-7 pr-6 py-1 text-xs text-neutral-900 placeholder-neutral-400 outline-none focus:border-neutral-400 font-sans"
                 />
                 {busquedaInterna && (
                   <button
@@ -193,7 +193,7 @@ export const CheckboxDropdownFilter: React.FC<CheckboxDropdownFilterProps> = ({
               </div>
 
               {/* Botones de acción rápida */}
-              <div className="flex items-center justify-between mt-1.5 px-0.5 text-[10px] font-mono-code text-neutral-500">
+              <div className="flex items-center justify-between mt-1.5 px-0.5 text-[10px] text-neutral-500 font-medium">
                 <button
                   type="button"
                   onClick={seleccionarTodosVisibles}

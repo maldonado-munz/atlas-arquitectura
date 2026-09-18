@@ -12,31 +12,12 @@
     "region": "Región Metropolitana de Santiago",
     "ciudad": "Santiago",
     "direccion": "Vicuña Mackenna 4860, Macul",
-    "coordenadas": {
-      "lat": -33.4984,
-      "lng": -70.6105
-    },
-    "periodo": [
-      "Contemporáneo y Alta Tecnología",
-      "Movimiento Moderno y Brutalismo"
-    ],
-    "estilo": [
-      "Arquitectura Sustentable / Bioclimática",
-      "Brutalismo"
-    ],
-    "programa_principal": [
-      "Educación e Investigación",
-      "Oficinas y Trabajo"
-    ],
-    "programa_específico": [
-      "Centro de investigación / Laboratorio",
-      "Corporativo"
-    ],
-    "materiales_principales": [
-      "Hormigón armado",
-      "Vidrio",
-      "Madera"
-    ],
+    "coordenadas": {"lat": -33.4984, "lng": -70.6105},
+    "periodo": ["Contemporáneo y Alta Tecnología", "Movimiento Moderno y Brutalismo"],
+    "estilo": ["Arquitectura Sustentable / Bioclimática", "Brutalismo"],
+    "programa_principal": ["Educación e Investigación", "Oficinas y Trabajo"],
+    "programa_específico": ["Centro de investigación / Laboratorio", "Corporativo"],
+    "materiales_principales": ["Hormigón armado", "Vidrio", "Madera"],
     "descripcion": "El Centro de Innovación UC Anacleto Angelini es un edificio concebido para promover la interacción y transferencia de conocimiento entre la academia y las empresas. Presenta una estructura monolítica e Invertida de hormigón visto hacia el exterior que actúa como masa térmica para mitigar la radiación solar directa, mientras que ubica un núcleo transparente y de encuentros hacia el interior.",
     "fotografia_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Edificio_Anacleto_Angelini.jpg/960px-Edificio_Anacleto_Angelini.jpg?utm_source=es.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "fotografia_credito": "Vmorande",
