@@ -2,6 +2,7 @@ import React from 'react';
 import { SlidersHorizontal, List, Globe } from 'lucide-react';
 import { Idioma } from '../types';
 import { I18N_TEXTS } from '../i18n';
+import { GoogleAuthButton } from './GoogleAuthButton';
 
 interface HeaderProps {
   totalProyectos: number;
@@ -126,6 +127,11 @@ export const Header: React.FC<HeaderProps> = ({
           <List className="w-3.5 h-3.5" />
           <span>{t.catalogueButton}</span>
         </button>
+
+        {/* Google Sign-in / User Profile Button */}
+        <div className="ml-1 pl-1 border-l border-neutral-200">
+          <GoogleAuthButton idioma={idioma} />
+        </div>
       </div>
     </header>
   );

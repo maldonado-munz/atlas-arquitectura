@@ -1,23 +1,29 @@
-import rawData from '../../proyectos_arquitectura.json';
+import rawData from './proyectos.json';
 import { ProyectoArquitectura } from '../types';
-import { normalizarProyecto } from './architectNormalizer';
+import { normalizarProyecto } from './arquitectosFiltro.js';
 import { extractAvailableDecades } from '../utils/decadeUtils';
 import {
   LISTA_PERIODOS,
   LISTA_ESTILOS,
+  TAXONOMIA_PERIODOS_ESTILOS,
+  obtenerEstilosParaPeriodos,
+  obtenerPeriodoDeEstilo,
+} from './periodosYEstilos.js';
+import {
   LISTA_PROGRAMAS_PRINCIPALES,
   LISTA_PROGRAMAS_ESPECIFICOS,
-  TAXONOMIA_PERIODOS_ESTILOS,
   TAXONOMIA_PROGRAMAS,
-  obtenerEstilosParaPeriodos,
   obtenerEspecificosParaPrincipales,
-} from './taxonomy';
+  obtenerPrincipalDeEspecifico,
+} from './programas.js';
 
 export {
   TAXONOMIA_PERIODOS_ESTILOS,
   TAXONOMIA_PROGRAMAS,
   obtenerEstilosParaPeriodos,
+  obtenerPeriodoDeEstilo,
   obtenerEspecificosParaPrincipales,
+  obtenerPrincipalDeEspecifico,
 };
 
 export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = (
@@ -50,6 +56,3 @@ export const TODOS_LOS_PAISES = Array.from(
 ).sort((a, b) => a.localeCompare(b, 'es'));
 
 export const DECADAS_DISPONIBLES = extractAvailableDecades(PROYECTOS_ARQUITECTURA);
-
-
-

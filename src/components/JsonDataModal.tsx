@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Copy, Check, Download, FileCode } from 'lucide-react';
-import rawData from '../../proyectos_arquitectura.json';
+import rawData from '../data/proyectos.json';
 
 interface JsonDataModalProps {
   abierto: boolean;
@@ -25,7 +25,7 @@ export const JsonDataModal: React.FC<JsonDataModalProps> = ({ abierto, onCerrar 
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'proyectos_arquitectura.json';
+    link.download = 'proyectos.json';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -43,7 +43,7 @@ export const JsonDataModal: React.FC<JsonDataModalProps> = ({ abierto, onCerrar 
           <div className="flex items-center gap-2">
             <FileCode className="w-4 h-4 text-black" />
             <span className="text-xs font-mono-code font-bold uppercase">
-              proyectos_arquitectura.json
+              proyectos.json
             </span>
             <span className="text-[10px] font-mono-code px-1.5 py-0.5 bg-neutral-100 text-neutral-600">
               {rawData.length} registros
