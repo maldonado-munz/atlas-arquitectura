@@ -1,72 +1,36 @@
-import { PROYECTOS_DATA } from './proyectos_data';
+import rawData from '../../proyectos_arquitectura.json';
 import { ProyectoArquitectura } from '../types';
 import { normalizarProyecto } from './architectNormalizer';
 import { extractAvailableDecades } from '../utils/decadeUtils';
+import {
+  LISTA_PERIODOS,
+  LISTA_ESTILOS,
+  LISTA_PROGRAMAS_PRINCIPALES,
+  LISTA_PROGRAMAS_ESPECIFICOS,
+  TAXONOMIA_PERIODOS_ESTILOS,
+  TAXONOMIA_PROGRAMAS,
+  obtenerEstilosParaPeriodos,
+  obtenerEspecificosParaPrincipales,
+} from './taxonomy';
 
-export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = PROYECTOS_DATA.map(
-  normalizarProyecto
-);
+export {
+  TAXONOMIA_PERIODOS_ESTILOS,
+  TAXONOMIA_PROGRAMAS,
+  obtenerEstilosParaPeriodos,
+  obtenerEspecificosParaPrincipales,
+};
 
-export const ORDEN_CANONICO_ESTILOS = [
-  'Modernismo',
-  'Brutalismo',
-  'Minimalismo',
-  'Contemporáneo',
-  'Arquitectura Orgánica',
-  'Vernácula / Local',
-  'High-Tech',
-  'Deconstructivismo',
-  'Sostenible / Bioclimático',
-  'Estructura Expuesta',
-  'Posmodernismo',
-  'Neoclásico',
-  'Barroco',
-  'Internacional',
-  'Historicismo',
-  'Art Déco',
-  'Art Nouveau',
-  'Arqueológico / Ancestral',
-  'Industrial / Hierro y Cristal',
-  'Paramétrico',
-];
+export const PROYECTOS_ARQUITECTURA: ProyectoArquitectura[] = (
+  rawData as ProyectoArquitectura[]
+).map(normalizarProyecto);
 
-// Estilos presentes en el dataset ordenados según la taxonomía normalizada
-const estilosEnDataset = new Set(PROYECTOS_ARQUITECTURA.flatMap((p) => p.estilos || []));
-export const TODOS_LOS_ESTILOS = ORDEN_CANONICO_ESTILOS.filter((estilo) =>
-  estilosEnDataset.has(estilo)
-);
+export const TODOS_LOS_PERIODOS = LISTA_PERIODOS;
+export const TODOS_LOS_ESTILOS = LISTA_ESTILOS;
+export const TODOS_LOS_PROGRAMAS_PRINCIPALES = LISTA_PROGRAMAS_PRINCIPALES;
+export const TODOS_LOS_PROGRAMAS_ESPECIFICOS = LISTA_PROGRAMAS_ESPECIFICOS;
 
-export const ORDEN_PROGRAMAS = [
-  'Residencial',
-  'Cultural',
-  'Educación',
-  'Institucional',
-  'Comercial',
-  'Infraestructura',
-  'Marítimo',
-  'Paisajismo',
-  'Religioso',
-  'Industrial',
-  'Deportivo',
-  'Salud',
-  'Hotelería',
-  'Social',
-  'Transporte',
-  'Científico',
-  'Patrimonio',
-  'Oficinas',
-  'Innovación',
-  'Pabellón',
-  'Efímero',
-  'Restauración',
-];
-
-const programasEnDataset = new Set(
-  PROYECTOS_ARQUITECTURA.flatMap((p) => p.programas || p.programa || [])
-);
-export const TODOS_LOS_PROGRAMAS = ORDEN_PROGRAMAS.filter((prog) =>
-  programasEnDataset.has(prog)
-);
+// Legacy export for backwards compatibility
+export const TODOS_LOS_PROGRAMAS = LISTA_PROGRAMAS_PRINCIPALES;
 
 // Menú desplegable: arquitectos en formato "Nombre Arquitecto (Nombre Oficina)" o "No aplica / Anónimo"
 export const TODOS_LOS_ARQUITECTOS = Array.from(
@@ -82,9 +46,10 @@ export const TODOS_LOS_ARQUITECTOS = Array.from(
 });
 
 export const TODOS_LOS_PAISES = Array.from(
-  new Set(PROYECTOS_ARQUITECTURA.map((p) => p.pais))
+  new Set(PROYECTOS_ARQUITECTURA.map((p) => p.pais).filter(Boolean))
 ).sort((a, b) => a.localeCompare(b, 'es'));
 
 export const DECADAS_DISPONIBLES = extractAvailableDecades(PROYECTOS_ARQUITECTURA);
+
 
 

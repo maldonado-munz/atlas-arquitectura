@@ -18,15 +18,23 @@ export interface ProyectoArquitectura {
   colaboradores?: string;
   instituciones?: string[];
   institucion?: string;
-  ano_pritzker?: number | null;
+  ano_pritzker?: number | string | null;
   fotografia_url?: string;
   direccion: string;
   coordenadas: Coordenadas;
   ano_diseno: string;
   anos_construccion: string;
   ano_inauguracion: string;
+  // Períodos y Estilos (compatibilidad singular/plural)
+  periodo?: string[];
+  periodos?: string[];
+  estilo?: string[];
   estilos: string[];
-  programa: string[];
+  // Programas arquitectónicos
+  programa_principal?: string[];
+  programa_especifico?: string[];
+  'programa_específico'?: string[];
+  programa?: string[];
   programas?: string[];
   // Campos complementarios de curaduría
   ciudad: string;
@@ -36,17 +44,27 @@ export interface ProyectoArquitectura {
   fuente_url?: string;
   materiales_principales?: string[];
   fotografia_credito?: string;
+  fotografia_autor_url?: string;
+  fotografia_licencia?: string;
+  fotografia_licencia_url?: string;
+  fotografia_fuente?: string;
   premio_nacional_arquitectura?: number | null;
 }
 
 export interface FiltrosState {
   busqueda: string;
-  estilosSeleccionados: string[];
-  programasSeleccionados: string[];
+  paisesSeleccionados: string[];
   arquitectoSeleccionado: string;
-  paisSeleccionado: string;
-  decadaSeleccionada: string;
+  programasPrincipalesSeleccionados: string[];
+  programasEspecificosSeleccionados: string[];
+  decadasSeleccionadas: string[];
+  periodosSeleccionados: string[];
+  estilosSeleccionados: string[];
   soloPritzker: boolean;
+  // Campos legacy para retrocompatibilidad
+  paisSeleccionado?: string;
+  decadaSeleccionada?: string;
+  programasSeleccionados?: string[];
 }
 
 export interface OpcionDecada {
@@ -55,9 +73,13 @@ export interface OpcionDecada {
 }
 
 export interface OpcionesFiltrosDisponibles {
-  programas: string[];
-  estilos: string[];
-  arquitectos: string[];
   paises: string[];
+  arquitectos: string[];
+  programasPrincipales: string[];
+  programasEspecificos: string[];
   decadas: OpcionDecada[];
+  periodos: string[];
+  estilos: string[];
+  // Legacy
+  programas?: string[];
 }

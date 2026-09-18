@@ -15,11 +15,11 @@ import {
   Calendar,
   Maximize2,
   ExternalLink,
-  LocateFixed,
 } from 'lucide-react';
 import { traducirEstilo, traducirPrograma } from '../i18n';
 import { useGeolocationTracking } from '../hooks/useGeolocationTracking';
 import { createUserLocationIcon } from './UserLocationPin';
+import { formatearCoordenadas } from '../utils/geoUtils';
 
 interface MapViewerProps {
   proyectos: ProyectoArquitectura[];
@@ -353,8 +353,8 @@ export const MapViewer: React.FC<MapViewerProps> = ({
       currentCenter.lng - targetLng
     );
 
-    if (distance > 0.02) {
-      map.flyTo([targetLat, targetLng], Math.max(map.getZoom(), 12), {
+    if (distance > 0.0001 || map.getZoom() < 15) {
+      map.flyTo([targetLat, targetLng], Math.max(map.getZoom(), 15), {
         duration: 1.2,
       });
     }
@@ -419,7 +419,7 @@ export const MapViewer: React.FC<MapViewerProps> = ({
 
       marker.bindTooltip(tooltipContent, {
         direction: 'top',
-        offset: [0, -42],
+        offset: [0, -28],
         opacity: 1,
         className: 'user-pin-tooltip',
       });
@@ -483,10 +483,6 @@ export const MapViewer: React.FC<MapViewerProps> = ({
     mapInstanceRef.current?.zoomOut();
   };
 
-  const handleVerChile = () => {
-    mapInstanceRef.current?.flyTo([-33.4489, -70.6693], 6.2, { duration: 1.2 });
-  };
-
   const handleResetView = () => {
     mapInstanceRef.current?.flyTo([25, 10], 2.4, { duration: 1.5 });
   };
@@ -526,9 +522,9 @@ export const MapViewer: React.FC<MapViewerProps> = ({
 
         <div className="h-[1px] bg-[#D4D4D4] my-0.5" />
 
-        {/* User GPS Location Button (Mi Ubicación) */}
+        {/* Real-time GPS Location & Centering Button (MapPin) */}
         <button
-          id="btn-map-mi-ubicacion"
+          id="btn-map-gps-ubicacion"
           onClick={handleMiUbicacion}
           className={`w-9 h-9 border border-[#111111] flex items-center justify-center transition-colors cursor-pointer relative ${
             isTrackingUser
@@ -538,24 +534,14 @@ export const MapViewer: React.FC<MapViewerProps> = ({
           title={
             isTrackingUser
               ? (idioma === 'en' ? 'Center on my location (GPS active)' : 'Centrar en mi ubicación (GPS activo)')
-              : (idioma === 'en' ? 'Track my location (GPS)' : 'Rastrear mi ubicación (GPS)')
+              : (idioma === 'en' ? 'Activate GPS / My location' : 'Activar GPS / Mi ubicación')
           }
-          aria-label={idioma === 'en' ? 'My Location' : 'Mi Ubicación'}
+          aria-label={idioma === 'en' ? 'My Location (GPS)' : 'Mi Ubicación (GPS)'}
         >
-          <LocateFixed className={`w-4 h-4 ${isLocatingUser ? 'animate-spin' : ''}`} />
+          <MapPin className={`w-4 h-4 ${isLocatingUser ? 'animate-pulse text-black' : ''}`} />
           {isTrackingUser && (
             <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-black border border-white rounded-full"></span>
           )}
-        </button>
-
-        <button
-          id="btn-map-focus-chile"
-          onClick={handleVerChile}
-          className="w-9 h-9 bg-white hover:bg-black text-black hover:text-white border border-[#111111] flex items-center justify-center transition-colors cursor-pointer"
-          title="Enfocar Chile"
-          aria-label="Enfocar Chile"
-        >
-          <MapPin className="w-4 h-4" />
         </button>
 
         <button
@@ -697,6 +683,22 @@ export const MapViewer: React.FC<MapViewerProps> = ({
             </div>
           </div>
 
+          {/* Project Thumbnail Image */}
+          {proyectoSeleccionado.fotografia_url && (
+            <div className="relative w-full h-28 sm:h-32 bg-neutral-100 overflow-hidden border border-neutral-200">
+              <img
+                src={proyectoSeleccionado.fotografia_url}
+                alt={proyectoSeleccionado.nombre_proyecto}
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+                loading="lazy"
+              />
+              <div className="absolute bottom-1 right-1.5 px-1 py-0.5 bg-black/70 text-[9px] font-mono-code text-neutral-200">
+                {proyectoSeleccionado.fotografia_credito || 'Vmorande'} • {proyectoSeleccionado.fotografia_licencia || 'CC BY-SA 4.0'}
+              </div>
+            </div>
+          )}
+
           {/* Project Details */}
           <div>
             <h3 className="text-base sm:text-lg font-bold tracking-tight text-black leading-snug">
@@ -726,26 +728,60 @@ export const MapViewer: React.FC<MapViewerProps> = ({
                 {proyectoSeleccionado.ano_inauguracion}
               </span>
             </div>
+
+            {/* Reactive Coordinates Chip in Floating Card */}
+            <button
+              id="btn-ficha-coordenadas-mapa"
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (mapInstanceRef.current && proyectoSeleccionado) {
+                  mapInstanceRef.current.flyTo(
+                    [proyectoSeleccionado.coordenadas.lat, proyectoSeleccionado.coordenadas.lng],
+                    16,
+                    { duration: 1.2 }
+                  );
+                }
+              }}
+              className="group inline-flex items-center gap-1.5 px-2 py-0.5 bg-neutral-100 hover:bg-black text-neutral-800 hover:text-white border border-neutral-300 hover:border-black text-[10px] font-mono-code transition-all cursor-pointer shadow-2xs mt-1.5"
+              title={idioma === 'en' ? 'Center map on coordinates' : 'Centrar mapa en estas coordenadas'}
+            >
+              <Navigation className="w-2.5 h-2.5 text-neutral-500 group-hover:text-[#FDE17D] rotate-45 transition-colors" />
+              <span className="font-semibold tracking-tight">
+                {formatearCoordenadas(proyectoSeleccionado.coordenadas.lat, proyectoSeleccionado.coordenadas.lng)}
+              </span>
+              <span className="text-[9px] text-neutral-400 group-hover:text-neutral-200 ml-0.5 uppercase font-normal">
+                ({idioma === 'en' ? 'Focus' : 'Centrar'})
+              </span>
+            </button>
           </div>
 
           {/* Styles & Program Badges */}
           <div className="flex flex-wrap gap-1.5 max-h-16 overflow-y-auto">
-            {proyectoSeleccionado.estilos.slice(0, 3).map((estilo) => (
-              <span
-                key={estilo}
-                className="px-2 py-0.5 bg-neutral-100 text-neutral-800 text-[10px] font-mono-code border border-neutral-200"
-              >
-                {traducirEstilo(estilo, lang)}
-              </span>
-            ))}
-            {(proyectoSeleccionado.programa || []).slice(0, 2).map((prog) => (
-              <span
-                key={prog}
-                className="px-2 py-0.5 bg-neutral-50 text-neutral-600 text-[10px] font-mono-code border border-neutral-200"
-              >
-                {traducirPrograma(prog, lang)}
-              </span>
-            ))}
+            {(proyectoSeleccionado.estilos || proyectoSeleccionado.estilo || [])
+              .slice(0, 3)
+              .map((estilo) => (
+                <span
+                  key={estilo}
+                  className="px-2 py-0.5 bg-neutral-100 text-neutral-800 text-[10px] font-mono-code border border-neutral-200"
+                >
+                  {traducirEstilo(estilo, lang)}
+                </span>
+              ))}
+            {(
+              proyectoSeleccionado.programa_principal ||
+              proyectoSeleccionado.programa ||
+              []
+            )
+              .slice(0, 2)
+              .map((prog) => (
+                <span
+                  key={prog}
+                  className="px-2 py-0.5 bg-neutral-50 text-neutral-600 text-[10px] font-mono-code border border-neutral-200"
+                >
+                  {traducirPrograma(prog, lang)}
+                </span>
+              ))}
           </div>
 
           {/* Excerpt */}

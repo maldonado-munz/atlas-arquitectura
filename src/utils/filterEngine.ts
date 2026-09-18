@@ -1,15 +1,19 @@
 /**
  * Filter engine for Architectural Atlas
- * Implements bidirectional cascading/faceted filters and derived options
+ * Implements multi-select faceted filters, cascading logic, and derived options
  */
 
 import { ProyectoArquitectura, FiltrosState, OpcionesFiltrosDisponibles } from '../types';
 import {
+  TODOS_LOS_PERIODOS,
   TODOS_LOS_ESTILOS,
-  TODOS_LOS_PROGRAMAS,
+  TODOS_LOS_PROGRAMAS_PRINCIPALES,
+  TODOS_LOS_PROGRAMAS_ESPECIFICOS,
   TODOS_LOS_ARQUITECTOS,
   TODOS_LOS_PAISES,
   DECADAS_DISPONIBLES,
+  obtenerEstilosParaPeriodos,
+  obtenerEspecificosParaPrincipales,
 } from '../data/proyectos';
 import {
   extractAvailableDecades,
@@ -46,6 +50,7 @@ export function coincideTextoLibre(
     p.descripcion,
     p.direccion,
     p.ciudad,
+    p.region,
     p.pais,
     p.ano_diseno,
     p.anos_construccion,
@@ -54,7 +59,10 @@ export function coincideTextoLibre(
     p.premio_nacional_arquitectura
       ? `premio nacional ${p.premio_nacional_arquitectura}`
       : '',
-    ...(p.estilos || []),
+    ...(p.estilos || p.estilo || []),
+    ...(p.periodos || p.periodo || []),
+    ...(p.programa_principal || []),
+    ...(p.programa_especifico || p['programa_específico'] || []),
     ...(p.programas || p.programa || []),
     ...(p.materiales_principales || []),
     p.fuente_url,
@@ -66,21 +74,12 @@ export function coincideTextoLibre(
   );
 }
 
-export function coincideEstilos(
+export function coincidePaises(
   p: ProyectoArquitectura,
-  estilosSeleccionados: string[]
+  paisesSeleccionados: string[]
 ): boolean {
-  if (!estilosSeleccionados || estilosSeleccionados.length === 0) return true;
-  return estilosSeleccionados.some((estilo) => p.estilos.includes(estilo));
-}
-
-export function coincideProgramas(
-  p: ProyectoArquitectura,
-  programasSeleccionados: string[]
-): boolean {
-  if (!programasSeleccionados || programasSeleccionados.length === 0) return true;
-  const progs = p.programas || p.programa || [];
-  return programasSeleccionados.some((prog) => progs.includes(prog));
+  if (!paisesSeleccionados || paisesSeleccionados.length === 0) return true;
+  return paisesSeleccionados.includes(p.pais);
 }
 
 export function coincideArquitecto(
@@ -119,12 +118,86 @@ export function coincideArquitecto(
   return p.arquitecto.includes(arqSel);
 }
 
-export function coincidePais(
+export function coincideProgramasPrincipales(
   p: ProyectoArquitectura,
-  paisSeleccionado: string
+  programasPrincipalesSeleccionados: string[]
 ): boolean {
-  if (!paisSeleccionado || paisSeleccionado.trim() === '') return true;
-  return p.pais === paisSeleccionado;
+  if (
+    !programasPrincipalesSeleccionados ||
+    programasPrincipalesSeleccionados.length === 0
+  ) {
+    return true;
+  }
+
+  const principalesProyecto = p.programa_principal || [];
+  const programasLegacy = p.programas || p.programa || [];
+
+  return programasPrincipalesSeleccionados.some((prog) => {
+    if (principalesProyecto.includes(prog)) return true;
+    if (programasLegacy.includes(prog)) return true;
+    return false;
+  });
+}
+
+export function coincideProgramasEspecificos(
+  p: ProyectoArquitectura,
+  programasEspecificosSeleccionados: string[]
+): boolean {
+  if (
+    !programasEspecificosSeleccionados ||
+    programasEspecificosSeleccionados.length === 0
+  ) {
+    return true;
+  }
+
+  const especificosProyecto =
+    p.programa_especifico || p['programa_específico'] || [];
+  const programasLegacy = p.programas || p.programa || [];
+
+  return programasEspecificosSeleccionados.some((prog) => {
+    if (especificosProyecto.includes(prog)) return true;
+    if (programasLegacy.includes(prog)) return true;
+    return false;
+  });
+}
+
+export function coincideDecadas(
+  p: ProyectoArquitectura,
+  decadasSeleccionadas: string[]
+): boolean {
+  if (
+    !decadasSeleccionadas ||
+    decadasSeleccionadas.length === 0 ||
+    decadasSeleccionadas.includes('all')
+  ) {
+    return true;
+  }
+
+  return decadasSeleccionadas.some((dec) => coincideDecada(p, dec));
+}
+
+export function coincidePeriodos(
+  p: ProyectoArquitectura,
+  periodosSeleccionados: string[]
+): boolean {
+  if (!periodosSeleccionados || periodosSeleccionados.length === 0) {
+    return true;
+  }
+
+  const periodos = p.periodo || p.periodos || [];
+  return periodosSeleccionados.some((periodo) => periodos.includes(periodo));
+}
+
+export function coincideEstilos(
+  p: ProyectoArquitectura,
+  estilosSeleccionados: string[]
+): boolean {
+  if (!estilosSeleccionados || estilosSeleccionados.length === 0) {
+    return true;
+  }
+
+  const estilos = p.estilos || p.estilo || [];
+  return estilosSeleccionados.some((estilo) => estilos.includes(estilo));
 }
 
 export function coincideSoloPritzker(
@@ -132,40 +205,76 @@ export function coincideSoloPritzker(
   soloPritzker: boolean
 ): boolean {
   if (!soloPritzker) return true;
-  return p.ano_pritzker !== null;
+  return (
+    p.ano_pritzker !== null &&
+    p.ano_pritzker !== undefined &&
+    p.ano_pritzker !== ''
+  );
 }
-
-// coincideDecada is imported and re-exported from ./decadeUtils
 
 /**
  * Checks if a project matches all active filters, optionally excluding one dimension.
- * Used to compute candidate subsets for cascading dropdown options.
  */
 export function cumpleFiltros(
   p: ProyectoArquitectura,
   filtros: FiltrosState,
-  excluirDimension?: 'programa' | 'estilo' | 'arquitecto' | 'pais' | 'decada'
+  excluirDimension?:
+    | 'pais'
+    | 'arquitecto'
+    | 'programa_principal'
+    | 'programa_especifico'
+    | 'decada'
+    | 'periodo'
+    | 'estilo'
 ): boolean {
   if (!coincideTextoLibre(p, filtros.busqueda)) return false;
   if (!coincideSoloPritzker(p, filtros.soloPritzker)) return false;
 
-  if (excluirDimension !== 'programa' && !coincideProgramas(p, filtros.programasSeleccionados)) {
+  const paises = filtros.paisesSeleccionados || (filtros.paisSeleccionado ? [filtros.paisSeleccionado] : []);
+  if (excluirDimension !== 'pais' && !coincidePaises(p, paises)) {
     return false;
   }
 
-  if (excluirDimension !== 'estilo' && !coincideEstilos(p, filtros.estilosSeleccionados)) {
+  if (
+    excluirDimension !== 'arquitecto' &&
+    !coincideArquitecto(p, filtros.arquitectoSeleccionado)
+  ) {
     return false;
   }
 
-  if (excluirDimension !== 'arquitecto' && !coincideArquitecto(p, filtros.arquitectoSeleccionado)) {
+  if (
+    excluirDimension !== 'programa_principal' &&
+    !coincideProgramasPrincipales(p, filtros.programasPrincipalesSeleccionados)
+  ) {
     return false;
   }
 
-  if (excluirDimension !== 'pais' && !coincidePais(p, filtros.paisSeleccionado)) {
+  if (
+    excluirDimension !== 'programa_especifico' &&
+    !coincideProgramasEspecificos(p, filtros.programasEspecificosSeleccionados)
+  ) {
     return false;
   }
 
-  if (excluirDimension !== 'decada' && !coincideDecada(p, filtros.decadaSeleccionada)) {
+  const decadas = filtros.decadasSeleccionadas || (filtros.decadaSeleccionada && filtros.decadaSeleccionada !== 'all' ? [filtros.decadaSeleccionada] : []);
+  if (
+    excluirDimension !== 'decada' &&
+    !coincideDecadas(p, decadas)
+  ) {
+    return false;
+  }
+
+  if (
+    excluirDimension !== 'periodo' &&
+    !coincidePeriodos(p, filtros.periodosSeleccionados)
+  ) {
+    return false;
+  }
+
+  if (
+    excluirDimension !== 'estilo' &&
+    !coincideEstilos(p, filtros.estilosSeleccionados)
+  ) {
     return false;
   }
 
@@ -190,256 +299,98 @@ export function calcularOpcionesDisponibles(
   proyectos: ProyectoArquitectura[],
   filtros: FiltrosState
 ): OpcionesFiltrosDisponibles {
-  // 1. Programas: candidatos que cumplen todos los filtros excepto programa
-  const candidatosProgramas = proyectos.filter((p) =>
-    cumpleFiltros(p, filtros, 'programa')
-  );
-  const progsEnCandidatos = new Set(
-    candidatosProgramas.flatMap((p) => p.programas || p.programa || [])
-  );
-  const programasDisponibles = TODOS_LOS_PROGRAMAS.filter((prog) =>
-    progsEnCandidatos.has(prog)
-  );
-
-  // 2. Estilos: candidatos que cumplen todos los filtros excepto estilo
-  const candidatosEstilos = proyectos.filter((p) =>
-    cumpleFiltros(p, filtros, 'estilo')
-  );
-  const estilosEnCandidatos = new Set(
-    candidatosEstilos.flatMap((p) => p.estilos || [])
-  );
-  const estilosDisponibles = TODOS_LOS_ESTILOS.filter((estilo) =>
-    estilosEnCandidatos.has(estilo)
-  );
-
-  // 3. Arquitectos: candidatos que cumplen todos los filtros excepto arquitecto
-  const candidatosArquitectos = proyectos.filter((p) =>
-    cumpleFiltros(p, filtros, 'arquitecto')
-  );
-  const arqsEnCandidatos = new Set<string>();
-  for (const p of candidatosArquitectos) {
-    const arqVal = p.arquitecto_filtro || p.arquitecto_responsable;
-    if (arqVal) {
-      arqsEnCandidatos.add(arqVal);
-    }
-  }
-  const arquitectosDisponibles = TODOS_LOS_ARQUITECTOS.filter((arq) => {
-    if (arqsEnCandidatos.has(arq)) return true;
-    return candidatosArquitectos.some((p) => coincideArquitecto(p, arq));
-  });
-
-  // 4. Países: candidatos que cumplen todos los filtros excepto país
+  // 1. Países
   const candidatosPais = proyectos.filter((p) =>
     cumpleFiltros(p, filtros, 'pais')
   );
   const paisesEnCandidatos = new Set(
     candidatosPais.map((p) => p.pais).filter(Boolean)
   );
-  const paisesDisponibles = TODOS_LOS_PAISES.filter((pais) =>
-    paisesEnCandidatos.has(pais)
+  const paisesDisponibles = TODOS_LOS_PAISES.length > 0
+    ? TODOS_LOS_PAISES.filter((pais) => paisesEnCandidatos.has(pais))
+    : Array.from(paisesEnCandidatos).sort((a, b) => a.localeCompare(b, 'es'));
+
+  // 2. Arquitectos
+  const candidatosArquitectos = proyectos.filter((p) =>
+    cumpleFiltros(p, filtros, 'arquitecto')
+  );
+  const arqsEnCandidatos = new Set<string>();
+  for (const p of candidatosArquitectos) {
+    const arqVal = p.arquitecto_filtro || p.arquitecto_responsable;
+    if (arqVal) arqsEnCandidatos.add(arqVal);
+  }
+  const arquitectosDisponibles = TODOS_LOS_ARQUITECTOS.filter((arq) => {
+    if (arqsEnCandidatos.has(arq)) return true;
+    return candidatosArquitectos.some((p) => coincideArquitecto(p, arq));
+  });
+
+  // 3. Programas Principales
+  const candidatosProgPrincipal = proyectos.filter((p) =>
+    cumpleFiltros(p, filtros, 'programa_principal')
+  );
+  const progsPrincipalesEnCandidatos = new Set(
+    candidatosProgPrincipal.flatMap((p) => p.programa_principal || [])
+  );
+  const programasPrincipalesDisponibles = TODOS_LOS_PROGRAMAS_PRINCIPALES.filter(
+    (prog) => progsPrincipalesEnCandidatos.size === 0 || progsPrincipalesEnCandidatos.has(prog)
   );
 
-  // 5. Décadas: candidatos que cumplen todos los filtros excepto década
+  // 4. Programas Específicos: si hay programas principales seleccionados, restringir a ellos
+  const candidatosProgEspecifico = proyectos.filter((p) =>
+    cumpleFiltros(p, filtros, 'programa_especifico')
+  );
+  const progsEspecificosEnCandidatos = new Set(
+    candidatosProgEspecifico.flatMap(
+      (p) => p.programa_especifico || p['programa_específico'] || []
+    )
+  );
+  const baseEspecificos = obtenerEspecificosParaPrincipales(
+    filtros.programasPrincipalesSeleccionados
+  );
+  const programasEspecificosDisponibles = baseEspecificos.filter(
+    (esp) => progsEspecificosEnCandidatos.size === 0 || progsEspecificosEnCandidatos.has(esp)
+  );
+
+  // 5. Décadas
   const candidatosDecada = proyectos.filter((p) =>
     cumpleFiltros(p, filtros, 'decada')
   );
-  const decadasDisponibles = extractAvailableDecades(candidatosDecada, true);
+  const decadasDisponibles = extractAvailableDecades(
+    candidatosDecada.length > 0 ? candidatosDecada : proyectos,
+    true
+  );
+
+  // 6. Períodos
+  const candidatosPeriodo = proyectos.filter((p) =>
+    cumpleFiltros(p, filtros, 'periodo')
+  );
+  const periodosEnCandidatos = new Set(
+    candidatosPeriodo.flatMap((p) => p.periodo || p.periodos || [])
+  );
+  const periodosDisponibles = TODOS_LOS_PERIODOS.filter(
+    (per) => periodosEnCandidatos.size === 0 || periodosEnCandidatos.has(per)
+  );
+
+  // 7. Estilos: si hay períodos seleccionados, restringir a los estilos de esos períodos
+  const candidatosEstilo = proyectos.filter((p) =>
+    cumpleFiltros(p, filtros, 'estilo')
+  );
+  const estilosEnCandidatos = new Set(
+    candidatosEstilo.flatMap((p) => p.estilos || p.estilo || [])
+  );
+  const baseEstilos = obtenerEstilosParaPeriodos(filtros.periodosSeleccionados);
+  const estilosDisponibles = baseEstilos.filter(
+    (est) => estilosEnCandidatos.size === 0 || estilosEnCandidatos.has(est)
+  );
 
   return {
-    programas: programasDisponibles,
-    estilos: estilosDisponibles,
-    arquitectos: arquitectosDisponibles,
     paises: paisesDisponibles,
+    arquitectos: arquitectosDisponibles,
+    programasPrincipales: programasPrincipalesDisponibles,
+    programasEspecificos: programasEspecificosDisponibles,
     decadas: decadasDisponibles,
+    periodos: periodosDisponibles,
+    estilos: estilosDisponibles,
+    programas: programasPrincipalesDisponibles,
   };
-}
-
-/**
- * Updates filter state and automatically resets any other active dropdown
- * whose selected value is no longer valid in the new context.
- */
-export function actualizarFiltrosConCascada(
-  proyectos: ProyectoArquitectura[],
-  filtrosActuales: FiltrosState,
-  cambios: Partial<FiltrosState>
-): FiltrosState {
-  const proximo: FiltrosState = { ...filtrosActuales, ...cambios };
-
-  // Identificar qué dimensión fue modificada por el usuario
-  const clavesModificadas = Object.keys(cambios) as (keyof FiltrosState)[];
-
-  // Si no hay filtros activos conflictivos, retornar temprano
-  const totalConProximo = filtrarProyectos(proyectos, proximo).length;
-  if (totalConProximo > 0) {
-    return proximo;
-  }
-
-  // Si se produjo un estado inválido (0 resultados), evaluar y resetear
-  // las opciones en otros menús desplegables que dejaron de ser compatibles.
-  // El filtro que el usuario acaba de tocar tiene prioridad (intención primaria).
-
-  // 1. Validar Arquitecto si no fue el modificado
-  if (
-    !clavesModificadas.includes('arquitectoSeleccionado') &&
-    proximo.arquitectoSeleccionado !== ''
-  ) {
-    const hayCoincidencias = proyectos.some((p) =>
-      cumpleFiltros(p, proximo)
-    );
-    if (!hayCoincidencias) {
-      // Verificar si el arquitecto es incompatible con el nuevo cambio
-      const compatibleConCambios = proyectos.some(
-        (p) =>
-          coincideArquitecto(p, proximo.arquitectoSeleccionado) &&
-          clavesModificadas.every((k) => {
-            if (k === 'paisSeleccionado') return coincidePais(p, proximo.paisSeleccionado);
-            if (k === 'decadaSeleccionada') return coincideDecada(p, proximo.decadaSeleccionada);
-            if (k === 'estilosSeleccionados') return coincideEstilos(p, proximo.estilosSeleccionados);
-            if (k === 'programasSeleccionados') return coincideProgramas(p, proximo.programasSeleccionados);
-            if (k === 'soloPritzker') return coincideSoloPritzker(p, proximo.soloPritzker);
-            if (k === 'busqueda') return coincideTextoLibre(p, proximo.busqueda);
-            return true;
-          })
-      );
-      if (!compatibleConCambios) {
-        proximo.arquitectoSeleccionado = '';
-      }
-    }
-  }
-
-  // 2. Validar País si no fue el modificado
-  if (
-    !clavesModificadas.includes('paisSeleccionado') &&
-    proximo.paisSeleccionado !== ''
-  ) {
-    const hayCoincidencias = proyectos.some((p) =>
-      cumpleFiltros(p, proximo)
-    );
-    if (!hayCoincidencias) {
-      const compatibleConCambios = proyectos.some(
-        (p) =>
-          coincidePais(p, proximo.paisSeleccionado) &&
-          clavesModificadas.every((k) => {
-            if (k === 'arquitectoSeleccionado') return coincideArquitecto(p, proximo.arquitectoSeleccionado);
-            if (k === 'decadaSeleccionada') return coincideDecada(p, proximo.decadaSeleccionada);
-            if (k === 'estilosSeleccionados') return coincideEstilos(p, proximo.estilosSeleccionados);
-            if (k === 'programasSeleccionados') return coincideProgramas(p, proximo.programasSeleccionados);
-            if (k === 'soloPritzker') return coincideSoloPritzker(p, proximo.soloPritzker);
-            if (k === 'busqueda') return coincideTextoLibre(p, proximo.busqueda);
-            return true;
-          })
-      );
-      if (!compatibleConCambios) {
-        proximo.paisSeleccionado = '';
-      }
-    }
-  }
-
-  // 3. Validar Década si no fue la modificada
-  if (
-    !clavesModificadas.includes('decadaSeleccionada') &&
-    proximo.decadaSeleccionada !== 'all'
-  ) {
-    const hayCoincidencias = proyectos.some((p) =>
-      cumpleFiltros(p, proximo)
-    );
-    if (!hayCoincidencias) {
-      const compatibleConCambios = proyectos.some(
-        (p) =>
-          coincideDecada(p, proximo.decadaSeleccionada) &&
-          clavesModificadas.every((k) => {
-            if (k === 'arquitectoSeleccionado') return coincideArquitecto(p, proximo.arquitectoSeleccionado);
-            if (k === 'paisSeleccionado') return coincidePais(p, proximo.paisSeleccionado);
-            if (k === 'estilosSeleccionados') return coincideEstilos(p, proximo.estilosSeleccionados);
-            if (k === 'programasSeleccionados') return coincideProgramas(p, proximo.programasSeleccionados);
-            if (k === 'soloPritzker') return coincideSoloPritzker(p, proximo.soloPritzker);
-            if (k === 'busqueda') return coincideTextoLibre(p, proximo.busqueda);
-            return true;
-          })
-      );
-      if (!compatibleConCambios) {
-        proximo.decadaSeleccionada = 'all';
-      }
-    }
-  }
-
-  // 4. Validar Estilos si no fueron los modificados
-  if (
-    !clavesModificadas.includes('estilosSeleccionados') &&
-    proximo.estilosSeleccionados.length > 0
-  ) {
-    const estilosValidos = proximo.estilosSeleccionados.filter((estilo) =>
-      proyectos.some(
-        (p) =>
-          p.estilos.includes(estilo) &&
-          clavesModificadas.every((k) => {
-            if (k === 'arquitectoSeleccionado') return coincideArquitecto(p, proximo.arquitectoSeleccionado);
-            if (k === 'paisSeleccionado') return coincidePais(p, proximo.paisSeleccionado);
-            if (k === 'decadaSeleccionada') return coincideDecada(p, proximo.decadaSeleccionada);
-            if (k === 'programasSeleccionados') return coincideProgramas(p, proximo.programasSeleccionados);
-            if (k === 'soloPritzker') return coincideSoloPritzker(p, proximo.soloPritzker);
-            if (k === 'busqueda') return coincideTextoLibre(p, proximo.busqueda);
-            return true;
-          })
-      )
-    );
-    proximo.estilosSeleccionados = estilosValidos;
-  }
-
-  // 5. Validar Programas si no fueron los modificados
-  if (
-    !clavesModificadas.includes('programasSeleccionados') &&
-    proximo.programasSeleccionados.length > 0
-  ) {
-    const programasValidos = proximo.programasSeleccionados.filter((prog) =>
-      proyectos.some(
-        (p) =>
-          (p.programas || p.programa || []).includes(prog) &&
-          clavesModificadas.every((k) => {
-            if (k === 'arquitectoSeleccionado') return coincideArquitecto(p, proximo.arquitectoSeleccionado);
-            if (k === 'paisSeleccionado') return coincidePais(p, proximo.paisSeleccionado);
-            if (k === 'decadaSeleccionada') return coincideDecada(p, proximo.decadaSeleccionada);
-            if (k === 'estilosSeleccionados') return coincideEstilos(p, proximo.estilosSeleccionados);
-            if (k === 'soloPritzker') return coincideSoloPritzker(p, proximo.soloPritzker);
-            if (k === 'busqueda') return coincideTextoLibre(p, proximo.busqueda);
-            return true;
-          })
-      )
-    );
-    proximo.programasSeleccionados = programasValidos;
-  }
-
-  // 6. Si tras la validación directa persistiera una incompatibilidad entre filtros secundarios
-  // que arroje 0 resultados, relajar progresivamente los secundarios respetando la dimensión modificada
-  if (filtrarProyectos(proyectos, proximo).length === 0) {
-    if (!clavesModificadas.includes('programasSeleccionados')) {
-      proximo.programasSeleccionados = [];
-    }
-    if (
-      filtrarProyectos(proyectos, proximo).length === 0 &&
-      !clavesModificadas.includes('estilosSeleccionados')
-    ) {
-      proximo.estilosSeleccionados = [];
-    }
-    if (
-      filtrarProyectos(proyectos, proximo).length === 0 &&
-      !clavesModificadas.includes('arquitectoSeleccionado')
-    ) {
-      proximo.arquitectoSeleccionado = '';
-    }
-    if (
-      filtrarProyectos(proyectos, proximo).length === 0 &&
-      !clavesModificadas.includes('decadaSeleccionada')
-    ) {
-      proximo.decadaSeleccionada = 'all';
-    }
-    if (
-      filtrarProyectos(proyectos, proximo).length === 0 &&
-      !clavesModificadas.includes('paisSeleccionado')
-    ) {
-      proximo.paisSeleccionado = '';
-    }
-  }
-
-  return proximo;
 }

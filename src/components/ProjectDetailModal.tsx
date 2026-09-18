@@ -18,11 +18,13 @@ import {
 } from 'lucide-react';
 import { ProyectoArquitectura, Idioma } from '../types';
 import { I18N_TEXTS, traducirEstilo, traducirPrograma } from '../i18n';
+import { formatearCoordenadas } from '../utils/geoUtils';
 
 interface ProjectDetailModalProps {
   proyecto: ProyectoArquitectura | null;
   idioma: Idioma;
   onCerrar: () => void;
+  onCentrarEnMapa?: (proyecto: ProyectoArquitectura) => void;
   onAnterior?: () => void;
   onSiguiente?: () => void;
   tieneAnterior?: boolean;
@@ -33,6 +35,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   proyecto,
   idioma,
   onCerrar,
+  onCentrarEnMapa,
   onAnterior,
   onSiguiente,
   tieneAnterior,
@@ -302,6 +305,61 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
           </div>
 
+          {/* Fotografía Arquitectónica y Atribución Legal CC BY-SA 4.0 */}
+          {proyecto.fotografia_url && (
+            <div className="space-y-1.5">
+              <div className="w-full bg-[#111111] overflow-hidden border border-[#E5E5E5] shadow-xs flex items-center justify-center max-h-[460px]">
+                <img
+                  src={proyecto.fotografia_url}
+                  alt={proyecto.nombre_proyecto}
+                  className="w-full h-auto max-h-[460px] object-cover"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Atribución sutil conforme a CC BY-SA 4.0 */}
+              <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-1 text-[11px] font-mono-code text-neutral-500">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="text-neutral-400">Fotografía:</span>
+                  {proyecto.fotografia_autor_url ? (
+                    <a
+                      href={proyecto.fotografia_autor_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-600 hover:text-black underline underline-offset-2 transition-colors"
+                      title="Ver archivo original en Wikimedia Commons"
+                    >
+                      {proyecto.fotografia_credito || 'Vmorande'}
+                    </a>
+                  ) : (
+                    <span className="text-neutral-600">{proyecto.fotografia_credito || 'Vmorande'}</span>
+                  )}
+                  <span className="text-neutral-300">•</span>
+                  {proyecto.fotografia_licencia_url ? (
+                    <a
+                      href={proyecto.fotografia_licencia_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-neutral-600 hover:text-black underline underline-offset-2 transition-colors"
+                      title="Licencia Creative Commons Attribution-ShareAlike 4.0 International"
+                    >
+                      {proyecto.fotografia_licencia || 'CC BY-SA 4.0'}
+                    </a>
+                  ) : (
+                    <span>{proyecto.fotografia_licencia || 'CC BY-SA 4.0'}</span>
+                  )}
+                </div>
+
+                {proyecto.fotografia_fuente && (
+                  <span className="text-neutral-400">
+                    Vía {proyecto.fotografia_fuente}
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Chronology & Location Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 bg-[#F7F7F7] border border-[#EBEBEB]">
             {/* Location */}
@@ -352,48 +410,99 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
           </div>
 
-          {/* Architectural Styles, Program & Materiality */}
+          {/* Architectural Periods, Styles & Program */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Styles */}
-            <div>
-              <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5" />
-                <span>{t.stylesLabel}</span>
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
-                {proyecto.estilos && proyecto.estilos.length > 0 ? (
-                  proyecto.estilos.map((estilo) => (
-                    <span
-                      key={estilo}
-                      className="px-2.5 py-1 text-xs bg-white border border-black font-medium text-black"
-                    >
-                      {traducirEstilo(estilo, idioma)}
-                    </span>
-                  ))
-                ) : (
-                  <span className="text-xs text-neutral-400 italic">—</span>
+            {/* Periods & Styles */}
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5" />
+                  <span>{idioma === 'es' ? 'Período y Estilos' : 'Period & Styles'}</span>
+                </h3>
+                
+                {/* Periods if present */}
+                {(proyecto.periodos || proyecto.periodo) && (proyecto.periodos || proyecto.periodo)!.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {(proyecto.periodos || proyecto.periodo)!.map((per) => (
+                      <span
+                        key={per}
+                        className="px-2.5 py-0.5 text-xs bg-neutral-100 border border-neutral-300 font-mono-code text-neutral-800"
+                      >
+                        {per}
+                      </span>
+                    ))}
+                  </div>
                 )}
+
+                {/* Styles */}
+                <div className="flex flex-wrap gap-1.5">
+                  {(proyecto.estilos || proyecto.estilo) && (proyecto.estilos || proyecto.estilo)!.length > 0 ? (
+                    (proyecto.estilos || proyecto.estilo)!.map((estilo) => (
+                      <span
+                        key={estilo}
+                        className="px-2.5 py-1 text-xs bg-white border border-black font-medium text-black shadow-2xs"
+                      >
+                        {traducirEstilo(estilo, idioma)}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-xs text-neutral-400 italic">—</span>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Program */}
-            <div>
-              <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
-                <Building2 className="w-3.5 h-3.5" />
-                <span>{t.programLabel}</span>
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
-                {(proyecto.programas || proyecto.programa) && (proyecto.programas || proyecto.programa)!.length > 0 ? (
-                  (proyecto.programas || proyecto.programa)!.map((prog) => (
-                    <span
-                      key={prog}
-                      className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"
-                    >
-                      {traducirPrograma(prog, idioma)}
-                    </span>
-                  ))
-                ) : (
-                  <span className="text-xs text-neutral-400 italic">—</span>
+            {/* Programs: Principal & Específico */}
+            <div className="space-y-3">
+              <div>
+                <h3 className="text-xs font-mono-code uppercase tracking-wider text-neutral-500 mb-2 flex items-center gap-1.5">
+                  <Building2 className="w-3.5 h-3.5" />
+                  <span>{t.programLabel}</span>
+                </h3>
+                
+                {/* Main Programs */}
+                {proyecto.programa_principal && proyecto.programa_principal.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {proyecto.programa_principal.map((prog) => (
+                      <span
+                        key={prog}
+                        className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"
+                      >
+                        {traducirPrograma(prog, idioma)}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Specific Programs */}
+                {(proyecto.programa_especifico || proyecto['programa_específico']) &&
+                  (proyecto.programa_especifico || proyecto['programa_específico'])!.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mb-2">
+                      {(proyecto.programa_especifico || proyecto['programa_específico'])!.map((esp) => (
+                        <span
+                          key={esp}
+                          className="px-2 py-0.5 text-xs bg-[#EFEFEF] border border-neutral-300 text-neutral-800 font-mono-code"
+                        >
+                          {esp}
+                        </span>
+                      ))}
+                    </div>
+                )}
+
+                {/* Fallback to legacy programs if neither is present */}
+                {(!proyecto.programa_principal || proyecto.programa_principal.length === 0) &&
+                  (!proyecto.programa_especifico || proyecto.programa_especifico.length === 0) &&
+                  (proyecto.programas || proyecto.programa) && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {(proyecto.programas || proyecto.programa)!.map((prog) => (
+                        <span
+                          key={prog}
+                          className="px-2.5 py-1 text-xs bg-neutral-900 text-white font-medium"
+                        >
+                          {traducirPrograma(prog, idioma)}
+                        </span>
+                      ))}
+                    </div>
                 )}
               </div>
             </div>
@@ -431,11 +540,29 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           </div>
 
           {/* Geographic Coordinates & Reference Footer */}
-          <div className="flex flex-wrap items-center justify-between text-xs font-mono-code text-neutral-500 pt-4 border-t border-[#E5E5E5] gap-2">
-            <div className="flex items-center gap-4">
-              <span>
-                {t.coordinatesLabel}: {proyecto.coordenadas.lat.toFixed(5)}°N, {proyecto.coordenadas.lng.toFixed(5)}°E
-              </span>
+          <div className="flex flex-wrap items-center justify-between text-xs font-mono-code text-neutral-500 pt-4 border-t border-[#E5E5E5] gap-3">
+            <div className="flex items-center gap-3">
+              <button
+                id="btn-modal-centrar-coordenadas"
+                type="button"
+                onClick={() => {
+                  if (onCentrarEnMapa) {
+                    onCentrarEnMapa(proyecto);
+                  } else {
+                    onCerrar();
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 bg-black hover:bg-neutral-800 text-white border border-black text-xs font-mono-code transition-all cursor-pointer shadow-xs group"
+                title={idioma === 'en' ? 'Center map on coordinates' : 'Centrar mapa en estas coordenadas'}
+              >
+                <Compass className="w-3.5 h-3.5 text-[#FDE17D] group-hover:rotate-45 transition-transform" />
+                <span className="font-bold">
+                  {t.coordinatesLabel}: {formatearCoordenadas(proyecto.coordenadas.lat, proyecto.coordenadas.lng)}
+                </span>
+                <span className="text-[10px] uppercase font-mono-code px-1.5 py-0.5 bg-white/20 text-white ml-1">
+                  {idioma === 'en' ? 'View on map →' : 'Ver en mapa →'}
+                </span>
+              </button>
             </div>
 
             {proyecto.fuente_url && (

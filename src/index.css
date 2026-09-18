@@ -173,13 +173,13 @@
 
 .user-pulse-ring {
   position: absolute;
-  left: 17px;
-  top: 42.5px;
-  width: 22px;
-  height: 22px;
+  left: 11px;
+  top: 27px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: rgba(253, 225, 125, 0.45);
-  border: 1.5px solid #111111;
+  border: 1px solid #111111;
   animation: user-pulse 2.2s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
   pointer-events: none;
   z-index: 1;

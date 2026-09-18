@@ -14,16 +14,17 @@ import { ProyectoArquitectura, FiltrosState, Idioma } from './types';
 import {
   filtrarProyectos,
   calcularOpcionesDisponibles,
-  actualizarFiltrosConCascada,
 } from './utils/filterEngine';
 
 const FILTROS_INICIALES: FiltrosState = {
   busqueda: '',
-  estilosSeleccionados: [],
-  programasSeleccionados: [],
+  paisesSeleccionados: [],
   arquitectoSeleccionado: '',
-  paisSeleccionado: '',
-  decadaSeleccionada: 'all',
+  programasPrincipalesSeleccionados: [],
+  programasEspecificosSeleccionados: [],
+  decadasSeleccionadas: [],
+  periodosSeleccionados: [],
+  estilosSeleccionados: [],
   soloPritzker: false,
 };
 
@@ -121,9 +122,7 @@ export default function App() {
   ]);
 
   const handleActualizarFiltros = (nuevos: Partial<FiltrosState>) => {
-    setFiltros((prev) =>
-      actualizarFiltrosConCascada(PROYECTOS_ARQUITECTURA, prev, nuevos)
-    );
+    setFiltros((prev) => ({ ...prev, ...nuevos }));
   };
 
   const handleResetFiltros = () => {
@@ -157,7 +156,7 @@ export default function App() {
       )}
 
       {/* Main Map Canvas Area */}
-      <main className="flex-1 relative overflow-hidden">
+      <main className="flex-1 relative overflow-hidden z-0">
         <MapViewer
           proyectos={proyectosFiltrados}
           proyectoSeleccionado={proyectoSeleccionado}
@@ -194,6 +193,10 @@ export default function App() {
           proyecto={proyectoSeleccionado}
           idioma={idioma}
           onCerrar={() => setModalDetalleAbierto(false)}
+          onCentrarEnMapa={(p) => {
+            setProyectoSeleccionado(p);
+            setModalDetalleAbierto(false);
+          }}
           onAnterior={navegarAnterior}
           onSiguiente={navegarSiguiente}
           tieneAnterior={proyectosFiltrados.length > 1}

@@ -104,28 +104,37 @@ export const ProjectsListDrawer: React.FC<ProjectsListDrawerProps> = ({
 
                   <div className="flex items-center gap-1 mt-2 flex-wrap">
                     {/* Program pills */}
-                    {(proyecto.programas || proyecto.programa || []).slice(0, 2).map((prog) => (
-                      <span
-                        key={prog}
-                        className="text-[9px] font-mono-code px-1.5 py-0.2 bg-black text-white"
-                      >
-                        {traducirPrograma(prog, idioma)}
-                      </span>
-                    ))}
+                    {(
+                      proyecto.programa_principal ||
+                      proyecto.programas ||
+                      proyecto.programa ||
+                      []
+                    )
+                      .slice(0, 2)
+                      .map((prog) => (
+                        <span
+                          key={prog}
+                          className="text-[9px] font-mono-code px-1.5 py-0.2 bg-black text-white"
+                        >
+                          {traducirPrograma(prog, idioma)}
+                        </span>
+                      ))}
 
                     {/* Style pills */}
-                    {proyecto.estilos && proyecto.estilos.slice(0, 2).map((st) => (
-                      <span
-                        key={st}
-                        className="text-[9px] font-mono-code px-1.5 py-0.2 border border-neutral-200 text-neutral-600"
-                      >
-                        {traducirEstilo(st, idioma)}
-                      </span>
-                    ))}
+                    {(proyecto.estilos || proyecto.estilo || [])
+                      .slice(0, 2)
+                      .map((st) => (
+                        <span
+                          key={st}
+                          className="text-[9px] font-mono-code px-1.5 py-0.2 border border-neutral-200 text-neutral-600"
+                        >
+                          {traducirEstilo(st, idioma)}
+                        </span>
+                      ))}
 
-                    {proyecto.estilos && proyecto.estilos.length > 2 && (
+                    {(proyecto.estilos || proyecto.estilo || []).length > 2 && (
                       <span className="text-[9px] font-mono-code text-neutral-400">
-                        +{proyecto.estilos.length - 2}
+                        +{(proyecto.estilos || proyecto.estilo || []).length - 2}
                       </span>
                     )}
                   </div>
