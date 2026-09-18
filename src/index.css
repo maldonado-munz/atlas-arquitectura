@@ -111,9 +111,9 @@
 .arch-marker-inner {
   width: 14px;
   height: 14px;
-  background-color: #111111;
+  background-color: #91DDE8;
   border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
@@ -121,22 +121,22 @@
 .arch-marker-pin.selected .arch-marker-inner {
   width: 18px;
   height: 18px;
-  background-color: #000000;
+  background-color: #91DDE8;
   border: 2px solid #FFFFFF;
-  outline: 2px solid #000000;
+  outline: 2px solid #91DDE8;
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(145, 221, 232, 0.45);
 }
 
-/* Pritzker distinction: Rotated Diamond with high-contrast inner core */
+/* Pritzker distinction: Rotated Diamond with inner core */
 .arch-marker-pritzker .arch-marker-inner {
   width: 15px;
   height: 15px;
   border-radius: 0;
   transform: rotate(45deg);
-  background-color: #000000;
+  background-color: #91DDE8;
   border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 1.5px #000000, 0 3px 6px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,15 +145,15 @@
 .arch-marker-pritzker-core {
   width: 3px;
   height: 3px;
-  background-color: #FFFFFF;
+  background-color: #111111;
 }
 
 .arch-marker-pin.selected.arch-marker-pritzker .arch-marker-inner {
   width: 19px;
   height: 19px;
-  outline: 2px solid #000000;
+  outline: 2px solid #91DDE8;
   outline-offset: 3px;
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 5px rgba(145, 221, 232, 0.45);
 }
 
 /* Completely suppress all map watermarks and attributions */
